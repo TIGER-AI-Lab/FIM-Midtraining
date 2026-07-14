@@ -1,0 +1,104 @@
+# =============================================================================
+# SWE-Smith agentic post-training — torchtune config.
+#
+# This is the one pipeline that does NOT use LLaMA-Factory. SWE-Smith's official
+# recipe is torchtune, and we follow it.
+#
+# Everything a run needs to change (base model, data file, output dir) is
+# overridable on the `tune run` command line — see run_posttrain.sh. You should
+# not need to edit this file to switch between the baseline and the mid-trained
+# arm.
+#
+# Hyperparameters are Table 8 of the paper (Appendix C).
+# =============================================================================
+
+exp_name: swe-smith-posttrain
+output_dir: ./outputs/${exp_name}
+
+# --- Model ------------------------------------------------------------------
+# The 7B Qwen2.5 architecture. For a different size, swap both components
+# (e.g. torchtune.models.qwen2_5.qwen2_5_14b_instruct).
+model:
+  _component_: torchtune.models.qwen2_5.qwen2_5_7b_instruct
+
+# EDIT ME (or override on the CLI) — the directory holding the checkpoint to
+# start from. Two runs reproduce the paper's row-pair:
+#   baseline : a local copy of Qwen/Qwen2.5-Coder-7B-Instruct
+#   ours     : the FIM mid-trained checkpoint from ../../midtraining
+#
+# torchtune reads the tokenizer out of this same directory, and needs the
+# safetensors shards listed explicitly. If your checkpoint has a different
+# number of shards, fix `checkpoint_files` to match — a mismatch here fails
+# loudly at startup, it does not silently load a partial model.
+tokenizer:
+  _component_: torchtune.models.qwen2_5.qwen2_5_tokenizer
+  path: /path/to/Qwen2.5-Coder-7B-Instruct/vocab.json
+  merges_file: /path/to/Qwen2.5-Coder-7B-Instruct/merges.txt
+  max_seq_len: 32768
+
+checkpointer:
+  _component_: torchtune.training.FullModelHFCheckpointer
+  checkpoint_dir: /path/to/Qwen2.5-Coder-7B-Instruct
+  checkpoint_files: [
+    model-00001-of-00004.safetensors,
+    model-00002-of-00004.safetensors,
+    model-00003-of-00004.safetensors,
+    model-00004-of-00004.safetensors,
+  ]
+  recipe_checkpoint: null
+  output_dir: ${output_dir}
+  model_type: QWEN2
+  safe_serialization: True
+resume_from_checkpoint: False
+
+# --- Data -------------------------------------------------------------------
+# Produced by download_data.py: resolved SWE-Smith trajectories in OpenAI
+# chat format.
+dataset:
+  _component_: torchtune.datasets.chat_dataset
+  source: json
+  data_files: ./data/swe_smith_trajectories.jsonl
+  split: train
+  conversation_column: messages
+  conversation_style: openai
+  train_on_input: False
+  new_system_prompt: null
+  packed: False
+seed: 42
+shuffle: True
+batch_size: 1
+
+# --- Optimizer --------------------------------------------------------------
+# lr 1e-4 is 10x the R2E-Gym rate. That is the upstream SWE-Smith recipe, not a
+# choice of ours — post-training pipelines are used unmodified so that the
+# mid-training delta is the only thing that varies.
+optimizer:
+  _component_: torch.optim.AdamW
+  fused: True
+  weight_decay: 0.01
+  lr: 1e-4
+lr_scheduler:
+  _component_: torchtune.training.lr_schedulers.get_cosine_schedule_with_warmup
+  num_warmup_steps: 5
+optimizer_in_bwd: False
+loss:
+  _component_: torchtune.modules.loss.CEWithChunkedOutputLoss
+
+# --- Training ---------------------------------------------------------------
+epochs: 3
+max_steps_per_epoch: null
+gradient_accumulation_steps: 4    # -> effective batch size 32 on 8 GPUs
+compile: True
+
+# --- Environment ------------------------------------------------------------
+device: cuda
+dtype: bf16
+enable_activation_checkpointing: True
+enable_activation_offloading: False
+
+# --- Logging ----------------------------------------------------------------
+metric_logger:
+  _component_: torchtune.training.metric_logging.DiskLogger
+  log_dir: ${output_dir}/logs
+log_every_n_steps: 1
+log_peak_memory_stats: True

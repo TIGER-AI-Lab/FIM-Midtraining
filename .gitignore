@@ -1,0 +1,13 @@
+# Pipeline output: cloned repos, intermediate JSON, checkpoints, logs, SFT data.
+workdir/
+saves/
+data_construction/workdir/
+
+# Eval output
+traj_*/
+results/
+*.log
+
+__pycache__/
+*.pyc
+.DS_Store

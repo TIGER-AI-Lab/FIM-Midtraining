@@ -1,0 +1,15 @@
+# Core — needed by every step.
+pyyaml>=6.0
+tqdm>=4.65
+
+# Step 4 only: the Gemini API client.
+google-genai>=0.3.0
+
+# Step 5 only: exact token counts in the dataset statistics.
+# Without it the scripts fall back to a chars/4 approximation and still run.
+tiktoken>=0.5.0
+
+# Optional: experiment tracking for step 4 (enable with wandb.enabled in
+# config.yaml, or --wandb). The pipelines run fine without these installed.
+# wandb>=0.16.0
+# weave>=0.51.0

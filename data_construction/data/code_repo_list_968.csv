@@ -1,0 +1,991 @@
+sample_id,repository_url,category,description,notes,license
+0,https://github.com/eriklindernoren/ML-From-Scratch,Category 1: From Scratch,Bare bones NumPy implementations of ML models from linear regression to deep learning,"Excellent code structure, clear separation of concerns, well-documented",MIT License
+1,https://github.com/hyunwoongko/transformer,Category 1: From Scratch,Clean PyTorch implementation of Transformer (Attention Is All You Need),"Excellent code clarity, well-structured, educational",Apache License 2.0
+2,https://github.com/karpathy/minbpe,Category 1: From Scratch,Minimal BPE tokenizer implementation,"Clean code by Karpathy, minimal dependencies, educational",MIT License
+3,https://github.com/karpathy/nanoGPT,Category 1: From Scratch,Simplest GPT implementation for training,"Extremely clean, self-contained, perfect for learning",MIT License
+4,https://github.com/karpathy/micrograd,Category 1: From Scratch,Tiny autograd engine with neural nets,"Only stdlib, educational masterpiece, very small",MIT License
+5,https://github.com/karpathy/minGPT,Category 1: From Scratch,Minimal GPT implementation in PyTorch,"Clean architecture, well-documented, medium size",MIT License
+6,https://github.com/geohot/tinygrad,Category 1: From Scratch,Simple deep learning framework from scratch,"Minimal dependencies, framework implementation",MIT License
+7,https://github.com/yunjey/pytorch-tutorial,Category 1: From Scratch,PyTorch tutorial with clean examples,"Educational, clear code structure, various models",MIT License
+8,https://github.com/eriklindernoren/PyTorch-GAN,Category 1: From Scratch,Minimal PyTorch GAN implementations,"Collection of GAN models, very clean",MIT License
+9,https://github.com/TheAlgorithms/Python,Category 3: Algorithms,Comprehensive collection of algorithms in Python,"Massive collection, well-organized, community-driven",MIT License
+10,https://github.com/keon/algorithms,Category 3: Algorithms,Minimal and clean implementations of data structures and algorithms,"Extremely clean code, minimal dependencies, excellent for learning",MIT License
+11,https://github.com/dennybritz/reinforcement-learning,Category 4: Scientific Computing,"RL algorithms with OpenAI Gym, TensorFlow, exercises and solutions","Comprehensive learning resource, well-documented",MIT License
+12,https://github.com/ahmedfgad/GeneticAlgorithmPython,Category 4: Scientific Computing,PyGAD - comprehensive genetic algorithm library,"Supports Keras, PyTorch, well-documented","BSD 3-Clause ""New"" or ""Revised"" License"
+13,https://github.com/pymc-devs/pymc,Category 4: Scientific Computing,Bayesian modeling and probabilistic programming,"MCMC implementations, statistical models",Apache License 2.0
+14,https://github.com/davidhalter/parso,Category 5: Small Frameworks,Python parser supporting error recovery,"Used by Jedi, supports multiple Python versions",MIT License
+15,https://github.com/eliben/pycparser,Category 5: Small Frameworks,Complete C99 parser in pure Python,"Used by CFFI, no external dependencies","BSD 3-Clause ""New"" or ""Revised"" License"
+16,https://github.com/lark-parser/lark,Category 5: Small Frameworks,Parsing toolkit for Python,"LALR(1) and Earley parsers, pure Python",MIT License
+17,https://github.com/pallets/click,Category 5: Small Frameworks,Command line interface creation kit,"Clean CLI framework, well-architected","BSD 3-Clause ""New"" or ""Revised"" License"
+18,https://github.com/pallets/jinja,Category 5: Small Frameworks,Template engine for Python,Clean template parsing and rendering,"BSD 3-Clause ""New"" or ""Revised"" License"
+19,https://github.com/tiangolo/fastapi,Category 5: Small Frameworks,Modern async web framework,"Clean async patterns, type hints, well-designed",MIT License
+20,https://github.com/pydantic/pydantic,Category 5: Small Frameworks,Data validation using type hints,"Clean validation logic, type-driven",MIT License
+21,https://github.com/explosion/spaCy,Category 2: Domain Specific,Industrial-strength NLP library,"High-quality NLP pipelines, well-architected",MIT License
+22,https://github.com/scrapy/scrapy,Category 2: Domain Specific,Web crawling and scraping framework,"Excellent architecture, async spiders","BSD 3-Clause ""New"" or ""Revised"" License"
+23,https://github.com/Girrajjangid/Machine-Learning-from-Scratch,Category 1: From Scratch,ML algorithms from scratch with Jupyter demos and mathematical explanations,"Interactive notebooks, good for understanding implementations",No License
+24,https://github.com/jadore801120/attention-is-all-you-need-pytorch,Category 1: From Scratch,PyTorch implementation of Transformer with training support,Complete implementation with training pipeline,MIT License
+25,https://github.com/juho-lee/set_transformer,Category 1: From Scratch,Set Transformer implementation,"Research paper implementation, clean code",MIT License
+26,https://github.com/karpathy/pytorch-made,Category 1: From Scratch,MADE autoregressive model implementation,Clean implementation of density estimation,MIT License
+27,https://github.com/karpathy/pytorch-normalizing-flows,Category 1: From Scratch,Normalizing flows in PyTorch,Clear implementation of generative models,No License
+28,https://github.com/joeynmt/joeynmt,Category 1: From Scratch,Minimalist NMT toolkit,Clean neural machine translation code,Apache License 2.0
+29,https://github.com/kuangliu/pytorch-cifar,Category 1: From Scratch,CIFAR models in PyTorch playground,Clean implementations of vision models,MIT License
+30,https://github.com/lucidrains/vit-pytorch,Category 1: From Scratch,Vision Transformer implementations,"Clean ViT implementations, well-organized",MIT License
+31,https://github.com/lucidrains/x-transformers,Category 1: From Scratch,Experimental transformer architectures,"Advanced transformer variants, clean code",MIT License
+32,https://github.com/eriklindernoren/PyTorch-YOLOv3,Category 2: Domain Specific,Minimal PyTorch YOLOv3 implementation,Clean object detection code,GNU General Public License v3.0
+33,https://github.com/johnnycode8/gym_solutions,Category 4: Scientific Computing,Gymnasium RL environments solutions with YouTube tutorials,"Step-by-step tutorials, beginner-friendly",MIT License
+34,https://github.com/rmsolgi/geneticalgorithm,Category 4: Scientific Computing,Genetic algorithm package for Python,"Handles continuous, discrete, mixed variables",MIT License
+35,https://github.com/ericmjl/Network-Analysis-Made-Simple,Category 4: Scientific Computing,Network analysis tutorial with NetworkX,Educational resource with workshops,MIT License
+36,https://github.com/pallets/werkzeug,Category 5: Small Frameworks,WSGI utility library,"HTTP utilities, well-structured","BSD 3-Clause ""New"" or ""Revised"" License"
+37,https://github.com/encode/starlette,Category 5: Small Frameworks,Async web framework toolkit,"Lightweight ASGI framework, clean code","BSD 3-Clause ""New"" or ""Revised"" License"
+38,https://github.com/encode/httpx,Category 5: Small Frameworks,Next-gen HTTP client,"Async HTTP client, clean implementation","BSD 3-Clause ""New"" or ""Revised"" License"
+39,https://github.com/google/python-fire,Category 5: Small Frameworks,Auto-generate CLIs from any Python object,"Clean metaprogramming, reflection-based",Apache License 2.0
+40,https://github.com/streamlit/streamlit,Category 5: Small Frameworks,App framework for ML/data science,Clean reactive programming model,Apache License 2.0
+41,https://github.com/karpathy/llama2.c,Category 1: From Scratch,Pure C inference for Llama 2 with Python training code,"Minimal implementation, excellent for learning LLM internals",MIT License
+42,https://github.com/karpathy/nn-zero-to-hero,Category 1: From Scratch,Neural networks from scratch video series code,Educational masterpiece with videos,MIT License
+43,https://github.com/labmlai/annotated_deep_learning_paper_implementations,Category 1: From Scratch,Paper implementations with annotations,"Excellent documentation, many architectures",MIT License
+44,https://github.com/lucidrains/DALLE2-pytorch,Category 1: From Scratch,DALL-E 2 implementation in PyTorch,Clean diffusion model code,MIT License
+45,https://github.com/lucidrains/imagen-pytorch,Category 1: From Scratch,Google Imagen implementation,Text-to-image diffusion model,MIT License
+46,https://github.com/suno-ai/bark,Category 1: From Scratch,Text-to-audio model,Transformer-based audio generation,MIT License
+47,https://github.com/coqui-ai/TTS,Category 1: From Scratch,Text-to-speech library,Multiple TTS models implemented,Mozilla Public License 2.0
+48,https://github.com/xinntao/Real-ESRGAN,Category 1: From Scratch,Practical image restoration,Super-resolution implementation,"BSD 3-Clause ""New"" or ""Revised"" License"
+49,https://github.com/TencentARC/GFPGAN,Category 1: From Scratch,Face restoration GAN,Face enhancement model,Apache License 2.0
+50,https://github.com/sczhou/CodeFormer,Category 1: From Scratch,Face restoration with codebook,Transformer-based face restoration,Other
+51,https://github.com/lllyasviel/ControlNet,Category 1: From Scratch,Adding control to diffusion,Conditional image generation,Apache License 2.0
+52,https://github.com/mlfoundations/open_clip,Category 1: From Scratch,Open source CLIP implementation,Reproducible CLIP training,MIT License
+53,https://github.com/facebookresearch/mae,Category 1: From Scratch,Masked Autoencoders,Self-supervised vision learning,Creative Commons Attribution Non Commercial 4.0 International
+54,https://github.com/facebookresearch/dino,Category 1: From Scratch,Self-distillation with no labels,Vision transformer training,Apache License 2.0
+55,https://github.com/facebookresearch/dinov2,Category 1: From Scratch,DINOv2 self-supervised,Improved self-supervised vision,Apache License 2.0
+56,https://github.com/EleutherAI/gpt-neox,Category 1: From Scratch,GPT-NeoX-20B implementation,Large-scale LLM training,Apache License 2.0
+57,https://github.com/EleutherAI/gpt-neo,Category 1: From Scratch,GPT-Neo implementation,Open source GPT alternative,MIT License
+58,https://github.com/bigscience-workshop/petals,Category 1: From Scratch,Distributed LLM inference,Run LLMs collaboratively,MIT License
+59,https://github.com/facebookresearch/detr,Category 1: From Scratch,Detection Transformer,End-to-end object detection,Apache License 2.0
+60,https://github.com/microsoft/Swin-Transformer,Category 1: From Scratch,Swin Transformer implementation,Hierarchical vision transformer,MIT License
+61,https://github.com/facebookresearch/ConvNeXt,Category 1: From Scratch,Modernized ConvNet,A ConvNet for the 2020s,MIT License
+62,https://github.com/haotian-liu/LLaVA,Category 1: From Scratch,Large Language and Vision Assistant,Visual instruction tuning,Apache License 2.0
+63,https://github.com/clovaai/deep-text-recognition-benchmark,Category 1: From Scratch,Text recognition benchmark,STR model collection,Apache License 2.0
+64,https://github.com/JaidedAI/EasyOCR,Category 1: From Scratch,Easy-to-use OCR,Multi-language OCR,Apache License 2.0
+65,https://github.com/clovaai/CRAFT-pytorch,Category 1: From Scratch,Text detection model,Character region awareness,MIT License
+66,https://github.com/ytdl-org/youtube-dl,Category 2: Domain Specific,Download videos from YouTube,Comprehensive video downloader,The Unlicense
+67,https://github.com/yt-dlp/yt-dlp,Category 2: Domain Specific,Feature-rich youtube-dl fork,"Active development, more features",The Unlicense
+68,https://github.com/3b1b/manim,Category 2: Domain Specific,Math animation engine,Mathematical animations,MIT License
+69,https://github.com/ManimCommunity/manim,Category 2: Domain Specific,Community fork of manim,Improved manim version,MIT License
+70,https://github.com/sherlock-project/sherlock,Category 2: Domain Specific,Hunt usernames across social networks,OSINT tool,MIT License
+71,https://github.com/locustio/locust,Category 2: Domain Specific,Load testing tool,Scalable user simulation,MIT License
+72,https://github.com/mitmproxy/mitmproxy,Category 2: Domain Specific,Interactive HTTPS proxy,Network debugging tool,MIT License
+73,https://github.com/sqlmapproject/sqlmap,Category 2: Domain Specific,SQL injection tool,Security testing,Other
+74,https://github.com/s0md3v/XSStrike,Category 2: Domain Specific,XSS scanner,Cross-site scripting detection,GNU General Public License v3.0
+75,https://github.com/maurosoria/dirsearch,Category 2: Domain Specific,Web path scanner,Directory brute forcing,GNU General Public License v2.0
+76,https://github.com/laramies/theHarvester,Category 2: Domain Specific,Email and subdomain harvester,OSINT gathering,No License
+77,https://github.com/Gallopsled/pwntools,Category 2: Domain Specific,CTF toolkit,Exploit development,MIT License
+78,https://github.com/python-telegram-bot/python-telegram-bot,Category 2: Domain Specific,Telegram bot API,Bot development,GNU General Public License v3.0
+79,https://github.com/Rapptz/discord.py,Category 2: Domain Specific,Discord API wrapper,Discord bot development,MIT License
+80,https://github.com/tweepy/tweepy,Category 2: Domain Specific,Twitter API library,Twitter integration,MIT License
+81,https://github.com/praw-dev/praw,Category 2: Domain Specific,Reddit API wrapper,Reddit integration,"BSD 2-Clause ""Simplified"" License"
+82,https://github.com/burnash/gspread,Category 2: Domain Specific,Google Sheets API,Spreadsheet automation,MIT License
+83,https://github.com/RaRe-Technologies/gensim,Category 2: Domain Specific,Topic modelling library,NLP topic models,GNU Lesser General Public License v2.1
+84,https://github.com/nltk/nltk,Category 2: Domain Specific,Natural Language Toolkit,Classic NLP library,Apache License 2.0
+85,https://github.com/sloria/TextBlob,Category 2: Domain Specific,Simple NLP library,Easy text processing,MIT License
+86,https://github.com/stanfordnlp/stanza,Category 2: Domain Specific,Stanford NLP library,Multi-language NLP,Apache License 2.0
+87,https://github.com/flairNLP/flair,Category 2: Domain Specific,State-of-art NLP,"NER, POS tagging",MIT License
+88,https://github.com/deepset-ai/haystack,Category 2: Domain Specific,NLP framework,"Question answering, RAG",Apache License 2.0
+89,https://github.com/chroma-core/chroma,Category 2: Domain Specific,Vector database,AI-native embedding database,Apache License 2.0
+90,https://github.com/facebookresearch/faiss,Category 2: Domain Specific,Similarity search library,Efficient similarity search,MIT License
+91,https://github.com/spotify/annoy,Category 2: Domain Specific,Approximate nearest neighbors,Memory-efficient ANN,Apache License 2.0
+92,https://github.com/celery/celery,Category 2: Domain Specific,Distributed task queue,Async task processing,Creative Commons Attribution Share Alike 4.0 International
+93,https://github.com/rq/rq,Category 2: Domain Specific,Simple job queue,Redis-based queue,"BSD 2-Clause ""Simplified"" License"
+94,https://github.com/fabric/fabric,Category 2: Domain Specific,SSH command execution,Remote administration,"BSD 2-Clause ""Simplified"" License"
+95,https://github.com/paramiko/paramiko,Category 2: Domain Specific,SSH2 protocol library,SSH implementation,GNU Lesser General Public License v2.1
+96,https://github.com/donnemartin/interactive-coding-challenges,Category 3: Algorithms,Interactive coding challenges,Jupyter notebooks with solutions,Apache License 2.0
+97,https://github.com/faif/python-patterns,Category 3: Algorithms,Design patterns in Python,Comprehensive pattern collection,No License
+98,https://github.com/networkx/networkx,Category 3: Algorithms,Graph algorithms library,Comprehensive graph library,"BSD 3-Clause ""New"" or ""Revised"" License"
+99,https://github.com/pytransitions/transitions,Category 3: Algorithms,State machine library,Lightweight FSM,MIT License
+100,https://github.com/grantjenks/python-sortedcontainers,Category 3: Algorithms,Sorted collections,"SortedList, SortedDict",Apache License 2.0
+101,https://github.com/seperman/deepdiff,Category 3: Algorithms,Deep difference calculator,Object comparison,MIT License
+102,https://github.com/mahmoud/boltons,Category 3: Algorithms,Python utilities,Stdlib extensions,Other
+103,https://github.com/pytoolz/toolz,Category 3: Algorithms,Functional utilities,Functional programming helpers,"BSD 3-Clause ""New"" or ""Revised"" License"
+104,https://github.com/more-itertools/more-itertools,Category 3: Algorithms,Extended itertools,Iterator utilities,MIT License
+105,https://github.com/jd/tenacity,Category 3: Algorithms,Retry library,Flexible retry mechanism,Apache License 2.0
+106,https://github.com/omry/omegaconf,Category 3: Algorithms,Hierarchical configuration,YAML/dataclass configs,"BSD 3-Clause ""New"" or ""Revised"" License"
+107,https://github.com/facebookresearch/hydra,Category 3: Algorithms,Configuration framework,Dynamic config composition,MIT License
+108,https://github.com/dry-python/returns,Category 3: Algorithms,Typed functional primitives,"Maybe, Result types","BSD 2-Clause ""Simplified"" License"
+109,https://github.com/tobgu/pyrsistent,Category 3: Algorithms,Persistent data structures,Immutable collections,MIT License
+110,https://github.com/tkem/cachetools,Category 3: Algorithms,Extensible memoizing,Various cache algorithms,MIT License
+111,https://github.com/hynek/attrs,Category 3: Algorithms,Classes without boilerplate,Attribute management,MIT License
+112,https://github.com/python-attrs/cattrs,Category 3: Algorithms,Complex objects structuring,Serialization/deserialization,MIT License
+113,https://github.com/Farama-Foundation/Gymnasium,Category 4: Scientific Computing,Maintained Gym fork,Active RL environment library,MIT License
+114,https://github.com/DLR-RM/stable-baselines3,Category 4: Scientific Computing,PyTorch RL algorithms,Production-ready RL,MIT License
+115,https://github.com/thu-ml/tianshou,Category 4: Scientific Computing,RL library,PyTorch RL platform,MIT License
+116,https://github.com/google/dopamine,Category 4: Scientific Computing,RL research framework,TensorFlow RL research,Apache License 2.0
+117,https://github.com/AI4Finance-Foundation/FinRL,Category 4: Scientific Computing,Financial RL,Trading with RL,MIT License
+118,https://github.com/scipy/scipy,Category 4: Scientific Computing,Scientific computing,Core scientific library,"BSD 3-Clause ""New"" or ""Revised"" License"
+119,https://github.com/statsmodels/statsmodels,Category 4: Scientific Computing,Statistical models,Statistics library,"BSD 3-Clause ""New"" or ""Revised"" License"
+120,https://github.com/arviz-devs/arviz,Category 4: Scientific Computing,Bayesian visualization,Exploratory Bayesian analysis,Apache License 2.0
+121,https://github.com/pyro-ppl/pyro,Category 4: Scientific Computing,Probabilistic programming,Deep probabilistic modeling,Apache License 2.0
+122,https://github.com/pyro-ppl/numpyro,Category 4: Scientific Computing,NumPyro,JAX-based probabilistic,Apache License 2.0
+123,https://github.com/cornellius-gp/gpytorch,Category 4: Scientific Computing,Gaussian processes,GP implementation,MIT License
+124,https://github.com/pytorch/botorch,Category 4: Scientific Computing,Bayesian optimization,BO library,MIT License
+125,https://github.com/facebookresearch/nevergrad,Category 4: Scientific Computing,Gradient-free optimization,Derivative-free optimization,MIT License
+126,https://github.com/optuna/optuna,Category 4: Scientific Computing,Hyperparameter optimization,AutoML framework,MIT License
+127,https://github.com/hyperopt/hyperopt,Category 4: Scientific Computing,Hyperparameter optimization,Distributed optimization,"BSD 3-Clause ""New"" or ""Revised"" License"
+128,https://github.com/pycaret/pycaret,Category 4: Scientific Computing,Low-code ML,Easy ML workflows,MIT License
+129,https://github.com/EpistasisLab/tpot,Category 4: Scientific Computing,Automated ML,Genetic programming ML,GNU Lesser General Public License v3.0
+130,https://github.com/dask/dask,Category 4: Scientific Computing,Parallel computing,Scalable analytics,"BSD 3-Clause ""New"" or ""Revised"" License"
+131,https://github.com/modin-project/modin,Category 4: Scientific Computing,Parallel pandas,Scalable dataframes,Apache License 2.0
+132,https://github.com/pola-rs/polars,Category 4: Scientific Computing,Fast DataFrames,Rust-based DataFrames,MIT License
+133,https://github.com/numba/numba,Category 4: Scientific Computing,JIT compiler,Fast numerical code,"BSD 2-Clause ""Simplified"" License"
+134,https://github.com/cupy/cupy,Category 4: Scientific Computing,GPU NumPy,CUDA arrays,MIT License
+135,https://github.com/taichi-dev/taichi,Category 4: Scientific Computing,Graphics programming,High-performance computing,Apache License 2.0
+136,https://github.com/pallets/itsdangerous,Category 5: Small Frameworks,Data signing library,Cryptographic signing,"BSD 3-Clause ""New"" or ""Revised"" License"
+137,https://github.com/Textualize/rich,Category 5: Small Frameworks,Rich text terminal,Beautiful terminal output,MIT License
+138,https://github.com/tqdm/tqdm,Category 5: Small Frameworks,Progress bar,Fast progress bars,Mozilla Public License 2.0
+139,https://github.com/Textualize/textual,Category 5: Small Frameworks,TUI framework,Terminal UI,MIT License
+140,https://github.com/prompt-toolkit/python-prompt-toolkit,Category 5: Small Frameworks,Interactive CLI,Command line toolkit,"BSD 3-Clause ""New"" or ""Revised"" License"
+141,https://github.com/tartley/colorama,Category 5: Small Frameworks,Cross-platform colored terminal,Terminal colors,"BSD 3-Clause ""New"" or ""Revised"" License"
+142,https://github.com/Delgan/loguru,Category 5: Small Frameworks,Logging made simple,Better logging,MIT License
+143,https://github.com/hynek/structlog,Category 5: Small Frameworks,Structured logging,Structured log events,Apache License 2.0
+144,https://github.com/gruns/icecream,Category 5: Small Frameworks,Print debugging,Better print debugging,MIT License
+145,https://github.com/cool-RR/PySnooper,Category 5: Small Frameworks,Debug decorator,Never use print again,MIT License
+146,https://github.com/inducer/pudb,Category 5: Small Frameworks,Visual debugger,Full-screen debugger,MIT License
+147,https://github.com/HypothesisWorks/hypothesis,Category 5: Small Frameworks,Property-based testing,Generative testing,Mozilla Public License 2.0
+148,https://github.com/spulec/moto,Category 5: Small Frameworks,AWS mocking,Mock AWS services,Apache License 2.0
+149,https://github.com/kevin1024/vcrpy,Category 5: Small Frameworks,HTTP recording,Record HTTP interactions,MIT License
+150,https://github.com/getsentry/responses,Category 5: Small Frameworks,Requests mocking,Mock HTTP responses,Apache License 2.0
+151,https://github.com/aio-libs/aiohttp,Category 5: Small Frameworks,Async HTTP,Async web framework,Apache License 2.0
+152,https://github.com/MagicStack/uvloop,Category 5: Small Frameworks,Fast event loop,Drop-in asyncio replacement,Apache License 2.0
+153,https://github.com/python-trio/trio,Category 5: Small Frameworks,Async I/O library,Alternative to asyncio,MIT License
+154,https://github.com/agronholm/anyio,Category 5: Small Frameworks,Async compatibility,Backend-agnostic async,MIT License
+155,https://github.com/benoitc/gunicorn,Category 5: Small Frameworks,WSGI HTTP server,Production web server,MIT License
+156,https://github.com/encode/uvicorn,Category 5: Small Frameworks,ASGI server,Fast ASGI server,"BSD 3-Clause ""New"" or ""Revised"" License"
+157,https://github.com/falconry/falcon,Category 5: Small Frameworks,REST framework,Minimal REST API,Apache License 2.0
+158,https://github.com/bottlepy/bottle,Category 5: Small Frameworks,Micro web framework,Single file framework,MIT License
+159,https://github.com/cherrypy/cherrypy,Category 5: Small Frameworks,Web framework,Object-oriented framework,"BSD 3-Clause ""New"" or ""Revised"" License"
+160,https://github.com/sanic-org/sanic,Category 5: Small Frameworks,Async web framework,Fast async HTTP,MIT License
+161,https://github.com/marshmallow-code/marshmallow,Category 5: Small Frameworks,Serialization library,Object serialization,MIT License
+162,https://github.com/pygame/pygame,Category 6: Visualization and Games,Game development library,Python game framework,GNU Lesser General Public License v2.1
+163,https://github.com/pythonarcade/arcade,Category 6: Visualization and Games,2D game library,Modern game library,MIT License
+164,https://github.com/pyglet/pyglet,Category 6: Visualization and Games,OpenGL library,Windowing and multimedia,"BSD 3-Clause ""New"" or ""Revised"" License"
+165,https://github.com/kitao/pyxel,Category 6: Visualization and Games,Retro game engine,Fantasy console,MIT License
+166,https://github.com/lordmauve/pgzero,Category 6: Visualization and Games,Pygame Zero,Simplified pygame,GNU Lesser General Public License v3.0
+167,https://github.com/PySimpleGUI/PySimpleGUI,Category 6: Visualization and Games,Simple GUI,Easy GUI creation,GNU Lesser General Public License v3.0
+168,https://github.com/kivy/kivy,Category 6: Visualization and Games,Cross-platform UI,Mobile/desktop UI,MIT License
+169,https://github.com/niklasf/python-chess,Category 6: Visualization and Games,Chess library,Move generation,GNU General Public License v3.0
+170,https://github.com/plotly/plotly.py,Category 6: Visualization and Games,Interactive visualization,Interactive plots,MIT License
+171,https://github.com/bokeh/bokeh,Category 6: Visualization and Games,Interactive visualization,Browser-based plots,"BSD 3-Clause ""New"" or ""Revised"" License"
+172,https://github.com/altair-viz/altair,Category 6: Visualization and Games,Declarative visualization,Vega-Lite wrapper,"BSD 3-Clause ""New"" or ""Revised"" License"
+173,https://github.com/holoviz/holoviews,Category 6: Visualization and Games,High-level visualization,Data-driven plotting,"BSD 3-Clause ""New"" or ""Revised"" License"
+174,https://github.com/has2k1/plotnine,Category 6: Visualization and Games,Grammar of graphics,ggplot2 for Python,MIT License
+175,https://github.com/pyqtgraph/pyqtgraph,Category 6: Visualization and Games,Scientific graphics,Fast plotting,MIT License
+176,https://github.com/pyvista/pyvista,Category 6: Visualization and Games,3D visualization,VTK wrapper,MIT License
+177,https://github.com/jakevdp/PythonDataScienceHandbook,Category 7: Educational,Data science book,Jupyter notebooks,MIT License
+178,https://github.com/ageron/handson-ml2,Category 7: Educational,ML book code,Hands-on ML book,Apache License 2.0
+179,https://github.com/ageron/handson-ml3,Category 7: Educational,ML book 3rd edition,Updated ML book,Apache License 2.0
+180,https://github.com/wesm/pydata-book,Category 7: Educational,Python for Data Analysis,Classic data book,MIT License
+181,https://github.com/fchollet/deep-learning-with-python-notebooks,Category 7: Educational,Deep learning book,Keras creator's book,MIT License
+182,https://github.com/fastai/fastbook,Category 7: Educational,FastAI book,Practical deep learning,GNU Affero General Public License v3.0
+183,https://github.com/fastai/fastai,Category 7: Educational,FastAI library,Deep learning library,Apache License 2.0
+184,https://github.com/d2l-ai/d2l-en,Category 7: Educational,Dive into Deep Learning,Interactive DL book,Creative Commons Attribution Share Alike 4.0 International
+185,https://github.com/probml/pyprobml,Category 7: Educational,Probabilistic ML book,Murphy's book code,MIT License
+186,https://github.com/joelgrus/data-science-from-scratch,Category 7: Educational,Data science book,From scratch implementations,MIT License
+187,https://github.com/trekhleb/learn-python,Category 7: Educational,Python learning,Language features,MIT License
+188,https://github.com/jerry-git/learn-python3,Category 7: Educational,Python 3 learning,Jupyter tutorials,MIT License
+189,https://github.com/micropython/micropython,Category 8: Compilers,MicroPython,Python for microcontrollers,MIT License
+190,https://github.com/cython/cython,Category 8: Compilers,Python to C compiler,Optimizing compiler,Apache License 2.0
+191,https://github.com/Nuitka/Nuitka,Category 8: Compilers,Python compiler,Compiles to C,GNU Affero General Public License v3.0
+192,https://github.com/RustPython/RustPython,Category 8: Compilers,Python in Rust,Rust implementation,MIT License
+193,https://github.com/dabeaz/ply,Category 8: Compilers,Python lex-yacc,Classic parser tools,No License
+194,https://github.com/pyparsing/pyparsing,Category 8: Compilers,Parsing module,Grammar-based parsing,MIT License
+195,https://github.com/erikrose/parsimonious,Category 8: Compilers,PEG parser,Clean PEG parser,MIT License
+196,https://github.com/pandas-dev/pandas,Category 9: Data Processing,Data analysis library,Core data library,"BSD 3-Clause ""New"" or ""Revised"" License"
+197,https://github.com/numpy/numpy,Category 9: Data Processing,Numerical computing,Core numerical library,"BSD 3-Clause ""New"" or ""Revised"" License "
+198,https://github.com/apache/airflow,Category 9: Data Processing,Workflow management,DAG scheduling,Apache License 2.0
+199,https://github.com/prefecthq/prefect,Category 9: Data Processing,Modern workflow,Dataflow automation,Apache License 2.0
+200,https://github.com/dagster-io/dagster,Category 9: Data Processing,Data orchestrator,Data pipeline tool,Apache License 2.0
+201,https://github.com/spotify/luigi,Category 9: Data Processing,Pipeline framework,Batch processing,Apache License 2.0
+202,https://github.com/great-expectations/great_expectations,Category 9: Data Processing,Data validation,Data quality,Apache License 2.0
+203,https://github.com/pandera-dev/pandera,Category 9: Data Processing,DataFrame validation,Type checking for data,MIT License
+204,https://github.com/mlflow/mlflow,Category 9: Data Processing,ML lifecycle,Experiment tracking,Apache License 2.0
+205,https://github.com/wandb/wandb,Category 9: Data Processing,ML experiment tracking,Experiment management,MIT License
+206,https://github.com/iterative/dvc,Category 9: Data Processing,Data version control,ML data versioning,Apache License 2.0
+207,https://github.com/evidentlyai/evidently,Category 9: Data Processing,ML monitoring,Model monitoring,Apache License 2.0
+208,https://github.com/secdev/scapy,Category 10: Networking and Security,Packet manipulation,Network tool,GNU General Public License v2.0
+209,https://github.com/gevent/gevent,Category 10: Networking and Security,Coroutine networking,Green threads,MIT License
+210,https://github.com/pyca/cryptography,Category 10: Networking and Security,Cryptographic recipes,Crypto library,Apache License 2.0
+211,https://github.com/Legrandin/pycryptodome,Category 10: Networking and Security,Cryptography library,PyCrypto fork,"BSD 2-Clause ""Simplified"" License"
+212,https://github.com/lucidrains/denoising-diffusion-pytorch,Category 1: From Scratch,Denoising diffusion implementation,Clean diffusion model,MIT License
+213,https://github.com/lucidrains/perceiver-pytorch,Category 1: From Scratch,Perceiver implementation,General perception model,MIT License
+214,https://github.com/lucidrains/reformer-pytorch,Category 1: From Scratch,Reformer implementation,Efficient transformer,MIT License
+215,https://github.com/lucidrains/linear-attention-transformer,Category 1: From Scratch,Linear attention transformer,Efficient attention,MIT License
+216,https://github.com/lucidrains/performer-pytorch,Category 1: From Scratch,Performer implementation,FAVOR+ attention,MIT License
+217,https://github.com/lucidrains/lambda-networks,Category 1: From Scratch,Lambda Networks,Attention alternative,MIT License
+218,https://github.com/lucidrains/bottleneck-transformer-pytorch,Category 1: From Scratch,Bottleneck Transformer,Vision transformer variant,MIT License
+219,https://github.com/lucidrains/g-mlp-pytorch,Category 1: From Scratch,gMLP implementation,MLP-based architecture,MIT License
+220,https://github.com/lucidrains/mlp-mixer-pytorch,Category 1: From Scratch,MLP-Mixer implementation,All-MLP architecture,MIT License
+221,https://github.com/lucidrains/res-mlp-pytorch,Category 1: From Scratch,ResMLP implementation,Residual MLP,MIT License
+222,https://github.com/lucidrains/memory-efficient-attention-pytorch,Category 1: From Scratch,Memory efficient attention,Flash attention style,MIT License
+223,https://github.com/lucidrains/flash-attention-jax,Category 1: From Scratch,Flash attention in JAX,Efficient attention JAX,MIT License
+224,https://github.com/arogozhnikov/einops,Category 5: Small Frameworks,Tensor operations,Flexible tensor manipulation,MIT License
+225,https://github.com/google/trax,Category 1: From Scratch,Deep learning library,"Clear code, Reformer",Apache License 2.0
+226,https://github.com/facebookresearch/xformers,Category 1: From Scratch,Transformers building blocks,Efficient transformers,"BSD 3-Clause ""New"" or ""Revised"" License"
+227,https://github.com/kingoflolz/mesh-transformer-jax,Category 1: From Scratch,GPT-J implementation,Large scale JAX training,Apache License 2.0
+228,https://github.com/BlinkDL/RWKV-LM,Category 1: From Scratch,RWKV language model,RNN-Transformer hybrid,Apache License 2.0
+229,https://github.com/BlinkDL/ChatRWKV,Category 1: From Scratch,ChatRWKV,RWKV chat model,Apache License 2.0
+230,https://github.com/alpa-projects/alpa,Category 1: From Scratch,Auto parallelization,JAX auto parallelism,Apache License 2.0
+231,https://github.com/young-geng/EasyLM,Category 1: From Scratch,Easy LLM training,JAX LLM framework,Apache License 2.0
+232,https://github.com/CarperAI/trlx,Category 1: From Scratch,RLHF library,Reinforcement learning from human feedback,MIT License
+233,https://github.com/lvwerra/trl,Category 1: From Scratch,Transformer RL,PPO for LLMs,Apache License 2.0
+234,https://github.com/huggingface/peft,Category 1: From Scratch,Parameter-efficient fine-tuning,"LoRA, prefix tuning",Apache License 2.0
+235,https://github.com/TimDettmers/bitsandbytes,Category 1: From Scratch,8-bit optimizers,Quantization library,MIT License
+236,https://github.com/IST-DASLab/gptq,Category 1: From Scratch,GPT quantization,4-bit quantization,Apache License 2.0
+237,https://github.com/ggerganov/llama.cpp,Category 1: From Scratch,LLaMA in C++,CPU inference,MIT License
+238,https://github.com/abetlen/llama-cpp-python,Category 1: From Scratch,Python bindings for llama.cpp,Python LLaMA interface,MIT License
+239,https://github.com/vllm-project/vllm,Category 1: From Scratch,Fast LLM inference,PagedAttention,Apache License 2.0
+240,https://github.com/huggingface/text-generation-inference,Category 1: From Scratch,Text generation server,Production LLM serving,Apache License 2.0
+241,https://github.com/oobabooga/text-generation-webui,Category 1: From Scratch,Text generation UI,LLM web interface,GNU Affero General Public License v3.0
+242,https://github.com/lm-sys/FastChat,Category 1: From Scratch,FastChat,Training and serving,Apache License 2.0
+243,https://github.com/imartinez/privateGPT,Category 1: From Scratch,Private GPT,Local document QA,Apache License 2.0
+244,https://github.com/Significant-Gravitas/Auto-GPT,Category 1: From Scratch,Auto-GPT,Autonomous GPT,MIT License
+245,https://github.com/microsoft/guidance,Category 1: From Scratch,Guidance language,LLM control,MIT License
+246,https://github.com/microsoft/semantic-kernel,Category 1: From Scratch,Semantic Kernel,LLM orchestration,MIT License
+247,https://github.com/langchain-ai/langchain,Category 1: From Scratch,LangChain,LLM application framework,MIT License
+248,https://github.com/run-llama/llama_index,Category 1: From Scratch,LlamaIndex,Data framework for LLMs,MIT License
+249,https://github.com/openai/whisper,Category 1: From Scratch,Whisper ASR,Speech recognition,MIT License
+250,https://github.com/guillaumekln/faster-whisper,Category 1: From Scratch,Faster Whisper,CTranslate2 Whisper,MIT License
+251,https://github.com/m-bain/whisperX,Category 1: From Scratch,WhisperX,Whisper with alignment,"BSD 2-Clause ""Simplified"" License"
+252,https://github.com/Vaibhavs10/insanely-fast-whisper,Category 1: From Scratch,Fast Whisper,Optimized Whisper,Apache License 2.0
+253,https://github.com/sanchit-gandhi/whisper-jax,Category 1: From Scratch,Whisper JAX,JAX Whisper,Apache License 2.0
+254,https://github.com/jantic/DeOldify,Category 1: From Scratch,DeOldify,Image colorization,MIT License
+255,https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix,Category 1: From Scratch,CycleGAN pix2pix,Image translation,Other
+256,https://github.com/NVlabs/stylegan2,Category 1: From Scratch,StyleGAN2,Official TF impl,Other
+257,https://github.com/NVlabs/stylegan3,Category 1: From Scratch,StyleGAN3,Alias-free GAN,Other
+258,https://github.com/rosinality/stylegan2-pytorch,Category 1: From Scratch,StyleGAN2 PyTorch,Clean PyTorch impl,MIT License
+259,https://github.com/AliaksandrSiarohin/first-order-model,Category 1: From Scratch,First Order Motion,Motion transfer,MIT License
+260,https://github.com/deepfakes/faceswap,Category 1: From Scratch,Faceswap,Face swapping,GNU General Public License v3.0
+261,https://github.com/iperov/DeepFaceLab,Category 1: From Scratch,DeepFaceLab,Face manipulation,GNU General Public License v3.0
+262,https://github.com/serengil/deepface,Category 1: From Scratch,DeepFace,Face recognition,MIT License
+263,https://github.com/ageitgey/face_recognition,Category 1: From Scratch,Face recognition,Simple face rec,MIT License
+264,https://github.com/1adrianb/face-alignment,Category 1: From Scratch,Face alignment,2D/3D face landmarks,"BSD 3-Clause ""New"" or ""Revised"" License"
+265,https://github.com/timesler/facenet-pytorch,Category 1: From Scratch,FaceNet PyTorch,Face recognition,MIT License
+266,https://github.com/deepinsight/insightface,Category 1: From Scratch,InsightFace,Face analysis,MIT License
+267,https://github.com/minivision-ai/photo2cartoon,Category 1: From Scratch,Photo2Cartoon,Image stylization,MIT License
+268,https://github.com/danielgatis/rembg,Category 1: From Scratch,Remove background,Background removal,MIT License
+269,https://github.com/nadermx/backgroundremover,Category 1: From Scratch,Background remover,Video bg removal,MIT License
+270,https://github.com/PeterL1n/RobustVideoMatting,Category 1: From Scratch,Robust Video Matting,Video matting,GNU General Public License v3.0
+271,https://github.com/sberbank-ai/sber-swap,Category 1: From Scratch,SberSwap,Face swap,Apache License 2.0
+272,https://github.com/s0md3v/roop,Category 1: From Scratch,Roop,One-click face swap,GNU General Public License v3.0
+273,https://github.com/facefusion/facefusion,Category 1: From Scratch,FaceFusion,Face manipulation,Other
+274,https://github.com/facebookresearch/audiocraft,Category 1: From Scratch,AudioCraft,Audio generation,MIT License
+275,https://github.com/facebookresearch/encodec,Category 1: From Scratch,EnCodec,Neural audio codec,MIT License
+276,https://github.com/svc-develop-team/so-vits-svc,Category 1: From Scratch,SO-VITS-SVC,Singing voice conversion,GNU Affero General Public License v3.0
+277,https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI,Category 1: From Scratch,RVC,Voice conversion,MIT License
+278,https://github.com/jik876/hifi-gan,Category 1: From Scratch,HiFi-GAN,Speech synthesis,MIT License
+279,https://github.com/jaywalnut310/vits,Category 1: From Scratch,VITS,End-to-end TTS,MIT License
+280,https://github.com/Plachtaa/VITS-fast-fine-tuning,Category 1: From Scratch,VITS fine-tuning,Fast TTS training,Apache License 2.0
+281,https://github.com/cmu-db/ottertune,Category 2: Domain Specific,OtterTune,Database tuning ML,Other
+282,https://github.com/OpenBB-finance/OpenBBTerminal,Category 2: Domain Specific,OpenBB Terminal,Investment research,GNU Affero General Public License v3.0
+283,https://github.com/ranaroussi/yfinance,Category 2: Domain Specific,yfinance,Yahoo Finance API,Apache License 2.0
+284,https://github.com/pmorissette/bt,Category 2: Domain Specific,bt backtest,Backtesting,MIT License
+285,https://github.com/pmorissette/ffn,Category 2: Domain Specific,ffn,Financial functions,MIT License
+286,https://github.com/erdewit/ib_insync,Category 2: Domain Specific,IB Insync,Interactive Brokers,"BSD 2-Clause ""Simplified"" License"
+287,https://github.com/kernc/backtesting.py,Category 2: Domain Specific,Backtesting.py,Simple backtesting,GNU Affero General Public License v3.0
+288,https://github.com/google/timesketch,Category 2: Domain Specific,Timesketch,Forensic timeline,Apache License 2.0
+289,https://github.com/zulip/zulip,Category 2: Domain Specific,Zulip,Team chat,Apache License 2.0
+290,https://github.com/healthchecks/healthchecks,Category 2: Domain Specific,Healthchecks,Cron monitoring,"BSD 3-Clause ""New"" or ""Revised"" License"
+291,https://github.com/netbox-community/netbox,Category 2: Domain Specific,NetBox,Network documentation,Apache License 2.0
+292,https://github.com/ArchiveBox/ArchiveBox,Category 2: Domain Specific,ArchiveBox,Web archiving,MIT License
+293,https://github.com/wagtail/wagtail,Category 2: Domain Specific,Wagtail CMS,Django CMS,"BSD 3-Clause ""New"" or ""Revised"" License"
+294,https://github.com/joke2k/faker,Category 5: Small Frameworks,Fake data generator,Test data generation,MIT License
+295,https://github.com/samuelcolvin/watchfiles,Category 5: Small Frameworks,File watching,Rust-backed file watcher,MIT License
+,,,,,
+297,https://github.com/python-jsonschema/jsonschema,Category 5: Small Frameworks,JSON Schema validator,Schema validation,MIT License
+298,https://github.com/Julian/jsonschema,Category 5: Small Frameworks,JSON Schema implementation,Full JSON Schema support,MIT License
+299,https://github.com/ijl/orjson,Category 5: Small Frameworks,Fast JSON library,Rust-based JSON,Apache License 2.0
+300,https://github.com/ultrajson/ultrajson,Category 5: Small Frameworks,Ultra fast JSON,C-based JSON,"BSD 3-Clause ""New"" or ""Revised"" License"
+301,https://github.com/msgspec/msgspec,Category 5: Small Frameworks,Fast serialization,MessagePack/JSON,"BSD 3-Clause ""New"" or ""Revised"" License"
+302,https://github.com/samuelcolvin/dirty-equals,Category 5: Small Frameworks,Dirty equals,Testing utility,MIT License
+303,https://github.com/pydantic/pydantic-settings,Category 5: Small Frameworks,Pydantic settings,Settings management,MIT License
+304,https://github.com/unionai-oss/pandera,Category 5: Small Frameworks,DataFrame validation,Data validation,MIT License
+305,https://github.com/tiangolo/typer,Category 5: Small Frameworks,CLI framework,Modern CLI building,MIT License
+306,https://github.com/tiangolo/sqlmodel,Category 5: Small Frameworks,SQL databases in Python,SQLAlchemy + Pydantic,MIT License
+307,https://github.com/samuelcolvin/arq,Category 5: Small Frameworks,Async job queue,Redis job queue,MIT License
+308,https://github.com/encode/databases,Category 5: Small Frameworks,Async database support,Async DB interface,"BSD 3-Clause ""New"" or ""Revised"" License"
+309,https://github.com/piccolo-orm/piccolo,Category 5: Small Frameworks,Async ORM,Modern async ORM,MIT License
+310,https://github.com/tortoise/tortoise-orm,Category 5: Small Frameworks,Async ORM,Django-like async ORM,Apache License 2.0
+311,https://github.com/sqlalchemy/sqlalchemy,Category 5: Small Frameworks,SQL toolkit and ORM,Database toolkit,MIT License
+312,https://github.com/MagicStack/asyncpg,Category 5: Small Frameworks,Async PostgreSQL,Fast PostgreSQL driver,Apache License 2.0
+313,https://github.com/encode/orm,Category 5: Small Frameworks,Async ORM,Simple async ORM,"BSD 3-Clause ""New"" or ""Revised"" License"
+314,https://github.com/ponyorm/pony,Category 5: Small Frameworks,Pony ORM,Pythonic ORM,Apache License 2.0
+315,https://github.com/coleifer/peewee,Category 5: Small Frameworks,Simple ORM,Lightweight ORM,MIT License
+316,https://github.com/mongodb/motor,Category 5: Small Frameworks,Async MongoDB driver,MongoDB async,Apache License 2.0
+317,https://github.com/redis/redis-py,Category 5: Small Frameworks,Redis client,Python Redis client,MIT License
+318,https://github.com/aio-libs/aioredis-py,Category 5: Small Frameworks,Async Redis,Async Redis client,MIT License
+319,https://github.com/miguelgrinberg/python-socketio,Category 5: Small Frameworks,Socket.IO,Real-time communication,MIT License
+320,https://github.com/miguelgrinberg/Flask-SocketIO,Category 5: Small Frameworks,Flask-SocketIO,Flask WebSocket,MIT License
+321,https://github.com/aaugustin/websockets,Category 5: Small Frameworks,WebSocket library,Async WebSockets,"BSD 3-Clause ""New"" or ""Revised"" License"
+322,https://github.com/python-websockets/websockets,Category 5: Small Frameworks,WebSocket implementation,WebSocket protocol,"BSD 3-Clause ""New"" or ""Revised"" License"
+323,https://github.com/graphql-python/graphene,Category 5: Small Frameworks,GraphQL framework,GraphQL in Python,MIT License
+324,https://github.com/strawberry-graphql/strawberry,Category 5: Small Frameworks,GraphQL library,Type-first GraphQL,MIT License
+325,https://github.com/mirumee/ariadne,Category 5: Small Frameworks,Schema-first GraphQL,GraphQL framework,"BSD 3-Clause ""New"" or ""Revised"" License"
+326,https://github.com/graphql-python/graphql-core,Category 5: Small Frameworks,GraphQL core,GraphQL implementation,MIT License
+327,https://github.com/python-restx/flask-restx,Category 5: Small Frameworks,Flask REST extensions,REST API building,"BSD 3-Clause ""New"" or ""Revised"" License"
+328,https://github.com/flask-restful/flask-restful,Category 5: Small Frameworks,Flask RESTful,REST API framework,"BSD 3-Clause ""New"" or ""Revised"" License"
+329,https://github.com/dpgaspar/Flask-AppBuilder,Category 5: Small Frameworks,Flask app builder,Rapid app development,"BSD 3-Clause ""New"" or ""Revised"" License"
+330,https://github.com/pyeve/eve,Category 5: Small Frameworks,REST API framework,MongoDB REST,Other
+331,https://github.com/sloria/flask-marshmallow,Category 5: Small Frameworks,Flask + Marshmallow,Serialization integration,MIT License
+332,https://github.com/python-babel/babel,Category 5: Small Frameworks,Internationalization,i18n utilities,"BSD 3-Clause ""New"" or ""Revised"" License"
+333,https://github.com/mitsuhiko/flask-babel,Category 5: Small Frameworks,Flask i18n,Flask internationalization,Other
+334,https://github.com/django-extensions/django-extensions,Category 5: Small Frameworks,Django extensions,Django utilities,MIT License
+335,https://github.com/jazzband/django-debug-toolbar,Category 5: Small Frameworks,Django debug toolbar,Debugging tool,"BSD 3-Clause ""New"" or ""Revised"" License"
+336,https://github.com/jazzband/django-redis,Category 5: Small Frameworks,Django Redis,Redis cache backend,Other
+337,https://github.com/django-oscar/django-oscar,Category 2: Domain Specific,Django e-commerce,E-commerce framework,"BSD 3-Clause ""New"" or ""Revised"" License"
+338,https://github.com/saleor/saleor,Category 2: Domain Specific,E-commerce platform,GraphQL e-commerce,"BSD 3-Clause ""New"" or ""Revised"" License"
+339,https://github.com/pretix/pretix,Category 2: Domain Specific,Ticket sales,Event ticketing,GNU Affero General Public License v3.0
+340,https://github.com/django-cms/django-cms,Category 2: Domain Specific,Django CMS,Content management,"BSD 3-Clause ""New"" or ""Revised"" License"
+341,https://github.com/mezzanine/mezzanine,Category 2: Domain Specific,Django CMS,Content management,"BSD 2-Clause ""Simplified"" License"
+342,https://github.com/stephenmcd/mezzanine,Category 2: Domain Specific,Mezzanine CMS,Blog/CMS platform,"BSD 2-Clause ""Simplified"" License"
+343,https://github.com/edx/edx-platform,Category 2: Domain Specific,edX platform,Online learning,GNU Affero General Public License v3.0
+344,https://github.com/overhangio/tutor,Category 2: Domain Specific,Open edX Docker,edX deployment,GNU Affero General Public License v3.0
+345,https://github.com/frappe/frappe,Category 2: Domain Specific,Frappe framework,Web framework,MIT License
+346,https://github.com/frappe/erpnext,Category 2: Domain Specific,ERPNext,ERP system,GNU General Public License v3.0
+347,https://github.com/odoo/odoo,Category 2: Domain Specific,Odoo ERP,Business apps,GNU Affero General Public License v3.0
+348,https://github.com/tryton/tryton,Category 2: Domain Specific,Tryton,Business platform,No License
+349,https://github.com/indico/indico,Category 2: Domain Specific,Indico,Event management,MIT License
+350,https://github.com/Miserlou/Zappa,Category 2: Domain Specific,Serverless Python,AWS Lambda deploy,MIT License
+351,https://github.com/aws/chalice,Category 2: Domain Specific,AWS Chalice,Serverless framework,Apache License 2.0
+352,https://github.com/serverless/serverless,Category 2: Domain Specific,Serverless Framework,Multi-cloud serverless,Other
+353,https://github.com/pulumi/pulumi,Category 2: Domain Specific,Pulumi IaC,Infrastructure as code,Apache License 2.0
+354,https://github.com/hashicorp/terraform,Category 2: Domain Specific,Terraform,Infrastructure provisioning,Other
+355,https://github.com/ansible/ansible,Category 2: Domain Specific,Ansible automation,IT automation,GNU General Public License v3.0
+356,https://github.com/saltstack/salt,Category 2: Domain Specific,SaltStack,Configuration management,Apache License 2.0
+357,https://github.com/ray-project/ray,Category 4: Scientific Computing,Ray distributed computing,Distributed Python,Apache License 2.0
+358,https://github.com/vaexio/vaex,Category 4: Scientific Computing,Out-of-core DataFrames,Big data analysis,MIT License
+359,https://github.com/rapidsai/cudf,Category 4: Scientific Computing,GPU DataFrames,CUDA DataFrames,Apache License 2.0
+360,https://github.com/h2oai/h2o-3,Category 4: Scientific Computing,H2O ML platform,AutoML platform,Apache License 2.0
+361,https://github.com/autogluon/autogluon,Category 4: Scientific Computing,AutoGluon,AutoML toolkit,Apache License 2.0
+362,https://github.com/microsoft/FLAML,Category 4: Scientific Computing,FLAML AutoML,Fast AutoML,MIT License
+363,https://github.com/automl/auto-sklearn,Category 4: Scientific Computing,Auto-sklearn,Automated ML,"BSD 3-Clause ""New"" or ""Revised"" License"
+364,https://github.com/alteryx/featuretools,Category 4: Scientific Computing,Featuretools,Feature engineering,"BSD 3-Clause ""New"" or ""Revised"" License"
+365,https://github.com/feature-engine/feature_engine,Category 4: Scientific Computing,Feature Engine,Feature engineering,"BSD 3-Clause ""New"" or ""Revised"" License"
+366,https://github.com/scikit-learn-contrib/category_encoders,Category 4: Scientific Computing,Category Encoders,Categorical encoding,"BSD 3-Clause ""New"" or ""Revised"" License"
+367,https://github.com/scikit-learn-contrib/imbalanced-learn,Category 4: Scientific Computing,Imbalanced Learn,Imbalanced data,MIT License
+368,https://github.com/scikit-optimize/scikit-optimize,Category 4: Scientific Computing,Scikit-Optimize,Sequential optimization,"BSD 3-Clause ""New"" or ""Revised"" License"
+369,https://github.com/fmfn/BayesianOptimization,Category 4: Scientific Computing,Bayesian Optimization,Bayesian optimization,MIT License
+370,https://github.com/SheffieldML/GPy,Category 4: Scientific Computing,GPy,Gaussian processes,"BSD 3-Clause ""New"" or ""Revised"" License"
+371,https://github.com/dfm/emcee,Category 4: Scientific Computing,emcee,MCMC sampler,MIT License
+372,https://github.com/hmmlearn/hmmlearn,Category 4: Scientific Computing,hmmlearn,Hidden Markov Models,"BSD 3-Clause ""New"" or ""Revised"" License"
+373,https://github.com/pgmpy/pgmpy,Category 4: Scientific Computing,pgmpy,Probabilistic graphical models,MIT License
+374,https://github.com/jmschrei/pomegranate,Category 4: Scientific Computing,pomegranate,Probabilistic models,MIT License
+375,https://github.com/stan-dev/pystan,Category 4: Scientific Computing,PyStan,Stan interface,ISC License
+376,https://github.com/tensorflow/probability,Category 4: Scientific Computing,TensorFlow Probability,Probabilistic reasoning,Apache License 2.0
+377,https://github.com/zarr-developers/zarr-python,Category 4: Scientific Computing,Zarr,Chunked arrays,MIT License
+378,https://github.com/h5py/h5py,Category 4: Scientific Computing,h5py,HDF5 interface,"BSD 3-Clause ""New"" or ""Revised"" License"
+379,https://github.com/sunpy/sunpy,Category 4: Scientific Computing,SunPy,Solar data analysis,"BSD 2-Clause ""Simplified"" License"
+380,https://github.com/plasmapy/plasmapy,Category 4: Scientific Computing,PlasmaPy,Plasma physics,"BSD 3-Clause ""New"" or ""Revised"" License"
+381,https://github.com/mdtraj/mdtraj,Category 4: Scientific Computing,MDTraj,Molecular dynamics,GNU Lesser General Public License v2.1
+382,https://github.com/rdkit/rdkit,Category 4: Scientific Computing,RDKit,Cheminformatics,"BSD 3-Clause ""New"" or ""Revised"" License"
+383,https://github.com/deepchem/deepchem,Category 4: Scientific Computing,DeepChem,Drug discovery,MIT License
+384,https://github.com/openforcefield/openff-toolkit,Category 4: Scientific Computing,OpenFF Toolkit,Molecular simulations,MIT License
+385,https://github.com/materialsproject/pymatgen,Category 4: Scientific Computing,Pymatgen,Materials science,MIT License
+386,https://github.com/aiqm/torchani,Category 4: Scientific Computing,TorchANI,Neural network potentials,MIT License
+387,https://github.com/e3nn/e3nn,Category 4: Scientific Computing,e3nn,Euclidean neural networks,MIT License
+388,https://github.com/qiskit/qiskit,Category 4: Scientific Computing,Qiskit,Quantum computing,Apache License 2.0
+389,https://github.com/quantumlib/Cirq,Category 4: Scientific Computing,Cirq,Quantum circuits,Apache License 2.0
+390,https://github.com/PennyLaneAI/pennylane,Category 4: Scientific Computing,PennyLane,Quantum ML,Apache License 2.0
+391,https://github.com/strawberryfields/strawberryfields,Category 4: Scientific Computing,Strawberry Fields,Photonic quantum,Apache License 2.0
+392,https://github.com/pyquil/pyquil,Category 4: Scientific Computing,pyQuil,Quantum programming,Apache License 2.0
+393,https://github.com/QuTech-Delft/quantumsim,Category 4: Scientific Computing,QuantumSim,Quantum simulation,GNU General Public License v3.0
+394,https://github.com/uber/causalml,Category 4: Scientific Computing,CausalML,Causal inference,Apache License 2.0
+395,https://github.com/microsoft/dowhy,Category 4: Scientific Computing,DoWhy,Causal inference,MIT License
+396,https://github.com/py-why/EconML,Category 4: Scientific Computing,EconML,Heterogeneous treatment,"BSD 3-Clause ""New"" or ""Revised"" License"
+397,https://github.com/CamDavidsonPilon/lifelines,Category 4: Scientific Computing,Lifelines,Survival analysis,MIT License
+398,https://github.com/scikit-survival/scikit-survival,Category 4: Scientific Computing,Scikit-Survival,Survival analysis,GNU General Public License v3.0
+399,https://github.com/facebookresearch/prophet,Category 4: Scientific Computing,Prophet,Time series forecasting,MIT License
+400,https://github.com/alkaline-ml/pmdarima,Category 4: Scientific Computing,pmdarima,ARIMA modeling,MIT License
+401,https://github.com/blue-yonder/tsfresh,Category 4: Scientific Computing,tsfresh,Time series features,MIT License
+402,https://github.com/tslearn-team/tslearn,Category 4: Scientific Computing,tslearn,Time series ML,"BSD 2-Clause ""Simplified"" License"
+403,https://github.com/sktime/sktime,Category 4: Scientific Computing,sktime,Time series toolkit,"BSD 3-Clause ""New"" or ""Revised"" License"
+404,https://github.com/alan-turing-institute/sktime,Category 4: Scientific Computing,sktime unified,Time series ML,"BSD 3-Clause ""New"" or ""Revised"" License"
+405,https://github.com/unit8co/darts,Category 4: Scientific Computing,Darts,Time series library,Apache License 2.0
+406,https://github.com/awslabs/gluonts,Category 4: Scientific Computing,GluonTS,Probabilistic TS,Apache License 2.0
+407,https://github.com/nixtla/neuralforecast,Category 4: Scientific Computing,NeuralForecast,Neural forecasting,Apache License 2.0
+408,https://github.com/nixtla/statsforecast,Category 4: Scientific Computing,StatsForecast,Statistical forecasting,Apache License 2.0
+409,https://github.com/ourownstory/neural_prophet,Category 4: Scientific Computing,NeuralProphet,Neural Prophet,MIT License
+410,https://github.com/uber/orbit,Category 4: Scientific Computing,Orbit,Bayesian forecasting,Apache License 2.0
+411,https://github.com/salesforce/Merlion,Category 4: Scientific Computing,Merlion,Time series library,"BSD 3-Clause ""New"" or ""Revised"" License"
+412,https://github.com/linkedin/greykite,Category 4: Scientific Computing,Greykite,Forecasting library,"BSD 2-Clause ""Simplified"" License"
+413,https://github.com/Nixtla/nixtla,Category 4: Scientific Computing,Nixtla,Time series API,Apache License 2.0
+414,https://github.com/python-visualization/folium,Category 6: Visualization and Games,Folium maps,Leaflet.js maps,MIT License
+415,https://github.com/geopandas/geopandas,Category 6: Visualization and Games,GeoPandas,Geospatial data,"BSD 3-Clause ""New"" or ""Revised"" License"
+416,https://github.com/Toblerity/Shapely,Category 6: Visualization and Games,Shapely,Geometric objects,"BSD 3-Clause ""New"" or ""Revised"" License"
+417,https://github.com/Toblerity/Fiona,Category 6: Visualization and Games,Fiona,Geospatial data I/O,"BSD 3-Clause ""New"" or ""Revised"" License"
+418,https://github.com/pyproj4/pyproj,Category 6: Visualization and Games,pyproj,Cartographic projections,MIT License
+419,https://github.com/rasterio/rasterio,Category 6: Visualization and Games,Rasterio,Raster data,"BSD 3-Clause ""New"" or ""Revised"" License"
+420,https://github.com/ResidentMario/geoplot,Category 6: Visualization and Games,Geoplot,Geospatial plotting,MIT License
+421,https://github.com/holoviz/datashader,Category 6: Visualization and Games,Datashader,Big data visualization,"BSD 3-Clause ""New"" or ""Revised"" License"
+422,https://github.com/holoviz/hvplot,Category 6: Visualization and Games,hvPlot,High-level plotting,"BSD 3-Clause ""New"" or ""Revised"" License"
+423,https://github.com/holoviz/panel,Category 6: Visualization and Games,Panel,App building,"BSD 3-Clause ""New"" or ""Revised"" License"
+424,https://github.com/ydataai/ydata-profiling,Category 6: Visualization and Games,ydata-profiling,Data profiling,MIT License
+425,https://github.com/lux-org/lux,Category 6: Visualization and Games,Lux,Automated visualization,Apache License 2.0
+426,https://github.com/man-group/dtale,Category 6: Visualization and Games,D-Tale,DataFrame visualization,GNU Lesser General Public License v2.1
+427,https://github.com/fbdesignpro/sweetviz,Category 6: Visualization and Games,Sweetviz,EDA visualization,MIT License
+428,https://github.com/PAIR-code/facets,Category 6: Visualization and Games,Facets,Data visualization,Apache License 2.0
+429,https://github.com/tensorflow/tensorboard,Category 6: Visualization and Games,TensorBoard,ML visualization,Apache License 2.0
+430,https://github.com/lanpa/tensorboardX,Category 6: Visualization and Games,TensorBoardX,TensorBoard for PyTorch,MIT License
+431,https://github.com/fossasia/visdom,Category 6: Visualization and Games,Visdom,Flexible visualization,Apache License 2.0
+432,https://github.com/Netflix/metaflow,Category 9: Data Processing,Metaflow,ML infrastructure,Apache License 2.0
+433,https://github.com/zenml-io/zenml,Category 9: Data Processing,ZenML,MLOps framework,Apache License 2.0
+434,https://github.com/kubeflow/kubeflow,Category 9: Data Processing,Kubeflow,ML on Kubernetes,Apache License 2.0
+435,https://github.com/feast-dev/feast,Category 9: Data Processing,Feast,Feature store,Apache License 2.0
+436,https://github.com/combust/mleap,Category 9: Data Processing,MLeap,ML serialization,Apache License 2.0
+437,https://github.com/bentoml/BentoML,Category 9: Data Processing,BentoML,ML serving,Apache License 2.0
+438,https://github.com/SeldonIO/seldon-core,Category 9: Data Processing,Seldon Core,ML deployment,Other
+439,https://github.com/cortexlabs/cortex,Category 9: Data Processing,Cortex,ML deployment,Apache License 2.0
+440,https://github.com/bodywork-ml/bodywork-core,Category 9: Data Processing,Bodywork,ML pipelines,GNU Affero General Public License v3.0
+441,https://github.com/ploomber/ploomber,Category 9: Data Processing,Ploomber,Data pipelines,Apache License 2.0
+442,https://github.com/mage-ai/mage-ai,Category 9: Data Processing,Mage,Data pipeline tool,Apache License 2.0
+443,https://github.com/kedro-org/kedro,Category 9: Data Processing,Kedro,ML pipelines,Apache License 2.0
+444,https://github.com/PrefectHQ/marvin,Category 9: Data Processing,Marvin,AI engineering,Apache License 2.0
+445,https://github.com/kubeflow/pipelines,Category 9: Data Processing,Kubeflow Pipelines,ML workflows,Apache License 2.0
+446,https://github.com/flyteorg/flyte,Category 9: Data Processing,Flyte,Workflow orchestration,Apache License 2.0
+447,https://github.com/stitchfix/hamilton,Category 9: Data Processing,Hamilton,DAG framework,BSD 3-Clause Clear License
+448,https://github.com/erikbern/ann-benchmarks,Category 3: Algorithms,ANN Benchmarks,Algorithm benchmarks,MIT License
+449,https://github.com/nmslib/nmslib,Category 3: Algorithms,NMSLIB,Similarity search,Apache License 2.0
+450,https://github.com/nmslib/hnswlib,Category 3: Algorithms,hnswlib,Approximate NN,Apache License 2.0
+451,https://github.com/lmcinnes/umap,Category 3: Algorithms,UMAP,Dimensionality reduction,"BSD 3-Clause ""New"" or ""Revised"" License"
+452,https://github.com/lmcinnes/pynndescent,Category 3: Algorithms,PyNNDescent,Nearest neighbors,"BSD 2-Clause ""Simplified"" License"
+453,https://github.com/lmcinnes/hdbscan,Category 3: Algorithms,HDBSCAN,Clustering,"BSD 3-Clause ""New"" or ""Revised"" License"
+454,https://github.com/scikit-learn-contrib/hdbscan,Category 3: Algorithms,HDBSCAN contrib,Hierarchical clustering,"BSD 3-Clause ""New"" or ""Revised"" License"
+455,https://github.com/dmlc/xgboost,Category 4: Scientific Computing,XGBoost,Gradient boosting,Apache License 2.0
+456,https://github.com/microsoft/LightGBM,Category 4: Scientific Computing,LightGBM,Gradient boosting,MIT License
+457,https://github.com/catboost/catboost,Category 4: Scientific Computing,CatBoost,Gradient boosting,Apache License 2.0
+458,https://github.com/linkedin/luminol,Category 4: Scientific Computing,Luminol,Anomaly detection,Apache License 2.0
+459,https://github.com/yzhao062/pyod,Category 4: Scientific Computing,PyOD,Outlier detection,"BSD 2-Clause ""Simplified"" License"
+460,https://github.com/salesforce/PyTorch-LBFGS,Category 4: Scientific Computing,PyTorch-LBFGS,L-BFGS optimizer,MIT License
+461,https://github.com/pytorch/captum,Category 4: Scientific Computing,Captum,Model interpretability,"BSD 3-Clause ""New"" or ""Revised"" License"
+462,https://github.com/interpretml/interpret,Category 4: Scientific Computing,InterpretML,ML interpretability,MIT License
+463,https://github.com/slundberg/shap,Category 4: Scientific Computing,SHAP,Explainability,MIT License
+464,https://github.com/marcotcr/lime,Category 4: Scientific Computing,LIME,Local explanations,"BSD 2-Clause ""Simplified"" License"
+465,https://github.com/SeldonIO/alibi,Category 4: Scientific Computing,Alibi,ML explanations,Other
+466,https://github.com/EthicalML/xai,Category 4: Scientific Computing,XAI,Explainable AI,MIT License
+467,https://github.com/fairlearn/fairlearn,Category 4: Scientific Computing,Fairlearn,ML fairness,MIT License
+468,https://github.com/Trusted-AI/AIF360,Category 4: Scientific Computing,AI Fairness 360,Fairness toolkit,Apache License 2.0
+469,https://github.com/PAIR-code/what-if-tool,Category 4: Scientific Computing,What-If Tool,ML inspection,Apache License 2.0
+470,https://github.com/tensorflow/model-analysis,Category 4: Scientific Computing,TF Model Analysis,Model evaluation,Apache License 2.0
+471,https://github.com/cleanlab/cleanlab,Category 4: Scientific Computing,Cleanlab,Data-centric AI,Apache License 2.0
+472,https://github.com/snorkel-team/snorkel,Category 4: Scientific Computing,Snorkel,Weak supervision,Apache License 2.0
+473,https://github.com/diffgram/diffgram,Category 4: Scientific Computing,Diffgram,Training data,Other
+474,https://github.com/heartexlabs/label-studio,Category 4: Scientific Computing,Label Studio,Data labeling,Apache License 2.0
+475,https://github.com/doccano/doccano,Category 4: Scientific Computing,doccano,Text annotation,MIT License
+476,https://github.com/explosion/prodigy-recipes,Category 4: Scientific Computing,Prodigy Recipes,Annotation recipes,MIT License
+477,https://github.com/argilla-io/argilla,Category 4: Scientific Computing,Argilla,Data labeling,Apache License 2.0
+478,https://github.com/uber/ludwig,Category 4: Scientific Computing,Ludwig,Low-code ML,Apache License 2.0
+479,https://github.com/ludwig-ai/ludwig,Category 4: Scientific Computing,Ludwig AI,Declarative ML,Apache License 2.0
+480,https://github.com/aimhubio/aim,Category 4: Scientific Computing,Aim,ML experiment tracking,Apache License 2.0
+481,https://github.com/neptune-ai/neptune-client,Category 4: Scientific Computing,Neptune,Experiment tracking,Apache License 2.0
+482,https://github.com/allegroai/clearml,Category 4: Scientific Computing,ClearML,MLOps platform,Apache License 2.0
+483,https://github.com/polyaxon/polyaxon,Category 4: Scientific Computing,Polyaxon,ML platform,Apache License 2.0
+484,https://github.com/determined-ai/determined,Category 4: Scientific Computing,Determined,Deep learning platform,Apache License 2.0
+485,https://github.com/replicate/cog,Category 4: Scientific Computing,Cog,ML containers,Apache License 2.0
+486,https://github.com/huggingface/diffusers,Category 1: From Scratch,Diffusers,Diffusion models,Apache License 2.0
+487,https://github.com/CompVis/stable-diffusion,Category 1: From Scratch,Stable Diffusion,Text-to-image,Other
+,,,,,
+489,https://github.com/Stability-AI/generative-models,Category 1: From Scratch,Generative Models,SDXL and more,MIT License
+490,https://github.com/AUTOMATIC1111/stable-diffusion-webui,Category 1: From Scratch,SD Web UI,Web interface,GNU Affero General Public License v3.0
+491,https://github.com/invoke-ai/InvokeAI,Category 1: From Scratch,InvokeAI,Creative engine,Apache License 2.0
+492,https://github.com/comfyanonymous/ComfyUI,Category 1: From Scratch,ComfyUI,Node-based UI,GNU General Public License v3.0
+493,https://github.com/bmaltais/kohya_ss,Category 1: From Scratch,Kohya SS,Training scripts,Apache License 2.0
+494,https://github.com/d8ahazard/sd_dreambooth_extension,Category 1: From Scratch,DreamBooth,DreamBooth training,MIT License
+495,https://github.com/XavierXiao/Dreambooth-Stable-Diffusion,Category 1: From Scratch,DreamBooth SD,Fine-tuning,MIT License
+496,https://github.com/cloneofsimo/lora,Category 1: From Scratch,LoRA,Low-rank adaptation,Apache License 2.0
+497,https://github.com/kohya-ss/sd-scripts,Category 1: From Scratch,SD Scripts,Training scripts,Apache License 2.0
+498,https://github.com/Mikubill/sd-webui-controlnet,Category 1: From Scratch,ControlNet WebUI,ControlNet extension,GNU General Public License v3.0
+499,https://github.com/lllyasviel/ControlNet-v1-1-nightly,Category 1: From Scratch,ControlNet v1.1,Improved ControlNet,No License
+500,https://github.com/salesforce/BLIP,Category 1: From Scratch,BLIP,Vision-language,"BSD 3-Clause ""New"" or ""Revised"" License"
+,,,,,
+502,https://github.com/salesforce/LAVIS,Category 1: From Scratch,LAVIS,Vision-language,"BSD 3-Clause ""New"" or ""Revised"" License"
+503,https://github.com/OFA-Sys/OFA,Category 1: From Scratch,OFA,Unified model,Apache License 2.0
+504,https://github.com/microsoft/unilm,Category 1: From Scratch,UniLM,Pre-training,MIT License
+505,https://github.com/facebookresearch/ImageBind,Category 1: From Scratch,ImageBind,Multimodal,Creative Commons Attribution Share Alike 4.0 International
+506,https://github.com/facebookresearch/segment-anything,Category 1: From Scratch,SAM,Image segmentation,Apache License 2.0
+507,https://github.com/IDEA-Research/GroundingDINO,Category 1: From Scratch,GroundingDINO,Open-set detection,Apache License 2.0
+508,https://github.com/IDEA-Research/detrex,Category 1: From Scratch,detrex,Detection transformers,Apache License 2.0
+509,https://github.com/open-mmlab/mmdetection,Category 1: From Scratch,MMDetection,Detection toolbox,Apache License 2.0
+510,https://github.com/open-mmlab/mmcv,Category 1: From Scratch,MMCV,CV foundation,Apache License 2.0
+511,https://github.com/open-mmlab/mmsegmentation,Category 1: From Scratch,MMSegmentation,Segmentation toolbox,Apache License 2.0
+512,https://github.com/open-mmlab/mmpose,Category 1: From Scratch,MMPose,Pose estimation,Apache License 2.0
+513,https://github.com/open-mmlab/mmocr,Category 1: From Scratch,MMOCR,OCR toolbox,Apache License 2.0
+514,https://github.com/open-mmlab/mmaction2,Category 1: From Scratch,MMAction2,Action recognition,Apache License 2.0
+515,https://github.com/open-mmlab/mmtracking,Category 1: From Scratch,MMTracking,Video tracking,Apache License 2.0
+516,https://github.com/open-mmlab/mmgeneration,Category 1: From Scratch,MMGeneration,Generative models,Apache License 2.0
+517,https://github.com/open-mmlab/mmediting,Category 1: From Scratch,MMEditing,Image/video editing,Apache License 2.0
+518,https://github.com/open-mmlab/mmclassification,Category 1: From Scratch,MMClassification,Image classification,Apache License 2.0
+519,https://github.com/open-mmlab/mmselfsup,Category 1: From Scratch,MMSelfSup,Self-supervised,Apache License 2.0
+520,https://github.com/open-mmlab/mmpretrain,Category 1: From Scratch,MMPreTrain,Pre-training toolbox,Apache License 2.0
+521,https://github.com/open-mmlab/mmrazor,Category 1: From Scratch,MMRazor,Model compression,Apache License 2.0
+522,https://github.com/open-mmlab/mmdeploy,Category 1: From Scratch,MMDeploy,Model deployment,Apache License 2.0
+523,https://github.com/PaddlePaddle/PaddleOCR,Category 1: From Scratch,PaddleOCR,OCR toolkit,Apache License 2.0
+524,https://github.com/PaddlePaddle/PaddleNLP,Category 1: From Scratch,PaddleNLP,NLP toolkit,Apache License 2.0
+525,https://github.com/PaddlePaddle/PaddleSeg,Category 1: From Scratch,PaddleSeg,Segmentation,Apache License 2.0
+526,https://github.com/PaddlePaddle/PaddleDetection,Category 1: From Scratch,PaddleDetection,Object detection,Apache License 2.0
+527,https://github.com/PaddlePaddle/PaddleSpeech,Category 1: From Scratch,PaddleSpeech,Speech toolkit,Apache License 2.0
+528,https://github.com/PaddlePaddle/PaddleGAN,Category 1: From Scratch,PaddleGAN,GAN toolkit,Apache License 2.0
+529,https://github.com/modelscope/modelscope,Category 1: From Scratch,ModelScope,Model hub,Apache License 2.0
+530,https://github.com/modelscope/FunASR,Category 1: From Scratch,FunASR,Speech recognition,MIT License
+531,https://github.com/modelscope/swift,Category 1: From Scratch,SWIFT,LLM fine-tuning,Apache License 2.0
+,,,,,
+533,https://github.com/THUDM/ChatGLM-6B,Category 1: From Scratch,ChatGLM-6B,Chinese LLM,Apache License 2.0
+534,https://github.com/THUDM/GLM-130B,Category 1: From Scratch,GLM-130B,Large LLM,Apache License 2.0
+535,https://github.com/THUDM/CodeGeeX,Category 1: From Scratch,CodeGeeX,Code generation,Apache License 2.0
+536,https://github.com/THUDM/VisualGLM-6B,Category 1: From Scratch,VisualGLM,Vision-language,Apache License 2.0
+537,https://github.com/baichuan-inc/Baichuan-7B,Category 1: From Scratch,Baichuan-7B,Chinese LLM,Apache License 2.0
+,,,,,
+539,https://github.com/InternLM/InternLM,Category 1: From Scratch,InternLM,Multilingual LLM,Apache License 2.0
+540,https://github.com/QwenLM/Qwen,Category 1: From Scratch,Qwen,Alibaba LLM,Apache License 2.0
+541,https://github.com/FlagAI-Open/FlagAI,Category 1: From Scratch,FlagAI,Large-scale AI,Apache License 2.0
+542,https://github.com/OpenLMLab/MOSS,Category 1: From Scratch,MOSS,Chinese LLM,Apache License 2.0
+543,https://github.com/OptimalScale/LMFlow,Category 1: From Scratch,LMFlow,LLM fine-tuning,Apache License 2.0
+544,https://github.com/hpcaitech/ColossalAI,Category 1: From Scratch,ColossalAI,Large-scale training,Apache License 2.0
+545,https://github.com/microsoft/DeepSpeed,Category 1: From Scratch,DeepSpeed,Deep learning optimization,Apache License 2.0
+546,https://github.com/facebookresearch/fairscale,Category 1: From Scratch,FairScale,PyTorch extensions,Other
+547,https://github.com/mosaicml/composer,Category 1: From Scratch,Composer,Training library,Apache License 2.0
+548,https://github.com/mosaicml/llm-foundry,Category 1: From Scratch,LLM Foundry,LLM training,Apache License 2.0
+549,https://github.com/Lightning-AI/lightning,Category 1: From Scratch,PyTorch Lightning,Training framework,Apache License 2.0
+550,https://github.com/Lightning-AI/pytorch-lightning,Category 1: From Scratch,PyTorch Lightning,Deep learning,Apache License 2.0
+551,https://github.com/huggingface/accelerate,Category 1: From Scratch,Accelerate,PyTorch training,Apache License 2.0
+552,https://github.com/huggingface/optimum,Category 1: From Scratch,Optimum,Optimization toolkit,Apache License 2.0
+553,https://github.com/huggingface/safetensors,Category 1: From Scratch,Safetensors,Safe serialization,Apache License 2.0
+554,https://github.com/huggingface/tokenizers,Category 1: From Scratch,Tokenizers,Fast tokenization,Apache License 2.0
+555,https://github.com/huggingface/datasets,Category 1: From Scratch,Datasets,Dataset library,Apache License 2.0
+556,https://github.com/huggingface/evaluate,Category 1: From Scratch,Evaluate,Evaluation metrics,Apache License 2.0
+557,https://github.com/jax-ml/jax,Category 1: From Scratch,JAX,Composable transformations,Apache License 2.0
+558,https://github.com/google/flax,Category 1: From Scratch,Flax,Neural networks in JAX,Apache License 2.0
+559,https://github.com/deepmind/optax,Category 1: From Scratch,Optax,Gradient processing,Apache License 2.0
+560,https://github.com/deepmind/haiku,Category 1: From Scratch,Haiku,JAX neural networks,Apache License 2.0
+561,https://github.com/deepmind/chex,Category 1: From Scratch,Chex,JAX testing utilities,Apache License 2.0
+562,https://github.com/deepmind/rlax,Category 1: From Scratch,RLax,RL in JAX,Apache License 2.0
+563,https://github.com/deepmind/dm-haiku,Category 1: From Scratch,DM-Haiku,Neural networks,Apache License 2.0
+564,https://github.com/google/jax-md,Category 1: From Scratch,JAX-MD,Molecular dynamics,Apache License 2.0
+565,https://github.com/n2cholas/jax-cfd,Category 1: From Scratch,JAX-CFD,Computational fluid dynamics,Apache License 2.0
+566,https://github.com/deepmind/acme,Category 4: Scientific Computing,Acme,RL research,Apache License 2.0
+,,,,,
+568,https://github.com/deepmind/sonnet,Category 1: From Scratch,Sonnet,TensorFlow library,Apache License 2.0
+569,https://github.com/keras-team/keras,Category 1: From Scratch,Keras,Deep learning API,Apache License 2.0
+570,https://github.com/tensorflow/tensorflow,Category 1: From Scratch,TensorFlow,ML platform,Apache License 2.0
+571,https://github.com/pytorch/pytorch,Category 1: From Scratch,PyTorch,Deep learning,Other
+572,https://github.com/pytorch/vision,Category 1: From Scratch,TorchVision,Computer vision,"BSD 3-Clause ""New"" or ""Revised"" License"
+573,https://github.com/pytorch/audio,Category 1: From Scratch,TorchAudio,Audio processing,"BSD 2-Clause ""Simplified"" License"
+574,https://github.com/pytorch/text,Category 1: From Scratch,TorchText,NLP datasets,"BSD 3-Clause ""New"" or ""Revised"" License"
+575,https://github.com/pytorch/serve,Category 1: From Scratch,TorchServe,Model serving,Apache License 2.0
+576,https://github.com/pytorch/data,Category 1: From Scratch,TorchData,Data loading,"BSD 3-Clause ""New"" or ""Revised"" License"
+577,https://github.com/pytorch/functorch,Category 1: From Scratch,functorch,JAX-like transforms,"BSD 3-Clause ""New"" or ""Revised"" License"
+578,https://github.com/pytorch/ignite,Category 1: From Scratch,PyTorch Ignite,Training utilities,"BSD 3-Clause ""New"" or ""Revised"" License"
+579,https://github.com/skorch-dev/skorch,Category 1: From Scratch,skorch,scikit-learn + PyTorch,"BSD 3-Clause ""New"" or ""Revised"" License"
+580,https://github.com/catalyst-team/catalyst,Category 1: From Scratch,Catalyst,PyTorch framework,Apache License 2.0
+581,https://github.com/kornia/kornia,Category 1: From Scratch,Kornia,Differentiable CV,Apache License 2.0
+582,https://github.com/albumentations-team/albumentations,Category 1: From Scratch,Albumentations,Image augmentation,MIT License
+583,https://github.com/rwightman/pytorch-image-models,Category 1: From Scratch,timm,Image models,Apache License 2.0
+584,https://github.com/facebookresearch/detectron2,Category 1: From Scratch,Detectron2,Object detection,Apache License 2.0
+585,https://github.com/ultralytics/yolov5,Category 1: From Scratch,YOLOv5,Object detection,GNU Affero General Public License v3.0
+586,https://github.com/ultralytics/ultralytics,Category 1: From Scratch,Ultralytics,YOLO framework,GNU Affero General Public License v3.0
+587,https://github.com/WongKinYiu/yolov7,Category 1: From Scratch,YOLOv7,State-of-art detector,GNU General Public License v3.0
+588,https://github.com/meituan/YOLOv6,Category 1: From Scratch,YOLOv6,Industrial detector,GNU General Public License v3.0
+589,https://github.com/Megvii-BaseDetection/YOLOX,Category 1: From Scratch,YOLOX,Anchor-free detector,Apache License 2.0
+590,https://github.com/ifzhang/ByteTrack,Category 1: From Scratch,ByteTrack,Multi-object tracking,MIT License
+591,https://github.com/PaddlePaddle/PaddleClas,Category 1: From Scratch,PaddleClas,Image classification,Apache License 2.0
+592,https://github.com/facebookresearch/vissl,Category 1: From Scratch,VISSL,Self-supervised,MIT License
+593,https://github.com/facebookresearch/SlowFast,Category 1: From Scratch,SlowFast,Video understanding,Apache License 2.0
+594,https://github.com/facebookresearch/pytorchvideo,Category 1: From Scratch,PyTorchVideo,Video understanding,Apache License 2.0
+595,https://github.com/SwinTransformer/Swin-Transformer-Semantic-Segmentation,Category 1: From Scratch,Swin Seg,Semantic segmentation,Apache License 2.0
+596,https://github.com/NVlabs/SegFormer,Category 1: From Scratch,SegFormer,Segmentation transformer,Other
+,,,,,
+598,https://github.com/tesseract-ocr/tesseract,Category 2: Domain Specific,Tesseract,OCR engine,Apache License 2.0
+599,https://github.com/madmaze/pytesseract,Category 2: Domain Specific,pytesseract,Python Tesseract,Apache License 2.0
+600,https://github.com/PaddlePaddle/PaddleHub,Category 1: From Scratch,PaddleHub,Pre-trained models,Apache License 2.0
+601,https://github.com/speechbrain/speechbrain,Category 1: From Scratch,SpeechBrain,Speech toolkit,Apache License 2.0
+602,https://github.com/espnet/espnet,Category 1: From Scratch,ESPnet,Speech processing,Apache License 2.0
+603,https://github.com/NVIDIA/NeMo,Category 1: From Scratch,NeMo,Neural models,Apache License 2.0
+604,https://github.com/mozilla/DeepSpeech,Category 1: From Scratch,DeepSpeech,Speech-to-text,Mozilla Public License 2.0
+605,https://github.com/kaldi-asr/kaldi,Category 1: From Scratch,Kaldi,Speech recognition,Apache License 2.0
+606,https://github.com/alphacep/vosk-api,Category 1: From Scratch,Vosk,Offline speech,Apache License 2.0
+607,https://github.com/snakers4/silero-models,Category 1: From Scratch,Silero,Speech models,Creative Commons Attribution Share Alike 4.0 International
+608,https://github.com/lhotse-speech/lhotse,Category 1: From Scratch,Lhotse,Speech data,Apache License 2.0
+609,https://github.com/wenet-e2e/wenet,Category 1: From Scratch,WeNet,Production ASR,Apache License 2.0
+610,https://github.com/k2-fsa/icefall,Category 1: From Scratch,Icefall,Speech recipes,Apache License 2.0
+611,https://github.com/k2-fsa/k2,Category 1: From Scratch,k2,FSA operations,Apache License 2.0
+612,https://github.com/asteroid-team/asteroid,Category 1: From Scratch,Asteroid,Audio source separation,MIT License
+613,https://github.com/deezer/spleeter,Category 1: From Scratch,Spleeter,Source separation,MIT License
+614,https://github.com/facebookresearch/demucs,Category 1: From Scratch,Demucs,Music separation,MIT License
+615,https://github.com/yl4579/StyleTTS2,Category 1: From Scratch,StyleTTS2,Text-to-speech,MIT License
+616,https://github.com/neonbjb/tortoise-tts,Category 1: From Scratch,Tortoise TTS,Multi-voice TTS,Apache License 2.0
+617,https://github.com/rhasspy/piper,Category 1: From Scratch,Piper,Fast local TTS,MIT License
+618,https://github.com/MycroftAI/mimic3,Category 1: From Scratch,Mimic 3,Neural TTS,GNU Affero General Public License v3.0
+619,https://github.com/mozilla/TTS,Category 1: From Scratch,Mozilla TTS,Deep learning TTS,Mozilla Public License 2.0
+620,https://github.com/Edresson/Coqui-TTS,Category 1: From Scratch,Coqui TTS,TTS library,Mozilla Public License 2.0
+621,https://github.com/riffusion/riffusion,Category 1: From Scratch,Riffusion,Music generation,MIT License
+622,https://github.com/Harmonai-org/sample-generator,Category 1: From Scratch,Sample Generator,Audio generation,MIT License
+623,https://github.com/archinetai/audio-diffusion-pytorch,Category 1: From Scratch,Audio Diffusion,Audio diffusion,MIT License
+624,https://github.com/lucidrains/audiolm-pytorch,Category 1: From Scratch,AudioLM,AudioLM implementation,MIT License
+625,https://github.com/lucidrains/musiclm-pytorch,Category 1: From Scratch,MusicLM,MusicLM implementation,MIT License
+626,https://github.com/lucidrains/soundstorm-pytorch,Category 1: From Scratch,SoundStorm,SoundStorm implementation,MIT License
+627,https://github.com/spotify/pedalboard,Category 2: Domain Specific,Pedalboard,Audio effects,GNU General Public License v3.0
+628,https://github.com/librosa/librosa,Category 2: Domain Specific,Librosa,Audio analysis,ISC License
+629,https://github.com/jiaaro/pydub,Category 2: Domain Specific,PyDub,Audio manipulation,MIT License
+630,https://github.com/tyiannak/pyAudioAnalysis,Category 2: Domain Specific,pyAudioAnalysis,Audio feature extraction,Apache License 2.0
+631,https://github.com/aubio/aubio,Category 2: Domain Specific,Aubio,Audio analysis,GNU General Public License v3.0
+632,https://github.com/magenta/magenta,Category 1: From Scratch,Magenta,Music and art ML,Apache License 2.0
+633,https://github.com/magenta/note-seq,Category 1: From Scratch,Note-Seq,Music sequences,Apache License 2.0
+634,https://github.com/craffel/pretty-midi,Category 2: Domain Specific,pretty_midi,MIDI utilities,MIT License
+635,https://github.com/mido/mido,Category 2: Domain Specific,Mido,MIDI library,MIT License
+636,https://github.com/vishnubob/python-midi,Category 2: Domain Specific,python-midi,MIDI manipulation,MIT License
+637,https://github.com/MTG/essentia,Category 2: Domain Specific,Essentia,Audio analysis,GNU Affero General Public License v3.0
+638,https://github.com/CPJKU/madmom,Category 2: Domain Specific,madmom,Music analysis,Creative Commons Attribution Share Alike 4.0 International
+639,https://github.com/coqui-ai/Trainer,Category 1: From Scratch,Coqui Trainer,Training toolkit,No License
+640,https://github.com/mixxxdj/mixxx,Category 6: Visualization and Games,Mixxx,DJ software,GNU Lesser General Public License v3.0
+641,https://github.com/sonic-pi-net/sonic-pi,Category 6: Visualization and Games,Sonic Pi,Live coding music,Creative Commons Zero v1.0 Universal
+642,https://github.com/supercollider/supercollider,Category 6: Visualization and Games,SuperCollider,Audio synthesis,GNU General Public License v3.0
+643,https://github.com/opencv/opencv-python,Category 2: Domain Specific,OpenCV Python,Computer vision,MIT License
+644,https://github.com/opencv/opencv,Category 2: Domain Specific,OpenCV,Computer vision,Apache License 2.0
+645,https://github.com/scikit-image/scikit-image,Category 2: Domain Specific,scikit-image,Image processing,"BSD 3-Clause ""New"" or ""Revised"" License"
+646,https://github.com/python-pillow/Pillow,Category 2: Domain Specific,Pillow,Image library,Other
+647,https://github.com/imageio/imageio,Category 2: Domain Specific,imageio,Image I/O,"BSD 2-Clause ""Simplified"" License"
+648,https://github.com/luispedro/mahotas,Category 2: Domain Specific,Mahotas,Computer vision,Boost Software License 1.0
+649,https://github.com/emcconville/wand,Category 2: Domain Specific,Wand,ImageMagick binding,MIT License
+650,https://github.com/facebookresearch/nougat,Category 1: From Scratch,Nougat,Document understanding,MIT License
+651,https://github.com/microsoft/unilm/tree/master/kosmos-2,Category 1: From Scratch,Kosmos-2,Multimodal LLM,MIT License
+652,https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life,Category 1: From Scratch,Old Photo Restoration,Photo restoration,MIT License
+653,https://github.com/microsoft/Cream,Category 1: From Scratch,Cream,Vision models,MIT License
+654,https://github.com/microsoft/Oscar,Category 1: From Scratch,Oscar,Vision-language,MIT License
+,,,,,
+,,,,,
+657,https://github.com/microsoft/table-transformer,Category 1: From Scratch,Table Transformer,Table extraction,MIT License
+658,https://github.com/NielsRogge/Transformers-Tutorials,Category 7: Educational,Transformers Tutorials,HF tutorials,MIT License
+659,https://github.com/philschmid/deep-learning-pytorch-huggingface,Category 7: Educational,DL HuggingFace,PyTorch HF tutorials,MIT License
+660,https://github.com/dair-ai/ML-YouTube-Courses,Category 7: Educational,ML YouTube Courses,Video courses,Creative Commons Zero v1.0 Universal
+661,https://github.com/dair-ai/ML-Papers-of-the-Week,Category 7: Educational,ML Papers Weekly,Paper summaries,No License
+662,https://github.com/dair-ai/Prompt-Engineering-Guide,Category 7: Educational,Prompt Engineering,Prompting guide,MIT License
+663,https://github.com/rasbt/machine-learning-book,Category 7: Educational,ML Book,Raschka's book,MIT License
+664,https://github.com/rasbt/LLMs-from-scratch,Category 7: Educational,LLMs from Scratch,Building LLMs,Apache License 2.0
+665,https://github.com/mlabonne/llm-course,Category 7: Educational,LLM Course,LLM learning,Apache License 2.0
+666,https://github.com/karpathy/LLM101n,Category 7: Educational,LLM101n,Story LLMs,No License
+667,https://github.com/microsoft/generative-ai-for-beginners,Category 7: Educational,GenAI Beginners,Microsoft course,MIT License
+668,https://github.com/openai/openai-cookbook,Category 7: Educational,OpenAI Cookbook,OpenAI examples,MIT License
+669,https://github.com/anthropics/anthropic-cookbook,Category 7: Educational,Anthropic Cookbook,Claude examples,MIT License
+670,https://github.com/GoogleCloudPlatform/generative-ai,Category 7: Educational,GCP GenAI,Google AI samples,Apache License 2.0
+671,https://github.com/aws-samples/amazon-bedrock-workshop,Category 7: Educational,Bedrock Workshop,AWS AI workshop,MIT No Attribution
+672,https://github.com/udacity/deep-learning-v2-pytorch,Category 7: Educational,Udacity DL,Course materials,MIT License
+673,https://github.com/DataTalksClub/mlops-zoomcamp,Category 7: Educational,MLOps Zoomcamp,MLOps course,No License
+674,https://github.com/DataTalksClub/data-engineering-zoomcamp,Category 7: Educational,DE Zoomcamp,Data engineering,No License
+675,https://github.com/DataTalksClub/machine-learning-zoomcamp,Category 7: Educational,ML Zoomcamp,ML course,No License
+,,,,,
+677,https://github.com/GokuMohandas/Made-With-ML,Category 7: Educational,Made With ML,Applied ML,MIT License
+678,https://github.com/mrdbourke/tensorflow-deep-learning,Category 7: Educational,TF Deep Learning,TensorFlow course,MIT License
+679,https://github.com/mrdbourke/pytorch-deep-learning,Category 7: Educational,PyTorch DL,PyTorch course,MIT License
+680,https://github.com/huggingface/course,Category 7: Educational,HF Course,Transformers course,Apache License 2.0
+681,https://github.com/huggingface/deep-rl-class,Category 7: Educational,Deep RL Class,RL course,Apache License 2.0
+682,https://github.com/huggingface/diffusion-models-class,Category 7: Educational,Diffusion Class,Diffusion course,Apache License 2.0
+,,,,,
+684,https://github.com/facebookresearch/llama-recipes,Category 7: Educational,LLaMA Recipes,Fine-tuning guide,MIT License
+685,https://github.com/ray-project/llm-applications,Category 7: Educational,LLM Applications,Ray LLM examples,Creative Commons Attribution 4.0 International
+686,https://github.com/pinecone-io/examples,Category 7: Educational,Pinecone Examples,Vector DB examples,MIT License
+687,https://github.com/weaviate/recipes,Category 7: Educational,Weaviate Recipes,Vector search,No License
+688,https://github.com/qdrant/examples,Category 7: Educational,Qdrant Examples,Vector examples,Apache License 2.0
+689,https://github.com/milvus-io/bootcamp,Category 7: Educational,Milvus Bootcamp,Vector DB tutorials,Apache License 2.0
+690,https://github.com/practical-tutorials/project-based-learning,Category 7: Educational,Project Learning,Learning projects,MIT License
+691,https://github.com/codecrafters-io/build-your-own-x,Category 7: Educational,Build Your Own X,Build tutorials,CC0 1.0 Universal
+692,https://github.com/ossu/computer-science,Category 7: Educational,OSSU CS,CS curriculum,MIT License
+693,https://github.com/kamranahmedse/developer-roadmap,Category 7: Educational,Dev Roadmap,Learning roadmaps,Other
+694,https://github.com/public-apis/public-apis,Category 7: Educational,Public APIs,API collection,MIT License
+695,https://github.com/EbookFoundation/free-programming-books,Category 7: Educational,Free Books,Free resources,Creative Commons Attribution 4.0 International
+696,https://github.com/trimstray/the-book-of-secret-knowledge,Category 7: Educational,Secret Knowledge,Awesome lists,MIT License
+697,https://github.com/sindresorhus/awesome,Category 7: Educational,Awesome Lists,Curated lists,Creative Commons Zero v1.0 Universal
+698,https://github.com/vinta/awesome-python,Category 7: Educational,Awesome Python,Python resources,Creative Commons Attribution 4.0 International
+699,https://github.com/josephmisiti/awesome-machine-learning,Category 7: Educational,Awesome ML,ML resources,Other
+700,https://github.com/ujjwalkarn/Machine-Learning-Tutorials,Category 7: Educational,ML Tutorials,Tutorial collection,Creative Commons Zero v1.0 Universal
+701,https://github.com/Avik-Jain/100-Days-Of-ML-Code,Category 7: Educational,100 Days of ML,ML journey,MIT License
+702,https://github.com/llSourcell/Learn_Machine_Learning_in_3_Months,Category 7: Educational,Learn ML 3 Months,ML roadmap,No License
+703,https://github.com/ZuzooVn/machine-learning-for-software-engineers,Category 7: Educational,ML for SWEs,ML guide,Creative Commons Attribution Share Alike 4.0 International
+704,https://github.com/chris-chris/ml-engineering,Category 7: Educational,ML Engineering,ML eng guide,Creative Commons Attribution Share Alike 4.0 International
+705,https://github.com/stas00/ml-engineering,Category 7: Educational,ML Engineering,LLM engineering,Creative Commons Attribution Share Alike 4.0 International
+706,https://github.com/mli/paper-reading,Category 7: Educational,Paper Reading,Paper summaries,Apache License 2.0
+,,,,,
+708,https://github.com/eugeneyan/applied-ml,Category 7: Educational,Applied ML,ML in production,MIT License
+,,,,,
+710,https://github.com/chiphuyen/machine-learning-systems-design,Category 7: Educational,ML System Design,ML systems,No License
+711,https://github.com/chiphuyen/dmls-book,Category 7: Educational,DMLS Book,ML systems book,No License
+712,https://github.com/khuyentran1401/Data-science,Category 7: Educational,Data Science Tips,DS tips,No License
+713,https://github.com/khuyentran1401/Efficient_Python_tricks_and_tools_for_data_scientists,Category 7: Educational,Efficient Python,Python tips,No License
+714,https://github.com/lexfridman/mit-deep-learning,Category 7: Educational,MIT Deep Learning,MIT course,MIT License
+715,https://github.com/yandexdataschool/Practical_RL,Category 7: Educational,Practical RL,RL course,The Unlicense
+716,https://github.com/yandexdataschool/nlp_course,Category 7: Educational,NLP Course,NLP course,MIT License
+717,https://github.com/bentrevett/pytorch-sentiment-analysis,Category 7: Educational,Sentiment Analysis,NLP tutorials,MIT License
+718,https://github.com/bentrevett/pytorch-seq2seq,Category 7: Educational,Seq2Seq,Sequence models,MIT License
+719,https://github.com/bentrevett/pytorch-image-classification,Category 7: Educational,Image Classification,Vision tutorials,MIT License
+720,https://github.com/microsoft/recommenders,Category 2: Domain Specific,Recommenders,Recommendation systems,MIT License
+721,https://github.com/facebookresearch/ReAgent,Category 4: Scientific Computing,ReAgent,Applied RL,"BSD 3-Clause ""New"" or ""Revised"" License"
+722,https://github.com/tensorflow/ranking,Category 2: Domain Specific,TF Ranking,Learning to rank,Apache License 2.0
+723,https://github.com/RUCAIBox/RecBole,Category 2: Domain Specific,RecBole,Recommendation framework,MIT License
+724,https://github.com/lenskit/lkpy,Category 2: Domain Specific,LensKit,Recommendation toolkit,MIT License
+725,https://github.com/NicolasHug/Surprise,Category 2: Domain Specific,Surprise,Recommendation library,"BSD 3-Clause ""New"" or ""Revised"" License"
+726,https://github.com/benfred/implicit,Category 2: Domain Specific,Implicit,Implicit feedback,MIT License
+727,https://github.com/lyst/lightfm,Category 2: Domain Specific,LightFM,Recommendation,Apache License 2.0
+728,https://github.com/tensorflow/agents,Category 4: Scientific Computing,TF Agents,RL library,Apache License 2.0
+729,https://github.com/keras-rl/keras-rl,Category 4: Scientific Computing,Keras RL,Deep RL,MIT License
+730,https://github.com/hill-a/stable-baselines,Category 4: Scientific Computing,Stable Baselines,RL implementations,MIT License
+731,https://github.com/rlworkgroup/garage,Category 4: Scientific Computing,Garage,RL toolkit,MIT License
+732,https://github.com/tensorlayer/tensorlayer,Category 4: Scientific Computing,TensorLayer,Deep learning library,Apache License 2.0
+733,https://github.com/tensorflow/graphics,Category 4: Scientific Computing,TF Graphics,Differentiable graphics,Apache License 2.0
+734,https://github.com/google/mediapipe,Category 2: Domain Specific,MediaPipe,ML solutions,Apache License 2.0
+735,https://github.com/tensorflow/tflite-micro,Category 2: Domain Specific,TFLite Micro,Embedded ML,Apache License 2.0
+736,https://github.com/onnx/onnx,Category 1: From Scratch,ONNX,Model format,Apache License 2.0
+737,https://github.com/onnx/onnxruntime,Category 1: From Scratch,ONNX Runtime,Inference engine,MIT License
+738,https://github.com/microsoft/onnxruntime,Category 1: From Scratch,ONNX Runtime,Cross-platform ML,MIT License
+739,https://github.com/NVIDIA/TensorRT,Category 1: From Scratch,TensorRT,Inference optimizer,Apache License 2.0
+740,https://github.com/openvinotoolkit/openvino,Category 1: From Scratch,OpenVINO,Intel inference,Apache License 2.0
+741,https://github.com/apache/tvm,Category 1: From Scratch,TVM,ML compiler,Apache License 2.0
+742,https://github.com/triton-inference-server/server,Category 1: From Scratch,Triton Server,Inference server,"BSD 3-Clause ""New"" or ""Revised"" License"
+743,https://github.com/alibaba/MNN,Category 1: From Scratch,MNN,Mobile inference,Apache License 2.0
+744,https://github.com/Tencent/ncnn,Category 1: From Scratch,ncnn,Mobile inference,"BSD 3-Clause ""New"" or ""Revised"" License"
+745,https://github.com/apache/incubator-mxnet,Category 1: From Scratch,MXNet,Deep learning,Apache License 2.0
+746,https://github.com/dmlc/gluon-cv,Category 1: From Scratch,GluonCV,Computer vision,Apache License 2.0
+747,https://github.com/dmlc/gluon-nlp,Category 1: From Scratch,GluonNLP,NLP toolkit,Apache License 2.0
+748,https://github.com/dmlc/dgl,Category 1: From Scratch,DGL,Graph neural networks,Apache License 2.0
+749,https://github.com/pyg-team/pytorch_geometric,Category 1: From Scratch,PyG,Geometric deep learning,MIT License
+750,https://github.com/rusty1s/pytorch_geometric,Category 1: From Scratch,PyTorch Geometric,Graph neural networks,MIT License
+751,https://github.com/snap-stanford/ogb,Category 4: Scientific Computing,OGB,Graph benchmarks,MIT License
+752,https://github.com/stellargraph/stellargraph,Category 1: From Scratch,StellarGraph,Graph ML,Apache License 2.0
+753,https://github.com/PaddlePaddle/PGL,Category 1: From Scratch,PGL,Graph learning,Apache License 2.0
+754,https://github.com/alibaba/graph-learn,Category 1: From Scratch,GraphLearn,Graph learning,Apache License 2.0
+755,https://github.com/awslabs/graph-notebook,Category 7: Educational,Graph Notebook,Graph tutorials,Apache License 2.0
+756,https://github.com/neo4j/neo4j-python-driver,Category 2: Domain Specific,Neo4j Python,Graph database,Apache License 2.0
+757,https://github.com/py2neo-org/py2neo,Category 2: Domain Specific,py2neo,Neo4j library,Apache License 2.0
+758,https://github.com/dpkp/kafka-python,Category 2: Domain Specific,kafka-python,Kafka client,Apache License 2.0
+759,https://github.com/confluentinc/confluent-kafka-python,Category 2: Domain Specific,Confluent Kafka,Kafka client,Apache License 2.0
+760,https://github.com/robinhood/faust,Category 2: Domain Specific,Faust,Stream processing,Creative Commons Attribution Share Alike 4.0 International
+761,https://github.com/bytewax/bytewax,Category 2: Domain Specific,Bytewax,Stream processing,Apache License 2.0
+762,https://github.com/apache/beam,Category 2: Domain Specific,Apache Beam,Unified processing,Apache License 2.0
+763,https://github.com/apache/spark,Category 2: Domain Specific,Apache Spark,Big data processing,Apache License 2.0
+764,https://github.com/apache/flink,Category 2: Domain Specific,Apache Flink,Stream processing,Apache License 2.0
+765,https://github.com/palantir/pyspark-style-guide,Category 7: Educational,PySpark Guide,PySpark style,MIT License
+766,https://github.com/databricks/koalas,Category 4: Scientific Computing,Koalas,Pandas on Spark,Apache License 2.0
+767,https://github.com/fugue-project/fugue,Category 4: Scientific Computing,Fugue,Unified interface,Apache License 2.0
+768,https://github.com/ibis-project/ibis,Category 4: Scientific Computing,Ibis,DataFrame API,Apache License 2.0
+769,https://github.com/duckdb/duckdb,Category 4: Scientific Computing,DuckDB,Analytical database,MIT License
+770,https://github.com/apache/arrow,Category 4: Scientific Computing,Apache Arrow,Columnar memory,Apache License 2.0
+771,https://github.com/aymericdamien/TensorFlow-Examples,Category 7: Educational,TF Examples,TensorFlow tutorials,MIT License
+772,https://github.com/jtoy/awesome-tensorflow,Category 7: Educational,Awesome TensorFlow,TF resources,Creative Commons Zero v1.0 Universal
+773,https://github.com/bharathgs/Awesome-pytorch-list,Category 7: Educational,Awesome PyTorch,PyTorch resources,No License
+774,https://github.com/ritchieng/the-incredible-pytorch,Category 7: Educational,Incredible PyTorch,PyTorch tutorials,MIT License
+775,https://github.com/vahidk/EffectiveTensorflow,Category 7: Educational,Effective TensorFlow,TF best practices,No License
+776,https://github.com/aladdinpersson/Machine-Learning-Collection,Category 7: Educational,ML Collection,PyTorch tutorials,MIT License
+777,https://github.com/jcjohnson/pytorch-examples,Category 7: Educational,PyTorch Examples,Learning PyTorch,MIT License
+778,https://github.com/yunjey/pytorch-tutorial,Category 7: Educational,PyTorch Tutorial,Beginner tutorials,MIT License
+779,https://github.com/L1aoXingyu/pytorch-beginner,Category 7: Educational,PyTorch Beginner,Chinese tutorials,No License
+780,https://github.com/MorvanZhou/PyTorch-Tutorial,Category 7: Educational,Morvan PyTorch,Video tutorials,MIT License
+781,https://github.com/MorvanZhou/Tensorflow-Tutorial,Category 7: Educational,Morvan TensorFlow,TF tutorials,MIT License
+782,https://github.com/lyhue1991/eat_tensorflow2_in_30_days,Category 7: Educational,TF2 in 30 Days,Chinese course,Apache License 2.0
+783,https://github.com/lyhue1991/eat_pytorch_in_20_days,Category 7: Educational,PyTorch 20 Days,Chinese course,Apache License 2.0
+784,https://github.com/dsgiitr/d2l-pytorch,Category 7: Educational,D2L PyTorch,D2L in PyTorch,Apache License 2.0
+785,https://github.com/ShusenTang/Dive-into-DL-PyTorch,Category 7: Educational,D2L PyTorch,Chinese D2L,Apache License 2.0
+786,https://github.com/zergtant/pytorch-handbook,Category 7: Educational,PyTorch Handbook,Chinese handbook,CC BY-NC-SA
+787,https://github.com/chenyuntc/pytorch-book,Category 7: Educational,PyTorch Book,Chinese book,MIT License
+788,https://github.com/INTERMT/Awesome-PyTorch-Chinese,Category 7: Educational,Awesome PyTorch CN,Chinese resources,MIT License
+,,,,,
+790,https://github.com/nndl/nndl.github.io,Category 7: Educational,NNDL Book,DL textbook,No License
+791,https://github.com/dragen1860/Deep-Learning-with-TensorFlow-book,Category 7: Educational,DL with TF,Chinese book,No License
+792,https://github.com/dragen1860/TensorFlow-2.x-Tutorials,Category 7: Educational,TF2 Tutorials,Chinese tutorials,No License
+793,https://github.com/PaddlePaddle/book,Category 7: Educational,PaddlePaddle Book,DL book,No License
+794,https://github.com/apachecn/sklearn-doc-zh,Category 7: Educational,Sklearn Chinese,Chinese docs,Creative Commons Attribution Share Alike 4.0 International
+795,https://github.com/apachecn/pytorch-doc-zh,Category 7: Educational,PyTorch Chinese,Chinese docs,No License
+796,https://github.com/apachecn/tensorflow-doc-zh,Category 7: Educational,TF Chinese,Chinese docs,GNU General Public License v3.0
+797,https://github.com/Mikoto10032/DeepLearning,Category 7: Educational,Deep Learning Notes,Chinese notes,Apache License 2.0
+798,https://github.com/scutan90/DeepLearning-500-questions,Category 7: Educational,DL 500 Questions,Chinese QA,GNU General Public License v3.0
+799,https://github.com/exacity/deeplearningbook-chinese,Category 7: Educational,Deep Learning Book CN,Chinese translation,No License
+800,https://github.com/fluentpython/example-code-2e,Category 7: Educational,Fluent Python,Book code,MIT License
+801,https://github.com/cosmicpython/book,Category 7: Educational,Architecture Patterns,Python patterns,CC-By-ND
+,,,,,
+803,https://github.com/PacktPublishing/Python-Deep-Learning-Second-Edition,Category 7: Educational,Python DL,Book code,MIT License
+804,https://github.com/PacktPublishing/Python-Machine-Learning-Second-Edition,Category 7: Educational,Python ML,Book code,MIT License
+,,,,,
+806,https://github.com/alirezadir/Production-Level-Deep-Learning,Category 7: Educational,Production DL,Production guide,No License
+807,https://github.com/anyscale/ray-summit-2023-training,Category 7: Educational,Ray Summit Training,Ray tutorials,Apache License 2.0
+808,https://github.com/GoogleCloudPlatform/mlops-with-vertex-ai,Category 7: Educational,Vertex AI MLOps,GCP tutorials,Apache License 2.0
+809,https://github.com/GoogleCloudPlatform/python-docs-samples,Category 7: Educational,GCP Python Samples,GCP examples,Apache License 2.0
+810,https://github.com/aws-samples/aws-machine-learning-university-accelerated-nlp,Category 7: Educational,AWS NLP Course,AWS ML,Creative Commons Attribution Share Alike 4.0 International
+811,https://github.com/aws-samples/aws-machine-learning-university-accelerated-cv,Category 7: Educational,AWS CV Course,AWS ML,Creative Commons Attribution Share Alike 4.0 International
+812,https://github.com/Azure/azureml-examples,Category 7: Educational,AzureML Examples,Azure tutorials,MIT License
+813,https://github.com/Azure/MachineLearningNotebooks,Category 7: Educational,AzureML Notebooks,Azure ML,MIT License
+,,,,,
+815,https://github.com/microsoft/ML-For-Beginners,Category 7: Educational,ML for Beginners,Microsoft course,MIT License
+816,https://github.com/microsoft/AI-For-Beginners,Category 7: Educational,AI for Beginners,Microsoft course,MIT License
+817,https://github.com/microsoft/Data-Science-For-Beginners,Category 7: Educational,DS for Beginners,Microsoft course,MIT License
+818,https://github.com/microsoft/Web-Dev-For-Beginners,Category 7: Educational,Web for Beginners,Microsoft course,MIT License
+819,https://github.com/freeCodeCamp/freeCodeCamp,Category 7: Educational,freeCodeCamp,Learning platform,"BSD 3-Clause ""New"" or ""Revised"" License"
+820,https://github.com/tuvtran/project-based-learning,Category 7: Educational,Project Learning,Learning projects,MIT License
+,,,,,
+822,https://github.com/danistefanovic/build-your-own-x,Category 7: Educational,Build Your Own,From scratch projects,Creative Commons Public Domain Mark
+823,https://github.com/ryanmcdermott/clean-code-python,Category 7: Educational,Clean Code Python,Code quality,MIT License
+824,https://github.com/zedr/clean-code-python,Category 7: Educational,Clean Code Python,Clean code principles,MIT License
+825,https://github.com/wdxtub/clean-code-python,Category 7: Educational,Clean Code Python,Chinese version,MIT License
+826,https://github.com/satwikkansal/wtfpython,Category 7: Educational,WTF Python,Python quirks,Do What The F*ck You Want To Public License
+827,https://github.com/gto76/python-cheatsheet,Category 7: Educational,Python Cheatsheet,Quick reference,No License
+828,https://github.com/crazyguitar/pysheeet,Category 7: Educational,Python Cheatsheet,Code snippets,MIT License
+829,https://github.com/charlax/python-education,Category 7: Educational,Python Education,Learning resources,MIT License
+830,https://github.com/dabeaz-course/practical-python,Category 7: Educational,Practical Python,Course materials,Creative Commons Attribution Share Alike 4.0 International
+831,https://github.com/dabeaz-course/python-mastery,Category 7: Educational,Python Mastery,Advanced Python,Creative Commons Attribution Share Alike 4.0 International
+832,https://github.com/dabeaz/python-cookbook,Category 7: Educational,Python Cookbook,Code recipes,No License
+833,https://github.com/jackfrued/Python-100-Days,Category 7: Educational,Python 100 Days,Chinese course,No License
+834,https://github.com/walter201230/Python,Category 7: Educational,Python Basics,Chinese course,No License
+835,https://github.com/TwoWater/Python,Category 7: Educational,Grass Python,Chinese course,No License
+836,https://github.com/wistbean/learn_python3_spider,Category 7: Educational,Python Spider,Web scraping,MIT License
+837,https://github.com/Kr1s77/awesome-python-login-model,Category 7: Educational,Login Models,Web scraping,MIT License
+,,,,,
+839,https://github.com/lawlite19/MachineLearning_Python,Category 7: Educational,ML Python,Chinese ML,MIT License
+840,https://github.com/lijin-THU/notes-python,Category 7: Educational,Python Notes,Chinese notes,No License
+841,https://github.com/shimohq/chinese-programmer-wrong-pronunciation,Category 7: Educational,Pronunciation,Tech pronunciation,No License
+842,https://github.com/byoungd/English-level-up-tips,Category 7: Educational,English Tips,English learning,CC BY-NC
+843,https://github.com/justjavac/free-programming-books-zh_CN,Category 7: Educational,Free Books CN,Chinese resources,GNU General Public License v3.0
+844,https://github.com/halfrost/LeetCode-Go,Category 3: Algorithms,LeetCode Go,Algorithm solutions,MIT License
+845,https://github.com/azl397985856/leetcode,Category 3: Algorithms,LeetCode,Chinese solutions,Other
+846,https://github.com/labuladong/fucking-algorithm,Category 3: Algorithms,Fucking Algorithm,Chinese algorithms,CC BY-NC
+847,https://github.com/youngyangyang04/leetcode-master,Category 3: Algorithms,LeetCode Master,Chinese course,No License
+848,https://github.com/greyireland/algorithm-pattern,Category 3: Algorithms,Algorithm Pattern,Chinese patterns,MIT License
+849,https://github.com/MisterBooo/LeetCodeAnimation,Category 3: Algorithms,LeetCode Animation,Animated solutions,No License
+850,https://github.com/doocs/leetcode,Category 3: Algorithms,Doocs LeetCode,Multi-language,Creative Commons Attribution Share Alike 4.0 International
+851,https://github.com/grandyang/leetcode,Category 3: Algorithms,LeetCode Solutions,C++ solutions,No License
+852,https://github.com/pezy/LeetCode,Category 3: Algorithms,LeetCode C++,C++ solutions,MIT License
+853,https://github.com/haoel/leetcode,Category 3: Algorithms,LeetCode,C++ solutions,No License
+854,https://github.com/fishercoder1534/Leetcode,Category 3: Algorithms,LeetCode Java,Java solutions,Apache License 2.0
+855,https://github.com/wind-liang/leetcode,Category 3: Algorithms,LeetCode Chinese,Chinese explanations,No License
+856,https://github.com/neetcode-gh/leetcode,Category 3: Algorithms,NeetCode,Video solutions,MIT License
+857,https://github.com/wisdompeak/LeetCode,Category 3: Algorithms,LeetCode,Hard problems,No License
+858,https://github.com/mission-peace/interview,Category 3: Algorithms,Interview,Interview prep,Apache License 2.0
+859,https://github.com/yangshun/tech-interview-handbook,Category 3: Algorithms,Tech Interview,Interview guide,MIT License
+860,https://github.com/jwasham/coding-interview-university,Category 3: Algorithms,Coding Interview,Interview prep,Creative Commons Attribution Share Alike 4.0 International
+,,,,,
+862,https://github.com/TSiege/Tech-Interview-Cheat-Sheet,Category 3: Algorithms,Tech Interview,Interview tips,MIT License
+863,https://github.com/MaximAbramchuck/awesome-interview-questions,Category 3: Algorithms,Interview Questions,Question collection,Creative Commons Public Domain Mark
+864,https://github.com/donnemartin/system-design-primer,Category 3: Algorithms,System Design,System design,Creative Commons Attribution 4.0 International
+865,https://github.com/checkcheckzz/system-design-interview,Category 3: Algorithms,System Design Interview,Interview prep,No License
+866,https://github.com/karanpratapsingh/system-design,Category 3: Algorithms,System Design,System design course,Attribution-NonCommercial-NoDerivatives 4.0 International
+867,https://github.com/madd86/awesome-system-design,Category 3: Algorithms,Awesome System Design,System design resources,Creative Commons Zero v1.0 Universal
+868,https://github.com/binhnguyennus/awesome-scalability,Category 3: Algorithms,Awesome Scalability,Scalability patterns,MIT License
+869,https://github.com/kilimchoi/engineering-blogs,Category 3: Algorithms,Engineering Blogs,Tech blogs,Creative Commons Attribution Share Alike 4.0 International
+870,https://github.com/mtdvio/every-programmer-should-know,Category 3: Algorithms,Every Programmer,Dev knowledge,Creative Commons Attribution 4.0 International
+871,https://github.com/bregman-arie/devops-exercises,Category 2: Domain Specific,DevOps Exercises,DevOps practice,Other
+872,https://github.com/bregman-arie/devops-resources,Category 2: Domain Specific,DevOps Resources,DevOps links,CC BY-NC-ND 3.0
+873,https://github.com/MichaelCade/90DaysOfDevOps,Category 2: Domain Specific,90 Days DevOps,DevOps journey,Creative Commons Attribution Share Alike 4.0 International
+874,https://github.com/kamranahmedse/devops-roadmap,Category 2: Domain Specific,DevOps Roadmap,Learning path,Apache License 2.0
+875,https://github.com/veggiemonk/awesome-docker,Category 2: Domain Specific,Awesome Docker,Docker resources,Apache License 2.0
+876,https://github.com/wsargent/docker-cheat-sheet,Category 2: Domain Specific,Docker Cheatsheet,Docker reference,Creative Commons Attribution 4.0 International
+877,https://github.com/docker/docker-py,Category 2: Domain Specific,docker-py,Docker SDK,Apache License 2.0
+878,https://github.com/docker/compose,Category 2: Domain Specific,Docker Compose,Multi-container,Apache License 2.0
+879,https://github.com/ramitsurana/awesome-kubernetes,Category 2: Domain Specific,Awesome K8s,K8s resources,Creative Commons Attribution Non Commercial 4.0 International
+880,https://github.com/kubernetes-client/python,Category 2: Domain Specific,K8s Python,K8s client,Apache License 2.0
+881,https://github.com/kelseyhightower/kubernetes-the-hard-way,Category 2: Domain Specific,K8s Hard Way,K8s from scratch,Apache License 2.0
+882,https://github.com/helm/helm,Category 2: Domain Specific,Helm,K8s package manager,Apache License 2.0
+883,https://github.com/argoproj/argo-cd,Category 2: Domain Specific,Argo CD,GitOps,Apache License 2.0
+884,https://github.com/argoproj/argo-workflows,Category 2: Domain Specific,Argo Workflows,Workflow engine,Apache License 2.0
+885,https://github.com/tektoncd/pipeline,Category 2: Domain Specific,Tekton,CI/CD,Apache License 2.0
+886,https://github.com/jenkinsci/jenkins,Category 2: Domain Specific,Jenkins,CI/CD server,MIT License
+887,https://github.com/drone/drone,Category 2: Domain Specific,Drone,CI platform,Apache License 2.0
+888,https://github.com/concourse/concourse,Category 2: Domain Specific,Concourse,CI system,Apache License 2.0
+889,https://github.com/buildbot/buildbot,Category 2: Domain Specific,Buildbot,CI framework,GNU General Public License v2.0
+890,https://github.com/pypa/pipenv,Category 5: Small Frameworks,Pipenv,Dependency management,MIT License
+891,https://github.com/python-poetry/poetry,Category 5: Small Frameworks,Poetry,Dependency management,MIT License
+892,https://github.com/pypa/pip,Category 5: Small Frameworks,pip,Package installer,MIT License
+893,https://github.com/pypa/setuptools,Category 5: Small Frameworks,setuptools,Build system,MIT License
+894,https://github.com/pypa/wheel,Category 5: Small Frameworks,wheel,Built packages,MIT License
+895,https://github.com/pypa/twine,Category 5: Small Frameworks,twine,PyPI upload,Apache License 2.0
+896,https://github.com/pypa/build,Category 5: Small Frameworks,build,PEP 517 build,MIT License
+897,https://github.com/astral-sh/ruff,Category 5: Small Frameworks,Ruff,Fast linter,MIT License
+898,https://github.com/astral-sh/uv,Category 5: Small Frameworks,uv,Fast package manager,Apache License 2.0
+899,https://github.com/psf/black,Category 5: Small Frameworks,Black,Code formatter,MIT License
+900,https://github.com/PyCQA/isort,Category 5: Small Frameworks,isort,Import sorter,MIT License
+901,https://github.com/PyCQA/flake8,Category 5: Small Frameworks,flake8,Linter,MIT License
+902,https://github.com/PyCQA/bandit,Category 5: Small Frameworks,Bandit,Security linter,Apache License 2.0
+903,https://github.com/python/mypy,Category 5: Small Frameworks,mypy,Type checker,GNU General Public License v2.0
+904,https://github.com/microsoft/pyright,Category 5: Small Frameworks,Pyright,Type checker,MIT License
+905,https://github.com/davidhalter/jedi,Category 5: Small Frameworks,Jedi,Autocompletion,MIT License
+906,https://github.com/hhatto/autopep8,Category 5: Small Frameworks,autopep8,PEP8 formatter,MIT License
+907,https://github.com/google/yapf,Category 5: Small Frameworks,yapf,Code formatter,Apache License 2.0
+908,https://github.com/pre-commit/pre-commit,Category 5: Small Frameworks,pre-commit,Git hooks,MIT License
+909,https://github.com/pre-commit/pre-commit-hooks,Category 5: Small Frameworks,pre-commit-hooks,Hook collection,MIT License
+910,https://github.com/PyCQA/autoflake,Category 5: Small Frameworks,autoflake,Remove unused,MIT License
+911,https://github.com/asottile/pyupgrade,Category 5: Small Frameworks,pyupgrade,Syntax upgrade,MIT License
+912,https://github.com/charliermarsh/ruff,Category 5: Small Frameworks,Ruff,Fast Python linter,MIT License
+913,https://github.com/python-jsonschema/check-jsonschema,Category 5: Small Frameworks,check-jsonschema,Schema validation,Apache License 2.0
+914,https://github.com/mkdocs/mkdocs,Category 5: Small Frameworks,MkDocs,Documentation,"BSD 2-Clause ""Simplified"" License"
+915,https://github.com/squidfunk/mkdocs-material,Category 5: Small Frameworks,Material for MkDocs,MkDocs theme,MIT License
+916,https://github.com/readthedocs/readthedocs.org,Category 5: Small Frameworks,Read the Docs,Doc hosting,MIT License
+917,https://github.com/pdoc3/pdoc,Category 5: Small Frameworks,pdoc,Auto documentation,GNU Affero General Public License v3.0
+918,https://github.com/mitmproxy/pdoc,Category 5: Small Frameworks,pdoc,API documentation,MIT No Attribution
+919,https://github.com/tox-dev/tox,Category 5: Small Frameworks,tox,Test automation,MIT License
+920,https://github.com/pypa/virtualenv,Category 5: Small Frameworks,virtualenv,Virtual environments,MIT License
+921,https://github.com/pyenv/pyenv,Category 5: Small Frameworks,pyenv,Python version management,MIT License
+922,https://github.com/pyenv/pyenv-virtualenv,Category 5: Small Frameworks,pyenv-virtualenv,Virtualenv plugin,MIT License
+923,https://github.com/asdf-vm/asdf,Category 5: Small Frameworks,asdf,Version manager,MIT License
+924,https://github.com/conda/conda,Category 5: Small Frameworks,conda,Package manager,"BSD 3-Clause ""New"" or ""Revised"" License"
+925,https://github.com/mamba-org/mamba,Category 5: Small Frameworks,mamba,Fast conda,"BSD 3-Clause ""New"" or ""Revised"" License"
+926,https://github.com/conda-forge/miniforge,Category 5: Small Frameworks,miniforge,Conda distribution,"BSD 3-Clause ""New"" or ""Revised"" License"
+927,https://github.com/nteract/papermill,Category 9: Data Processing,Papermill,Parameterized notebooks,"BSD 3-Clause ""New"" or ""Revised"" License"
+928,https://github.com/jupyter/nbconvert,Category 9: Data Processing,nbconvert,Notebook conversion,"BSD 3-Clause ""New"" or ""Revised"" License"
+929,https://github.com/jupyter/nbformat,Category 9: Data Processing,nbformat,Notebook format,"BSD 3-Clause ""New"" or ""Revised"" License"
+930,https://github.com/jupyterlab/jupyterlab,Category 9: Data Processing,JupyterLab,Jupyter IDE,"BSD 3-Clause ""New"" or ""Revised"" License"
+931,https://github.com/jupyter/notebook,Category 9: Data Processing,Jupyter Notebook,Notebook interface,"BSD 3-Clause ""New"" or ""Revised"" License"
+932,https://github.com/ipython/ipython,Category 9: Data Processing,IPython,Interactive Python,"BSD 3-Clause ""New"" or ""Revised"" License"
+933,https://github.com/voila-dashboards/voila,Category 9: Data Processing,Voil_,Notebook dashboards,"BSD 3-Clause ""New"" or ""Revised"" License"
+934,https://github.com/jupyter-widgets/ipywidgets,Category 9: Data Processing,ipywidgets,Interactive widgets,"BSD 3-Clause ""New"" or ""Revised"" License"
+935,https://github.com/bqplot/bqplot,Category 6: Visualization and Games,bqplot,2D plotting,Apache License 2.0
+936,https://github.com/plotly/jupyter-dash,Category 6: Visualization and Games,Jupyter Dash,Dash in Jupyter,MIT License
+937,https://github.com/plotly/dash,Category 6: Visualization and Games,Dash,Analytical apps,MIT License
+938,https://github.com/gradio-app/gradio,Category 6: Visualization and Games,Gradio,ML demos,Apache License 2.0
+939,https://github.com/marimo-team/marimo,Category 9: Data Processing,marimo,Reactive notebook,Apache License 2.0
+940,https://github.com/quarto-dev/quarto-cli,Category 9: Data Processing,Quarto,Scientific publishing,MIT License
+941,https://github.com/posit-dev/great-tables,Category 6: Visualization and Games,Great Tables,Table generation,MIT License
+942,https://github.com/vega/altair,Category 6: Visualization and Games,Altair,Vega-Lite visualization,"BSD 3-Clause ""New"" or ""Revised"" License"
+943,https://github.com/vispy/vispy,Category 6: Visualization and Games,VisPy,Scientific visualization,"BSD 3-Clause ""New"" or ""Revised"" License"
+944,https://github.com/K3D-tools/K3D-jupyter,Category 6: Visualization and Games,K3D,3D visualization,MIT License
+945,https://github.com/pyviz/panel,Category 6: Visualization and Games,Panel,App builder,"BSD 3-Clause ""New"" or ""Revised"" License"
+946,https://github.com/holoviz/param,Category 6: Visualization and Games,Param,Declarative parameters,"BSD 3-Clause ""New"" or ""Revised"" License"
+947,https://github.com/voxel51/fiftyone,Category 6: Visualization and Games,FiftyOne,Dataset curation,Apache License 2.0
+948,https://github.com/activeloopai/deeplake,Category 9: Data Processing,Deep Lake,Data lake for AI,Apache License 2.0
+949,https://github.com/lancedb/lancedb,Category 9: Data Processing,LanceDB,Vector database,Apache License 2.0
+950,https://github.com/weaviate/weaviate,Category 9: Data Processing,Weaviate,Vector search,"BSD 3-Clause ""New"" or ""Revised"" License"
+951,https://github.com/qdrant/qdrant,Category 9: Data Processing,Qdrant,Vector similarity,Apache License 2.0
+952,https://github.com/milvus-io/milvus,Category 9: Data Processing,Milvus,Vector database,Apache License 2.0
+953,https://github.com/pgvector/pgvector,Category 9: Data Processing,pgvector,Postgres vectors,Other
+954,https://github.com/Pinecone-io/pinecone-python-client,Category 9: Data Processing,Pinecone,Vector DB client,Apache License 2.0
+955,https://github.com/docarray/docarray,Category 9: Data Processing,DocArray,Multi-modal data,Apache License 2.0
+956,https://github.com/jina-ai/jina,Category 9: Data Processing,Jina,Neural search,Apache License 2.0
+957,https://github.com/marqo-ai/marqo,Category 9: Data Processing,Marqo,Tensor search,Apache License 2.0
+958,https://github.com/semi-technologies/weaviate,Category 9: Data Processing,Weaviate,Vector database,"BSD 3-Clause ""New"" or ""Revised"" License"
+959,https://github.com/txtai/txtai,Category 9: Data Processing,txtai,Semantic search,Apache License 2.0
+960,https://github.com/neuml/txtai,Category 9: Data Processing,txtai,AI search,Apache License 2.0
+961,https://github.com/deepset-ai/haystack,Category 2: Domain Specific,Haystack,LLM framework,Apache License 2.0
+962,https://github.com/hwchase17/langchain,Category 2: Domain Specific,LangChain,LLM applications,MIT License
+963,https://github.com/guidance-ai/guidance,Category 2: Domain Specific,Guidance,LLM control,MIT License
+964,https://github.com/outlines-dev/outlines,Category 2: Domain Specific,Outlines,Structured generation,Apache License 2.0
+965,https://github.com/stanfordnlp/dspy,Category 2: Domain Specific,DSPy,LLM programming,MIT License
+966,https://github.com/BerriAI/litellm,Category 2: Domain Specific,LiteLLM,LLM proxy,MIT License
+967,https://github.com/ollama/ollama-python,Category 2: Domain Specific,Ollama Python,Local LLM,MIT License
+,,,,,
+969,https://github.com/sgl-project/sglang,Category 1: From Scratch,SGLang,LLM programming,Apache License 2.0
+970,https://github.com/modal-labs/modal-client,Category 2: Domain Specific,Modal,Serverless compute,Apache License 2.0
+971,https://github.com/instructor-ai/instructor,Category 2: Domain Specific,Instructor,Structured LLM output,MIT License
+972,https://github.com/jxnl/instructor,Category 2: Domain Specific,Instructor,Pydantic + LLM,MIT License
+973,https://github.com/pydantic/pydantic-ai,Category 2: Domain Specific,Pydantic AI,LLM agents,MIT License
+974,https://github.com/phidatahq/phidata,Category 2: Domain Specific,Phidata,AI assistants,Apache License 2.0
+975,https://github.com/crewAIInc/crewAI,Category 2: Domain Specific,CrewAI,AI agents,MIT License
+976,https://github.com/joaomdmoura/crewAI,Category 2: Domain Specific,CrewAI,Multi-agent framework,MIT License
+977,https://github.com/e2b-dev/e2b,Category 2: Domain Specific,E2B,AI sandboxes,Apache License 2.0
+978,https://github.com/geekan/MetaGPT,Category 2: Domain Specific,MetaGPT,Multi-agent,MIT License
+979,https://github.com/OpenBMB/ChatDev,Category 2: Domain Specific,ChatDev,AI software company,Apache License 2.0
+980,https://github.com/microsoft/autogen,Category 2: Domain Specific,AutoGen,Multi-agent framework,Creative Commons Attribution 4.0 International
+981,https://github.com/AgentOps-AI/agentops,Category 2: Domain Specific,AgentOps,Agent observability,MIT License
+982,https://github.com/assafelovic/gpt-researcher,Category 2: Domain Specific,GPT Researcher,Autonomous research,Apache License 2.0
+983,https://github.com/yoheinakajima/babyagi,Category 2: Domain Specific,BabyAGI,Task-driven agent,MIT License
+984,https://github.com/torantulino/Auto-GPT,Category 2: Domain Specific,Auto-GPT,Autonomous GPT-4,MIT License
+985,https://github.com/AntonOsika/gpt-engineer,Category 2: Domain Specific,GPT Engineer,AI code generation,MIT License
+986,https://github.com/Pythagora-io/gpt-pilot,Category 2: Domain Specific,GPT Pilot,AI development,MIT License
+987,https://github.com/OpenDevin/OpenDevin,Category 2: Domain Specific,OpenDevin,AI software developer,MIT License
+988,https://github.com/stitionai/devika,Category 2: Domain Specific,Devika,AI software engineer,MIT License
+,,,,,

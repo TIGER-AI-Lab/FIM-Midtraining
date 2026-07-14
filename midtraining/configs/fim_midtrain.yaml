@@ -1,0 +1,68 @@
+# =============================================================================
+# FIM mid-training — LLaMA-Factory config.
+#
+# This is the reference recipe. The paper applies it UNCHANGED to all three
+# base models (Qwen2.5-Coder-7B-Instruct, Qwen2.5-Coder-14B-Instruct, Qwen3-8B)
+# — to switch models you change `model_name_or_path` and nothing else.
+#
+# Hyperparameters below are Table 7 of the paper (Appendix C). Effective batch
+# size 128 = 8 GPUs x per_device 1 x grad_accum 16. If you train on a different
+# GPU count, adjust gradient_accumulation_steps to keep 128.
+#
+#   llamafactory-cli train configs/fim_midtrain.yaml
+# =============================================================================
+
+### model
+# EDIT ME — a local path or an HF id.
+#   Qwen/Qwen2.5-Coder-7B-Instruct
+#   Qwen/Qwen2.5-Coder-14B-Instruct
+#   Qwen/Qwen3-8B                     (base, not Instruct — see paper Sec. 4.1)
+model_name_or_path: Qwen/Qwen2.5-Coder-7B-Instruct
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: examples/deepspeed/ds_z3_config.json   # path inside the LLaMA-Factory checkout
+
+### dataset
+# Register the FIM corpus in LLaMA-Factory's data/dataset_info.json first —
+# see midtraining/dataset_info.json in this repo for the entries to paste in.
+# The 80/15/5 single/pair/triple mixture of the main results is produced by
+# data_construction/mixing/ (see its README); list the mixed file here.
+dataset: fim_midtrain
+template: qwen                # use `qwen3` for the Qwen3-8B base
+cutoff_len: 32768
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+### output
+output_dir: saves/fim-midtrain
+logging_steps: 10
+save_steps: 500
+save_only_model: true
+plot_loss: true
+overwrite_output_dir: false
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 16       # -> effective batch size 128 on 8 GPUs
+learning_rate: 1.0e-5
+num_train_epochs: 1.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+weight_decay: 0.05
+bf16: true
+ddp_timeout: 180000000
+
+# Memory: 32K context on 8xH100-80GB needs all three of these. Dropping any one
+# of them OOMs in our setup.
+flash_attn: fa2
+enable_liger_kernel: true
+use_unsloth_gc: true
+group_by_length: true
+
+### logging
+report_to: none
+run_name: fim-midtrain

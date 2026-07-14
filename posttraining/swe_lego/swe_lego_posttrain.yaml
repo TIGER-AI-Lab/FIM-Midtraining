@@ -1,0 +1,66 @@
+# =============================================================================
+# SWE-Lego agentic post-training — LLaMA-Factory config. Used for Qwen3-8B.
+#
+# Why Qwen3-8B uses this pipeline and not R2E-Gym/SWE-Smith: SWE-Lego's
+# trajectories exceed the 32K context those scaffolds are built around, so the
+# cross-base-model comparison necessarily varies the post-training pipeline
+# too. The paper discusses this confound in Section 4.2.
+#
+# NOTE — deliberate deviation from the official SWE-Lego recipe: we train for
+# 2 epochs, not 4. Four epochs overfits the FIM-midtrained Qwen3-8B base in our
+# setup. Every other hyperparameter is the official one.
+#
+#   llamafactory-cli train swe_lego_posttrain.yaml
+# =============================================================================
+
+### model
+# EDIT ME:
+#   Qwen/Qwen3-8B                       (baseline)
+#   saves/fim-midtrain/checkpoint-XXX   (ours: FIM-midtrained Qwen3-8B)
+model_name_or_path: Qwen/Qwen3-8B
+trust_remote_code: true
+rope_scaling: yarn                    # required to reach the 40K+ context below
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: examples/deepspeed/ds_z3_config.json
+
+### dataset
+# See download_data.py. Register both splits in data/dataset_info.json.
+dataset: swe_lego_real_data_resolved_trajectories,swe_lego_synthetic_data_resolved_trajectories
+template: qwen3_nothink
+cutoff_len: 40960
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+# Mask the loss on failed turns — only successful agent steps contribute.
+turn_mask: true
+
+### output
+output_dir: saves/swe-lego-posttrain
+logging_steps: 10
+save_strategy: epoch
+save_only_model: true
+plot_loss: true
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8        # -> effective batch size 64 on 8 GPUs
+learning_rate: 1.0e-4
+num_train_epochs: 2.0                 # official recipe is 4 — see header
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+weight_decay: 0.01
+bf16: true
+ddp_timeout: 180000000
+
+flash_attn: fa2
+enable_liger_kernel: true
+use_unsloth_gc: true
+
+### logging
+report_to: none
+run_name: swe-lego-posttrain

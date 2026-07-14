@@ -1,0 +1,65 @@
+# =============================================================================
+# R2E-Gym agentic post-training — LLaMA-Factory config.
+#
+# Run this TWICE to reproduce one row-pair of the paper's main table:
+#   baseline : model_name_or_path = the stock instruct model
+#   ours     : model_name_or_path = the FIM mid-trained checkpoint
+# Everything else identical. The delta between the two runs is the paper's
+# headline result.
+#
+# Hyperparameters are Table 8 of the paper (Appendix C), which follows the
+# official R2E-Gym release recipe.
+#
+#   llamafactory-cli train r2egym_posttrain.yaml
+# =============================================================================
+
+### model
+# EDIT ME — one of:
+#   Qwen/Qwen2.5-Coder-7B-Instruct                  (baseline)
+#   Qwen/Qwen2.5-Coder-14B-Instruct                 (baseline)
+#   saves/fim-midtrain/checkpoint-XXX               (ours: output of ../../midtraining)
+model_name_or_path: Qwen/Qwen2.5-Coder-7B-Instruct
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: examples/deepspeed/ds_z3_offload_config.json
+
+### dataset
+# Pulled straight from the Hub — LLaMA-Factory can load it by id once it is
+# registered in data/dataset_info.json. See download_data.py for a local copy.
+dataset: R2E-Gym/R2EGym-SFT-Trajectories
+template: qwen
+cutoff_len: 20480
+max_samples: 100000
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+### output
+output_dir: saves/r2egym-posttrain
+logging_steps: 10
+save_steps: 400
+save_only_model: true
+plot_loss: true
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 1        # -> effective batch size 8 on 8 GPUs
+learning_rate: 1.0e-5
+num_train_epochs: 2.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.05
+weight_decay: 0.0
+bf16: true
+ddp_timeout: 180000000
+
+flash_attn: fa2
+enable_liger_kernel: true
+use_unsloth_gc: true
+
+### logging
+report_to: none
+run_name: r2egym-posttrain

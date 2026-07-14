@@ -1,0 +1,96 @@
+# ============================================================================
+# Dependency-Aware FIM Dataset Construction — central configuration
+#
+# Every step script reads this file. Anything you set here can still be
+# overridden on the command line (CLI flags always win).
+#
+# Paths may be relative (resolved against this file's directory) or absolute.
+# ============================================================================
+
+paths:
+  # CSV listing the GitHub repositories to mine. Swap in your own — see the
+  # "Bringing your own repositories" section of the README for the schema.
+  #
+  # The shipped list is 968 permissively-licensed Python repos. Cloning all of
+  # them takes a while and step 4 over the full set costs real money; point this
+  # at a trimmed CSV first if you just want to see the pipeline run.
+  repo_csv: data/code_repo_list_968.csv
+
+  # Everything the pipeline produces lives under this directory. It is created
+  # on demand. Point it at a disk with room for the cloned repos (tens of GB
+  # for a few hundred repos).
+  work_dir: workdir
+
+llm:
+  # Any model id accepted by the google-genai SDK.
+  model: gemini-3-flash-preview
+
+  # Sampling temperatures. The completion call is deliberately warmer than the
+  # critique call, which should be as deterministic as we can make it.
+  fim_temperature: 0.7
+  critique_temperature: 0.3
+
+  # Seconds to sleep after each API call, per worker. Raise this if you are
+  # hitting rate limits.
+  wait_seconds: 0.5
+
+  # Retries per API call, with exponential backoff starting at retry_delay.
+  max_retries: 3
+  retry_delay: 5.0
+
+  # USD per 1M tokens — used only for the running cost estimate printed by
+  # step 4. Update these to match your billing tier; they do not affect the
+  # data in any way.
+  price_per_1m_input_tokens: 0.50
+  price_per_1m_output_tokens: 3.00
+
+sharding:
+  # step 4 is the only expensive step. It can be split across `total_shards`
+  # independent processes; each one owns its own checkpoint file and can be
+  # killed and restarted freely.
+  total_shards: 200
+
+  # Shards to launch with scripts/run_step4_parallel.sh (inclusive range).
+  shard_start: 1
+  shard_end: 200
+
+  # Requests in flight *within a single process*. Leave at 1 to reproduce the
+  # original one-request-at-a-time behaviour. Total concurrency against the API
+  # is roughly (number of running shards) x concurrency.
+  concurrency: 1
+
+# ----------------------------------------------------------------------------
+# Function / group selection (step 3). These are the thresholds from the paper.
+# Anything omitted falls back to the defaults in common/dep_graph.py.
+# ----------------------------------------------------------------------------
+selection:
+  min_file_lines: 50
+  max_file_lines: 1800
+  min_loc: 10
+  max_loc: 200
+  score_threshold: 0.08
+  min_complexity: 0.15
+
+# ----------------------------------------------------------------------------
+# Quality filters (step 5). A sample must clear every threshold to be kept.
+# ----------------------------------------------------------------------------
+filters:
+  single:
+    # Each of correctness / executability / api_usage / readability /
+    # completeness must be >= this.
+    min_individual_score: 3
+    min_overall_score: 4
+  multi:
+    # Every function in the group must reach this individually.
+    min_per_func_score: 3
+    min_group_overall_score: 4
+    # Cross-function coherence (interface / state / logic consistency).
+    min_coherence_score: 3
+
+wandb:
+  # Off by default. Requires `pip install wandb weave` and `wandb login`.
+  enabled: false
+  project: fim-dataset-curation
+  # Leave empty to use your default W&B entity.
+  entity: ""
+  run_name: ""
