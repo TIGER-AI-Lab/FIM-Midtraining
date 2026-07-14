@@ -34,11 +34,11 @@ Paper Appendix C, Table 8. R2E-Gym and SWE-Smith follow their official released 
 | Epochs | 2 | 3 | **2** (official: 4) |
 | Gradient accumulation | 1 | 4 | 8 |
 | Effective batch size | 8 | 32 | 64 |
-| Sequence length | 32,768 | 32,768 | 40,960† |
+| Sequence length | 32,768 | 32,768 | 131,072 |
 
 All on 8x H100 80GB, AdamW, bf16, cosine schedule.
 
-† SWE-Lego trajectories are long-tailed; the as-run config behind the released [FIM-8B](https://huggingface.co/TIGER-Lab/FIM-8B) truncates at `cutoff_len: 131072` with yarn rope scaling (see [`swe_lego/FIM_Posttrain_8B.yaml`](swe_lego/FIM_Posttrain_8B.yaml)), which is why that checkpoint ships `max_position_embeddings: 163840`.
+SWE-Lego runs at `cutoff_len: 131072` with yarn rope scaling — its trajectories are long, and this is why the released [FIM-8B](https://huggingface.co/TIGER-Lab/FIM-8B) ships `max_position_embeddings: 163840`.
 
 **The one deliberate deviation:** SWE-Lego is trained for 2 epochs instead of the official 4. Four epochs overfits the FIM-midtrained Qwen3-8B base in our setup. Everything else is upstream.
 

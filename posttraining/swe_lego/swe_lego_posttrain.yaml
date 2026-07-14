@@ -19,7 +19,7 @@
 #   saves/fim-midtrain/checkpoint-XXX   (ours: FIM-midtrained Qwen3-8B)
 model_name_or_path: Qwen/Qwen3-8B
 trust_remote_code: true
-rope_scaling: yarn                    # required to reach the 40K+ context below
+rope_scaling: yarn                    # required to reach the 131K context below
 
 ### method
 stage: sft
@@ -31,7 +31,7 @@ deepspeed: examples/deepspeed/ds_z3_config.json
 # See download_data.py. Register both splits in data/dataset_info.json.
 dataset: swe_lego_real_data_resolved_trajectories,swe_lego_synthetic_data_resolved_trajectories
 template: qwen3_nothink
-cutoff_len: 40960
+cutoff_len: 131072
 overwrite_cache: true
 preprocessing_num_workers: 16
 

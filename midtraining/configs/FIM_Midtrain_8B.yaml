@@ -2,10 +2,9 @@
 # FIM mid-training, Qwen3-8B — the as-run config behind
 # https://huggingface.co/TIGER-Lab/FIM-Mid-8B
 #
-# This file preserves the exact hyperparameters of the released run (note that
-# the run used `template: qwen`; the reference config suggests `qwen3` for
-# Qwen3-8B). The only edits for release are paths and the dataset reference,
-# which now points at the released corpus:
+# This file preserves the exact hyperparameters of the released run. The only
+# edits for release are paths and the dataset reference, which now points at
+# the released corpus:
 #   https://huggingface.co/datasets/TIGER-Lab/FIM-Midtraining-400K
 #
 # Register `fim_midtrain` (-> all_merged_400k.jsonl) in LLaMA-Factory's
@@ -27,7 +26,7 @@ deepspeed: examples/deepspeed/ds_z3_config.json   # path inside the LLaMA-Factor
 
 ### dataset
 dataset: fim_midtrain          # -> all_merged_400k.jsonl (80/15/5 single/pair/triple)
-template: qwen
+template: qwen3
 cutoff_len: 32768
 max_samples: null
 overwrite_cache: true
