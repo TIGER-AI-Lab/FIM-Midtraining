@@ -1,0 +1,58 @@
+# =============================================================================
+# R2E-Gym post-training, 7B — the as-run config behind
+# https://huggingface.co/TIGER-Lab/FIM-7B
+#
+# Starts from the released mid-trained checkpoint (TIGER-Lab/FIM-Mid-7B), so
+# this file reproduces the paper's `+ FIM-Midtrain + R2E-Gym` 7B row directly.
+# For the baseline arm, start from Qwen/Qwen2.5-Coder-7B-Instruct instead.
+#
+# Register `r2egym_sft_trajectories` (R2E-Gym/R2EGym-SFT-Trajectories on the
+# Hub) in LLaMA-Factory's data/dataset_info.json — see ../download_data.py.
+#
+#   llamafactory-cli train FIM_Posttrain_7B.yaml
+# =============================================================================
+
+### model
+model_name_or_path: TIGER-Lab/FIM-Mid-7B
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: examples/deepspeed/ds_z3_config.json   # path inside the LLaMA-Factory checkout
+
+### dataset
+dataset: r2egym_sft_trajectories   # R2E-Gym/R2EGym-SFT-Trajectories
+template: qwen
+cutoff_len: 32768
+max_samples: null
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+### output
+output_dir: saves/FIM_Posttrain_7B
+logging_steps: 10
+resume_from_checkpoint: null
+save_steps: 10000
+plot_loss: true
+overwrite_output_dir: false
+
+### train
+flash_attn: fa2
+enable_liger_kernel: true
+use_unsloth_gc: false
+optim: adamw_torch_fused
+
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 1
+group_by_length: true
+
+learning_rate: 1.0e-5
+weight_decay: 0.05
+max_grad_norm: 1.0
+num_train_epochs: 2
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000

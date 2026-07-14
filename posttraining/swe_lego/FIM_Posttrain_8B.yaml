@@ -1,0 +1,69 @@
+# =============================================================================
+# SWE-Lego post-training, Qwen3-8B — the as-run config behind
+# https://huggingface.co/TIGER-Lab/FIM-8B
+#
+# Starts from the released mid-trained checkpoint (TIGER-Lab/FIM-Mid-8B), so
+# this file reproduces the paper's `+ FIM-Midtrain + SWE-Lego` row directly.
+# For the baseline arm, start from Qwen/Qwen3-8B instead.
+#
+# Two things worth knowing before you run it:
+#   * 2 epochs, not the official SWE-Lego 4 — four overfits the FIM-midtrained
+#     base in our setup. This deviation is applied to BOTH arms.
+#   * cutoff_len 131072 with yarn rope scaling — this is why the released
+#     FIM-8B ships max_position_embeddings 163840. SWE-Lego trajectories are
+#     long; do not truncate them at 32K.
+#
+# Register the two SWE-Lego splits in data/dataset_info.json — see
+# ../download_data.py (both filtered to `resolved` trajectories).
+#
+#   llamafactory-cli train FIM_Posttrain_8B.yaml
+# =============================================================================
+
+### model
+model_name_or_path: TIGER-Lab/FIM-Mid-8B
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: examples/deepspeed/ds_z3_config.json   # path inside the LLaMA-Factory checkout
+
+### dataset
+dataset: swe_lego_real_data_resolved_trajectories,swe_lego_synthetic_data_resolved_trajectories
+template: qwen3_nothink
+cutoff_len: 131072
+rope_scaling: yarn
+max_samples: 1000000
+overwrite_cache: true
+preprocessing_num_workers: 16
+dataloader_num_workers: 4
+turn_mask: true                # mask the loss on failed turns
+
+### output
+output_dir: saves/FIM_Posttrain_8B
+logging_steps: 1
+save_strategy: epoch
+plot_loss: true
+overwrite_output_dir: false
+save_only_model: true
+report_to: none
+
+### train
+flash_attn: fa2
+enable_liger_kernel: true
+use_unsloth_gc: true
+
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+group_by_length: true
+
+learning_rate: 1.0e-4
+weight_decay: 0.01
+max_grad_norm: 1.0
+num_train_epochs: 2.0          # official SWE-Lego recipe is 4 — see header
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null

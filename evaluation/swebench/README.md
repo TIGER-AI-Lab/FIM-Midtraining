@@ -2,6 +2,8 @@
 
 The primary in-domain benchmark — Table 1 of the paper. This is the one evaluation with complete, working code in this repo.
 
+> Evaluating the **released checkpoints** ([FIM-7B](https://huggingface.co/TIGER-Lab/FIM-7B) / [FIM-8B](https://huggingface.co/TIGER-Lab/FIM-8B) / [FIM-14B](https://huggingface.co/TIGER-Lab/FIM-14B))? The exact pinned commands — including the OpenHands flow that FIM-8B requires instead of the R2E-Gym scaffold below — are in [`released_checkpoints.md`](released_checkpoints.md).
+
 ## How it works
 
 Three stages, three shells:

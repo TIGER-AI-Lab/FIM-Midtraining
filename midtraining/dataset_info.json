@@ -3,17 +3,24 @@
     "Paste these entries into LLaMA-Factory's own data/dataset_info.json, then",
     "reference the key from a training config's `dataset:` field.",
     "",
+    "All four files are released at",
+    "https://huggingface.co/datasets/TIGER-Lab/FIM-Midtraining-400K — download",
+    "them into LLaMA-Factory's data/ directory first:",
+    "",
+    "  huggingface-cli download TIGER-Lab/FIM-Midtraining-400K \\",
+    "    all_merged_400k.jsonl --repo-type dataset --local-dir <LLaMA-Factory>/data/",
+    "",
     "`fim_midtrain` is the corpus used for the main results: the 80/15/5",
-    "single/pair/triple mixture produced by data_construction/mixing/.",
-    "The three unmixed splits below are what data_construction emits directly;",
-    "list them comma-separated (dataset: fim_single,fim_pairs,fim_triples) if",
-    "you want LLaMA-Factory to concatenate them instead of pre-mixing.",
+    "single/pair/triple mixture (all_merged_400k.jsonl is exactly the union of",
+    "the three splits, shuffled). The three unmixed splits below are for",
+    "ablations; list them comma-separated (dataset: fim_single,fim_pairs,",
+    "fim_triples) if you want LLaMA-Factory to concatenate them instead.",
     "",
     "`file_name` is resolved relative to LLaMA-Factory's dataset_dir."
   ],
 
   "fim_midtrain": {
-    "file_name": "fim_midtrain_mixed.jsonl",
+    "file_name": "all_merged_400k.jsonl",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"
@@ -27,7 +34,7 @@
   },
 
   "fim_single": {
-    "file_name": "single_function_fim_sft.jsonl",
+    "file_name": "single_function_320k.jsonl",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"
@@ -41,7 +48,7 @@
   },
 
   "fim_pairs": {
-    "file_name": "multi_function_fim_sft_pairs.jsonl",
+    "file_name": "function_pair_60k.jsonl",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"
@@ -55,7 +62,7 @@
   },
 
   "fim_triples": {
-    "file_name": "multi_function_fim_sft_triples.jsonl",
+    "file_name": "function_triple_20k.jsonl",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"

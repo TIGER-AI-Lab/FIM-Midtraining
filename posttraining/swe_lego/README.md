@@ -40,6 +40,15 @@ llamafactory-cli train swe_lego_posttrain.yaml \
   model_name_or_path=saves/fim-midtrain/checkpoint-XXX output_dir=saves/swe-lego-fim
 ```
 
+## Configs
+
+| Config | What it is |
+|---|---|
+| [`swe_lego_posttrain.yaml`](swe_lego_posttrain.yaml) | **The reference recipe** (paper Appendix C) |
+| [`FIM_Posttrain_8B.yaml`](FIM_Posttrain_8B.yaml) | As run for [TIGER-Lab/FIM-8B](https://huggingface.co/TIGER-Lab/FIM-8B), starting from [FIM-Mid-8B](https://huggingface.co/TIGER-Lab/FIM-Mid-8B) |
+
+The as-run config trained with `cutoff_len: 131072` + `rope_scaling: yarn` — SWE-Lego trajectories are long, and this is why the released FIM-8B ships `max_position_embeddings: 163840`. It starts from the released mid-trained checkpoint on the Hub, so it reproduces the paper's `+ FIM-Midtrain + SWE-Lego` row without running mid-training yourself.
+
 ## The one deviation from upstream
 
 **2 epochs, not the official 4.** Four epochs overfits the FIM-midtrained Qwen3-8B base in our setup. Every other hyperparameter is the official SWE-Lego recipe. This is applied to *both* arms (baseline and ours), so the comparison stays fair.

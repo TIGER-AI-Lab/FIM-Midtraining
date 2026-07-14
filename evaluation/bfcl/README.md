@@ -1,48 +1,61 @@
 # BFCL (Berkeley Function-Calling Leaderboard)
 
-> **Status: not yet released.** This directory is a placeholder — the evaluation
-> for this benchmark was run outside this repository and the scripts have not
-> been recovered. See "What belongs here" below.
-
-## What this benchmark is for
-
-Function-calling accuracy across single/multiple/parallel calls, AST-matched and executed.
+Function-calling accuracy across single/multiple/parallel calls, AST-matched and executed. We use **`all_scoring`** and report the **overall accuracy**.
 
 **Role in the paper:** Tool use, outside the coding domain. The other load-bearing transfer result — and the most direct probe of the paper's function-call/tool-call isomorphism claim.
 
 ## Numbers to reproduce
 
-Paper Table 2 (capability preservation), Qwen2.5-Coder-14B-Instruct + R2E-Gym.
-All three rows use the same checkpoints; only the benchmark differs.
+Paper Table 2 (capability preservation), Qwen2.5-Coder-14B-Instruct + R2E-Gym. All three arms use the same checkpoints; only the benchmark differs.
 
-| Setting | Score |
-|---|---|
-| Instruct (ceiling) | 23.20 |
-| + R2E-Gym | 15.80 |
-| + FIM Mid-Train + R2E-Gym | **18.20** |
+| Arm | Checkpoint | Score |
+|---|---|---|
+| Instruct (ceiling) | [Qwen/Qwen2.5-Coder-14B-Instruct](https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct) | 23.20 |
+| + R2E-Gym | [R2E-Gym/R2EGym-14B-Agent](https://huggingface.co/R2E-Gym/R2EGym-14B-Agent) | 15.80 |
+| **+ FIM Mid-Train + R2E-Gym (ours)** | [TIGER-Lab/FIM-14B](https://huggingface.co/TIGER-Lab/FIM-14B) | **18.20** |
 
-## What belongs here
+## Reproduce
 
-A runner that takes a **post-trained checkpoint** and emits a single score, for
-each of the three arms above. In practice that means:
+First serve the checkpoint with vLLM ([`../README.md`](../README.md#common-pattern)) — BFCL relies on structured tool calls, so the `--enable-auto-tool-choice --tool-call-parser hermes` serving flags are **required**. The commands below assume the endpoint `http://127.0.0.1:8010/v1` with served name `qwen2.5-coder-14b` (swap per arm).
 
-1. **Serve the checkpoint.** Reuse
-   [`../swebench/start_vllm_server.sh`](../swebench/start_vllm_server.sh) — every
-   benchmark here talks to an OpenAI-compatible endpoint, so the serving step is
-   identical and should not be re-implemented per benchmark.
-2. **Drive the upstream harness** against that endpoint: https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard
-   Do not reimplement the benchmark; the published numbers only mean something
-   if they come from the official harness.
-3. **Parse the harness output into one number** and write it somewhere
-   comparable across the three arms.
+```bash
+git clone https://github.com/ShishirPatil/gorilla.git && cd gorilla
+git checkout 6ea5797
+pip install -e berkeley-function-call-leaderboard
+pip install soundfile   # unlisted transitive dep: model_config imports qwen_agent, which needs it
+```
 
-The three arms to run:
+The pinned commit has no entry for these models, so register one that routes through the OpenAI-compatible endpoint — append to `berkeley-function-call-leaderboard/bfcl_eval/constants/model_config.py`:
 
-| Arm | Checkpoint |
-|---|---|
-| Instruct (ceiling) | `Qwen/Qwen2.5-Coder-14B-Instruct` |
-| post-training only | `../../posttraining/r2egym` output, started from the stock model |
-| ours | `../../posttraining/r2egym` output, started from the mid-trained model |
+```python
+api_inference_model_map["qwen2.5-coder-14b-FC"] = ModelConfig(
+    model_name="qwen2.5-coder-14b",   # must equal the vLLM served name
+    display_name="qwen2.5-coder-14b-FC",
+    url="http://localhost/openai-compatible",
+    org="local",
+    license="unknown",
+    model_handler=OpenAICompletionsHandler,
+    input_price=None,
+    output_price=None,
+    is_fc_model=True,
+    underscore_to_dot=True,
+)
+MODEL_CONFIG_MAPPING["qwen2.5-coder-14b-FC"] = api_inference_model_map["qwen2.5-coder-14b-FC"]
+```
+
+Then generate and evaluate. The `OpenAICompletionsHandler` registered above reads `OPENAI_BASE_URL` / `OPENAI_API_KEY` (the `REMOTE_OPENAI_*` variables only apply to the local/OSS handler path), so point those at the vLLM endpoint:
+
+```bash
+export OPENAI_BASE_URL=http://127.0.0.1:8010/v1
+export OPENAI_API_KEY=EMPTY
+
+bfcl generate --model qwen2.5-coder-14b-FC --test-category all_scoring --num-threads 4
+bfcl evaluate --model qwen2.5-coder-14b-FC --test-category all_scoring
+```
+
+The overall accuracy is reported in the evaluation output (`score/data_overall.csv`).
+
+Deterministic under greedy decoding — should reproduce closely.
 
 ## Upstream
 

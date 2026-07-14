@@ -6,14 +6,14 @@ Eight benchmarks in three groups. Every one of them scores a **post-trained** ch
 |---|---|---|---|
 | **Coding agent** (in-domain) | [SWE-Bench-Verified](swebench) | Table 1 | ✅ scripts here |
 | | [SWE-Bench-Lite](swebench) | Table 1 | ✅ scripts here |
-| **Non-agent coding** (regression check) | [LiveCodeBench](livecodebench) | Table 2 | ⬜ placeholder |
-| | [OJBench](ojbench) | Table 2 | ⬜ placeholder |
-| | [FullStackBench-EN](fullstackbench) | Table 2 | ⬜ placeholder |
-| **Agent OOD** | [Terminal-Bench](terminal_bench) | Table 2 | ⬜ placeholder |
-| **Tool use** (outside coding) | [τ-bench](tau_bench) | Table 2 | ⬜ placeholder |
-| | [BFCL](bfcl) | Table 2 | ⬜ placeholder |
+| **Non-agent coding** (regression check) | [LiveCodeBench](livecodebench) | Table 2 | ✅ repro guide |
+| | [OJBench](ojbench) | Table 2 | ✅ repro guide |
+| | [FullStackBench-EN](fullstackbench) | Table 2 | ✅ repro guide |
+| **Agent OOD** | [Terminal-Bench 2.0](terminal_bench) | Table 2 | ✅ repro guide |
+| **Tool use** (outside coding) | [τ-bench](tau_bench) | Table 2 | ✅ repro guide |
+| | [BFCL](bfcl) | Table 2 | ✅ repro guide |
 
-**⬜ placeholder** means exactly that: the directory holds a README describing what belongs there, and no code. Those six evaluations were run outside this repository and the scripts have not been recovered. Each placeholder README states the benchmark's role, the numbers to reproduce, the upstream harness to drive, and the three checkpoints to run it on.
+Each Table-2 directory documents the exact reproduction path: which upstream harness at which version, how to point it at a served checkpoint, and the three arms to run — the instruct base ([Qwen/Qwen2.5-Coder-14B-Instruct](https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct)), the post-trained-only arm ([R2E-Gym/R2EGym-14B-Agent](https://huggingface.co/R2E-Gym/R2EGym-14B-Agent)), and ours ([TIGER-Lab/FIM-14B](https://huggingface.co/TIGER-Lab/FIM-14B)). All six were run at 14B; scores are in each directory's README and in the paper's Table 2.
 
 ## Why the second and third groups exist
 
@@ -25,13 +25,20 @@ Agentic post-training buys SWE-Bench points and quietly **charges for them elsew
 
 ## Common pattern
 
-Every benchmark scores a checkpoint through an **OpenAI-compatible endpoint**, so the serving step is shared:
+Every benchmark except LiveCodeBench (which loads the model itself) scores a checkpoint through an **OpenAI-compatible endpoint**, so the serving step is shared. For SWE-Bench use [`swebench/start_vllm_server.sh`](swebench/start_vllm_server.sh); for the six Table-2 benchmarks serve at 32K context:
 
 ```bash
-../evaluation/swebench/start_vllm_server.sh /path/to/checkpoint
+vllm serve TIGER-Lab/FIM-14B \
+  --served-model-name fim-14b \
+  --host 0.0.0.0 --port 8010 \
+  --dtype bfloat16 --max-model-len 32768 --gpu-memory-utilization 0.90 \
+  --enable-auto-tool-choice --tool-call-parser hermes \
+  --trust-remote-code
 ```
 
-Then drive the benchmark's own official harness against `http://127.0.0.1:$PORT/v1`. Do not reimplement a benchmark — a number only means something if the official harness produced it.
+Swap the model and served name per arm (`Qwen/Qwen2.5-Coder-14B-Instruct` → `qwen2.5-coder-14b`, `R2E-Gym/R2EGym-14B-Agent` → `r2egym-model`). The `--enable-auto-tool-choice --tool-call-parser hermes` flags are **required** for τ-bench and BFCL (they rely on structured tool calls; Qwen2.5 emits Hermes-style tool calls) and harmless for the rest. The endpoint is `http://127.0.0.1:8010/v1` with API key `EMPTY`.
+
+Then drive the benchmark's own official harness against that endpoint. Do not reimplement a benchmark — a number only means something if the official harness produced it. Unless a harness exposes otherwise, all generations use temperature 0 and `max_tokens=4096`; table values are rounded to one decimal place.
 
 ## Protocol
 

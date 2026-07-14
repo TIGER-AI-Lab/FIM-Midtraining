@@ -1,48 +1,53 @@
 # LiveCodeBench
 
-> **Status: not yet released.** This directory is a placeholder — the evaluation
-> for this benchmark was run outside this repository and the scripts have not
-> been recovered. See "What belongs here" below.
+Contamination-free competitive-programming problems, scored by executing the generated program against held-out tests. We use **release_v6, pass@1, greedy decoding**.
 
-## What this benchmark is for
-
-Contamination-free competitive-programming problems, scored by executing the generated program against held-out tests.
-
-**Role in the paper:** Non-agent coding — the regression check. This is where agentic post-training does the most damage (-13.10 vs the Instruct ceiling) and where mid-training recovers the most (+11.10).
+**Role in the paper:** Non-agent coding — the regression check. This is where agentic post-training does the most damage (−13.10 vs the Instruct ceiling) and where mid-training recovers the most (+11.10).
 
 ## Numbers to reproduce
 
-Paper Table 2 (capability preservation), Qwen2.5-Coder-14B-Instruct + R2E-Gym.
-All three rows use the same checkpoints; only the benchmark differs.
+Paper Table 2 (capability preservation), Qwen2.5-Coder-14B-Instruct + R2E-Gym. All three arms use the same checkpoints; only the benchmark differs.
 
-| Setting | Score |
-|---|---|
-| Instruct (ceiling) | 37.20 |
-| + R2E-Gym | 24.10 |
-| + FIM Mid-Train + R2E-Gym | **35.20** |
+| Arm | Checkpoint | Score |
+|---|---|---|
+| Instruct (ceiling) | [Qwen/Qwen2.5-Coder-14B-Instruct](https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct) | 37.20 |
+| + R2E-Gym | [R2E-Gym/R2EGym-14B-Agent](https://huggingface.co/R2E-Gym/R2EGym-14B-Agent) | 24.10 |
+| **+ FIM Mid-Train + R2E-Gym (ours)** | [TIGER-Lab/FIM-14B](https://huggingface.co/TIGER-Lab/FIM-14B) | **35.20** |
 
-## What belongs here
+## Reproduce
 
-A runner that takes a **post-trained checkpoint** and emits a single score, for
-each of the three arms above. In practice that means:
+Unlike the other five benchmarks, LiveCodeBench loads the model directly through its own vLLM runner — **no server needed**.
 
-1. **Serve the checkpoint.** Reuse
-   [`../swebench/start_vllm_server.sh`](../swebench/start_vllm_server.sh) — every
-   benchmark here talks to an OpenAI-compatible endpoint, so the serving step is
-   identical and should not be re-implemented per benchmark.
-2. **Drive the upstream harness** against that endpoint: https://github.com/LiveCodeBench/LiveCodeBench
-   Do not reimplement the benchmark; the published numbers only mean something
-   if they come from the official harness.
-3. **Parse the harness output into one number** and write it somewhere
-   comparable across the three arms.
+```bash
+git clone https://github.com/LiveCodeBench/LiveCodeBench.git && cd LiveCodeBench
+uv venv --python 3.11 && source .venv/bin/activate && uv pip install -e .
+```
 
-The three arms to run:
+If `lcb_runner/lm_styles.py` has no `Qwen2.5-Coder-14B-Instruct` entry, register one (append inside the `LanguageModelList`, next to the existing Qwen2.5-Coder entries):
 
-| Arm | Checkpoint |
-|---|---|
-| Instruct (ceiling) | `Qwen/Qwen2.5-Coder-14B-Instruct` |
-| post-training only | `../../posttraining/r2egym` output, started from the stock model |
-| ours | `../../posttraining/r2egym` output, started from the mid-trained model |
+```python
+    LanguageModel(
+        "Qwen/Qwen2.5-Coder-14B-Instruct",
+        "Qwen2.5-Coder-Ins-14B",
+        LMStyle.CodeQwenInstruct,
+        datetime(2024, 6, 30),
+        link="https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct",
+    ),
+```
+
+Then run generation + evaluation:
+
+```bash
+python -m lcb_runner.runner.main \
+  --model Qwen/Qwen2.5-Coder-14B-Instruct \
+  --scenario codegeneration --release_version release_v6 \
+  --n 1 --temperature 0 --max_tokens 4096 \
+  --evaluate --num_process_evaluate 12 --timeout 6
+```
+
+For the two fine-tuned checkpoints, keep the same `--model` (they share the Qwen2.5-Coder chat template) and add `--local_model_path /path/to/checkpoint` (a local download of `R2E-Gym/R2EGym-14B-Agent` or `TIGER-Lab/FIM-14B`). Pass@1 is printed at the end and saved under `output/`.
+
+Deterministic under greedy decoding — should reproduce closely.
 
 ## Upstream
 

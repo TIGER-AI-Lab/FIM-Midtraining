@@ -32,7 +32,7 @@ deepspeed: examples/deepspeed/ds_z3_offload_config.json
 # registered in data/dataset_info.json. See download_data.py for a local copy.
 dataset: R2E-Gym/R2EGym-SFT-Trajectories
 template: qwen
-cutoff_len: 20480
+cutoff_len: 32768
 max_samples: 100000
 overwrite_cache: true
 preprocessing_num_workers: 16

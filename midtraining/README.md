@@ -1,8 +1,10 @@
 # FIM Mid-Training
 
-Takes a base model and the FIM corpus from [`../data_construction`](../data_construction), and produces the mid-trained checkpoint that every post-training run starts from.
+Takes a base model and the FIM corpus — the released [TIGER-Lab/FIM-Midtraining-400K](https://huggingface.co/datasets/TIGER-Lab/FIM-Midtraining-400K), or your own build from [`../data_construction`](../data_construction) — and produces the mid-trained checkpoint that every post-training run starts from.
 
-This is **one reference script, not a script per experiment.** The paper applies the same recipe to all three base models — swap `model_name_or_path` (and `template` for Qwen3) and nothing else changes.
+The recipe is **one reference config, not a config per experiment.** The paper applies it to all three base models — swap `model_name_or_path` and nothing else changes. The exact per-model configs behind the released `FIM-Mid-*` checkpoints are also included (see [Configs](#configs)).
+
+The three released mid-trained checkpoints, if you want to skip this stage entirely: [FIM-Mid-7B](https://huggingface.co/TIGER-Lab/FIM-Mid-7B) · [FIM-Mid-8B](https://huggingface.co/TIGER-Lab/FIM-Mid-8B) · [FIM-Mid-14B](https://huggingface.co/TIGER-Lab/FIM-Mid-14B)
 
 ## Setup
 
@@ -15,11 +17,16 @@ pip install -e ".[torch,metrics,deepspeed,liger-kernel]"
 pip install flash-attn --no-build-isolation
 ```
 
-## Register the corpus
+## Get and register the corpus
 
-Copy your FIM JSONL into LLaMA-Factory's `data/` directory, then paste the entries from [`dataset_info.json`](dataset_info.json) into LLaMA-Factory's own `data/dataset_info.json`.
+Download the released corpus into LLaMA-Factory's `data/` directory, then paste the entries from [`dataset_info.json`](dataset_info.json) into LLaMA-Factory's own `data/dataset_info.json`:
 
-The main results train on the **80% single / 15% pair / 5% triple** mixture (paper Table 4, block C). `data_construction` emits the three splits separately; see [`../data_construction/mixing/`](../data_construction/mixing) for the mixing step.
+```bash
+huggingface-cli download TIGER-Lab/FIM-Midtraining-400K all_merged_400k.jsonl \
+  --repo-type dataset --local-dir <LLaMA-Factory>/data/
+```
+
+The main results train on the **80% single / 15% pair / 5% triple** mixture (paper Table 4, block C) — `all_merged_400k.jsonl` *is* that mixture (320K single + 60K pairs + 20K triples, shuffled). The three unmixed splits are released alongside it for ablations, and [`../data_construction`](../data_construction) rebuilds everything from the repo list if you want a corpus of your own.
 
 ## Run
 
@@ -28,6 +35,17 @@ cp configs/fim_midtrain.yaml <LLaMA-Factory>/
 cd <LLaMA-Factory>
 llamafactory-cli train fim_midtrain.yaml
 ```
+
+## Configs
+
+| Config | What it is |
+|---|---|
+| [`configs/fim_midtrain.yaml`](configs/fim_midtrain.yaml) | **The reference recipe** — edit `model_name_or_path`, run |
+| [`configs/FIM_Midtrain_7B.yaml`](configs/FIM_Midtrain_7B.yaml) | As run for [TIGER-Lab/FIM-Mid-7B](https://huggingface.co/TIGER-Lab/FIM-Mid-7B) |
+| [`configs/FIM_Midtrain_8B.yaml`](configs/FIM_Midtrain_8B.yaml) | As run for [TIGER-Lab/FIM-Mid-8B](https://huggingface.co/TIGER-Lab/FIM-Mid-8B) |
+| [`configs/FIM_Midtrain_14B.yaml`](configs/FIM_Midtrain_14B.yaml) | As run for [TIGER-Lab/FIM-Mid-14B](https://huggingface.co/TIGER-Lab/FIM-Mid-14B) |
+
+The as-run configs preserve the exact hyperparameters of the released checkpoints (they differ from the reference only in bookkeeping fields like `save_steps`, plus `rope_scaling: yarn`); their dataset references point at the released corpus.
 
 ## What to change per base model
 

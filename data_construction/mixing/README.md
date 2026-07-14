@@ -1,7 +1,6 @@
 # Corpus Mixing
 
-> **Status: not yet released.** This directory is a placeholder — the mixing
-> step has not been recovered. Everything needed to write it is described below.
+> **The mixed corpus itself is released** — [`all_merged_400k.jsonl` on the Hub](https://huggingface.co/datasets/TIGER-Lab/FIM-Midtraining-400K) *is* the 80/15/5 mixture used for the main results (320K single + 60K pairs + 20K triples, shuffled), so you only need this step if you are rebuilding a corpus of your own or reproducing the mixture ablations. A standalone mixing script has not been recovered; everything needed to write one is described below.
 
 ## What belongs here
 

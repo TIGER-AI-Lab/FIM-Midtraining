@@ -1,48 +1,41 @@
 # FullStackBench (English subset)
 
-> **Status: not yet released.** This directory is a placeholder — the evaluation
-> for this benchmark was run outside this repository and the scripts have not
-> been recovered. See "What belongs here" below.
+Multi-domain full-stack programming problems executed in ByteDance's SandboxFusion. We use the **English split** and report the **pass rate**.
 
-## What this benchmark is for
-
-Real-world full-stack programming tasks across many domains, execution-scored. Use the EN subset only.
-
-**Role in the paper:** Non-agent coding — breadth check across domains rather than algorithmic difficulty.
+**Role in the paper:** Non-agent coding — regression check. Post-training costs −6.08 vs the Instruct ceiling; mid-training claws back +0.53 of it.
 
 ## Numbers to reproduce
 
-Paper Table 2 (capability preservation), Qwen2.5-Coder-14B-Instruct + R2E-Gym.
-All three rows use the same checkpoints; only the benchmark differs.
+Paper Table 2 (capability preservation), Qwen2.5-Coder-14B-Instruct + R2E-Gym. All three arms use the same checkpoints; only the benchmark differs.
 
-| Setting | Score |
-|---|---|
-| Instruct (ceiling) | 53.80 |
-| + R2E-Gym | 47.72 |
-| + FIM Mid-Train + R2E-Gym | **48.25** |
+| Arm | Checkpoint | Score |
+|---|---|---|
+| Instruct (ceiling) | [Qwen/Qwen2.5-Coder-14B-Instruct](https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct) | 53.80 |
+| + R2E-Gym | [R2E-Gym/R2EGym-14B-Agent](https://huggingface.co/R2E-Gym/R2EGym-14B-Agent) | 47.72 |
+| **+ FIM Mid-Train + R2E-Gym (ours)** | [TIGER-Lab/FIM-14B](https://huggingface.co/TIGER-Lab/FIM-14B) | **48.25** |
 
-## What belongs here
+## Reproduce
 
-A runner that takes a **post-trained checkpoint** and emits a single score, for
-each of the three arms above. In practice that means:
+First serve the checkpoint with vLLM ([`../README.md`](../README.md#common-pattern)); the commands below assume an OpenAI-compatible endpoint at `http://127.0.0.1:8010/v1`.
 
-1. **Serve the checkpoint.** Reuse
-   [`../swebench/start_vllm_server.sh`](../swebench/start_vllm_server.sh) — every
-   benchmark here talks to an OpenAI-compatible endpoint, so the serving step is
-   identical and should not be re-implemented per benchmark.
-2. **Drive the upstream harness** against that endpoint: https://github.com/bytedance/FullStackBench
-   Do not reimplement the benchmark; the published numbers only mean something
-   if they come from the official harness.
-3. **Parse the harness output into one number** and write it somewhere
-   comparable across the three arms.
+Docker is required for the execution sandbox:
 
-The three arms to run:
+```bash
+docker run -d --rm -p 8080:8080 volcengine/sandbox-fusion:server-20241204
 
-| Arm | Checkpoint |
-|---|---|
-| Instruct (ceiling) | `Qwen/Qwen2.5-Coder-14B-Instruct` |
-| post-training only | `../../posttraining/r2egym` output, started from the stock model |
-| ours | `../../posttraining/r2egym` output, started from the mid-trained model |
+git clone https://github.com/bytedance/FullStackBench.git && cd FullStackBench
+pip install -r requirements.txt
+```
+
+Edit `src/main.py` to point at the served model — set `client = AsyncOpenAI(api_key="EMPTY", base_url="http://127.0.0.1:8010/v1")`, put the served name in `model=`, and raise `max_tokens` to `4096`. The English split (`./data/fsb_en_20241204.jsonl`) is already the default. Then:
+
+```bash
+python src/main.py
+```
+
+The pass rate is printed at the end; per-sample results land in `results.jsonl`.
+
+Sandbox execution carries some run-to-run variance.
 
 ## Upstream
 

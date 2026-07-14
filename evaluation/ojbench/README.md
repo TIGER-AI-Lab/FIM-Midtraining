@@ -1,48 +1,74 @@
 # OJBench
 
-> **Status: not yet released.** This directory is a placeholder — the evaluation
-> for this benchmark was run outside this repository and the scripts have not
-> been recovered. See "What belongs here" below.
+Competitive-programming problems from NOI and ICPC, judged by a real online-judge sandbox (DMOJ judge-server). We use the **full set** and report the **AC rate**.
 
-## What this benchmark is for
-
-Olympiad/ICPC-level judge problems, scored by execution against the judge's tests.
-
-**Role in the paper:** Non-agent coding — the hardest of the three code-generation benchmarks. Mid-training brings it back to within 0.46 of the Instruct ceiling.
+**Role in the paper:** Non-agent coding — regression check. Mid-training recovers +1.94 of the −2.40 that post-training costs, landing within 0.46 of the Instruct ceiling.
 
 ## Numbers to reproduce
 
-Paper Table 2 (capability preservation), Qwen2.5-Coder-14B-Instruct + R2E-Gym.
-All three rows use the same checkpoints; only the benchmark differs.
+Paper Table 2 (capability preservation), Qwen2.5-Coder-14B-Instruct + R2E-Gym. All three arms use the same checkpoints; only the benchmark differs.
 
-| Setting | Score |
-|---|---|
-| Instruct (ceiling) | 5.20 |
-| + R2E-Gym | 2.80 |
-| + FIM Mid-Train + R2E-Gym | **4.74** |
+| Arm | Checkpoint | Score |
+|---|---|---|
+| Instruct (ceiling) | [Qwen/Qwen2.5-Coder-14B-Instruct](https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct) | 5.20 |
+| + R2E-Gym | [R2E-Gym/R2EGym-14B-Agent](https://huggingface.co/R2E-Gym/R2EGym-14B-Agent) | 2.80 |
+| **+ FIM Mid-Train + R2E-Gym (ours)** | [TIGER-Lab/FIM-14B](https://huggingface.co/TIGER-Lab/FIM-14B) | **4.74** |
 
-## What belongs here
+## Reproduce
 
-A runner that takes a **post-trained checkpoint** and emits a single score, for
-each of the three arms above. In practice that means:
+First serve the checkpoint with vLLM ([`../README.md`](../README.md#common-pattern)); the commands below assume an OpenAI-compatible endpoint at `http://127.0.0.1:8010/v1` with served name `fim-14b`.
 
-1. **Serve the checkpoint.** Reuse
-   [`../swebench/start_vllm_server.sh`](../swebench/start_vllm_server.sh) — every
-   benchmark here talks to an OpenAI-compatible endpoint, so the serving step is
-   identical and should not be re-implemented per benchmark.
-2. **Drive the upstream harness** against that endpoint: https://github.com/He-Ren/OJBench
-   Do not reimplement the benchmark; the published numbers only mean something
-   if they come from the official harness.
-3. **Parse the harness output into one number** and write it somewhere
-   comparable across the three arms.
+Requires `g++` (C++17), `pypy3`, and `libseccomp-dev` (judge-server compiles its sandbox against `seccomp.h`). Install pypy3 system-wide so the judge sandbox can access it: `apt install pypy3 libseccomp-dev`.
 
-The three arms to run:
+```bash
+git clone https://github.com/DMOJ/judge-server.git && cd judge-server
+pip install . && cd ..
 
-| Arm | Checkpoint |
-|---|---|
-| Instruct (ceiling) | `Qwen/Qwen2.5-Coder-14B-Instruct` |
-| post-training only | `../../posttraining/r2egym` output, started from the stock model |
-| ours | `../../posttraining/r2egym` output, started from the mid-trained model |
+git clone https://github.com/He-Ren/OJBench.git
+# edit OJBench/ojbench/runtime.yaml so g++17/pypy3 point to your binaries
+pip install -e OJBench
+
+git lfs install
+git clone https://huggingface.co/datasets/He-Ren/OJBench_testdata
+```
+
+Generate responses from the served model (OJBench leaves generation to you; any OpenAI client works):
+
+```python
+import json, concurrent.futures
+from openai import OpenAI
+
+client = OpenAI(base_url="http://127.0.0.1:8010/v1", api_key="EMPTY")
+prompts = [json.loads(l) for l in open("OJBench_testdata/prompts/full.jsonl")]
+
+def gen(row):
+    resp = client.chat.completions.create(
+        model="fim-14b",
+        messages=[{"role": "user", "content": row["prompt"]}],
+        temperature=0, max_tokens=4096)
+    return {**row, "content": resp.choices[0].message.content}
+
+with concurrent.futures.ThreadPoolExecutor(8) as pool:
+    rows = list(pool.map(gen, prompts))
+with open("model_response.jsonl", "w") as f:
+    f.writelines(json.dumps(r, ensure_ascii=False) + "\n" for r in rows)
+```
+
+Judge and compute the AC rate:
+
+```python
+import json
+from pathlib import Path
+import ojbench
+
+ojbench.init(problem_dirs=[Path("OJBench_testdata/NOI"), Path("OJBench_testdata/ICPC")])
+results = ojbench.judge_jsonl("model_response.jsonl", "judged.jsonl", num_workers=16)
+print("AC rate:", sum(r["is_passed"] for r in results) / len(results))
+```
+
+Note: if the judge fails to resolve numeric problem ids for NOI problems, prefix them with `loj-` (e.g. `1000` → `loj-1000`) before judging.
+
+Deterministic under greedy decoding — should reproduce closely.
 
 ## Upstream
 

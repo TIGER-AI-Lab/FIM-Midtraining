@@ -35,6 +35,16 @@ llamafactory-cli train r2egym_posttrain.yaml \
 
 Swap in `Qwen2.5-Coder-14B-Instruct` (and its mid-trained checkpoint) for the 14B rows. Nothing else changes.
 
+## Configs
+
+| Config | What it is |
+|---|---|
+| [`r2egym_posttrain.yaml`](r2egym_posttrain.yaml) | **The reference recipe** — edit `model_name_or_path`, run |
+| [`FIM_Posttrain_7B.yaml`](FIM_Posttrain_7B.yaml) | As run for [TIGER-Lab/FIM-7B](https://huggingface.co/TIGER-Lab/FIM-7B), starting from [FIM-Mid-7B](https://huggingface.co/TIGER-Lab/FIM-Mid-7B) |
+| [`FIM_Posttrain_14B.yaml`](FIM_Posttrain_14B.yaml) | As run for [TIGER-Lab/FIM-14B](https://huggingface.co/TIGER-Lab/FIM-14B), starting from [FIM-Mid-14B](https://huggingface.co/TIGER-Lab/FIM-Mid-14B) |
+
+The as-run configs start from the released mid-trained checkpoints on the Hub, so they reproduce the paper's `+ FIM-Midtrain + R2E-Gym` rows without running mid-training yourself.
+
 ## Reproduces
 
 | Config | Paper row (Table 1) |

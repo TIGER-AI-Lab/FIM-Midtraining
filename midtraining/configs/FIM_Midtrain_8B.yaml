@@ -1,0 +1,59 @@
+# =============================================================================
+# FIM mid-training, Qwen3-8B — the as-run config behind
+# https://huggingface.co/TIGER-Lab/FIM-Mid-8B
+#
+# This file preserves the exact hyperparameters of the released run (note that
+# the run used `template: qwen`; the reference config suggests `qwen3` for
+# Qwen3-8B). The only edits for release are paths and the dataset reference,
+# which now points at the released corpus:
+#   https://huggingface.co/datasets/TIGER-Lab/FIM-Midtraining-400K
+#
+# Register `fim_midtrain` (-> all_merged_400k.jsonl) in LLaMA-Factory's
+# data/dataset_info.json first — see ../dataset_info.json.
+#
+#   llamafactory-cli train FIM_Midtrain_8B.yaml
+# =============================================================================
+
+### model
+model_name_or_path: Qwen/Qwen3-8B
+trust_remote_code: true
+rope_scaling: yarn
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: examples/deepspeed/ds_z3_config.json   # path inside the LLaMA-Factory checkout
+
+### dataset
+dataset: fim_midtrain          # -> all_merged_400k.jsonl (80/15/5 single/pair/triple)
+template: qwen
+cutoff_len: 32768
+max_samples: null
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+### output
+output_dir: saves/FIM_Midtrain_8B
+logging_steps: 10
+resume_from_checkpoint: null
+save_steps: 10000
+plot_loss: true
+overwrite_output_dir: false
+
+### train
+flash_attn: fa2
+enable_liger_kernel: true
+use_unsloth_gc: false
+
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 16
+group_by_length: true
+
+learning_rate: 1.0e-5
+weight_decay: 0.05
+num_train_epochs: 1
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000

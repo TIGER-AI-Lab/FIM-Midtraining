@@ -1,49 +1,38 @@
-# Terminal-Bench
+# Terminal-Bench 2.0
 
-> **Status: not yet released.** This directory is a placeholder — the evaluation
-> for this benchmark was run outside this repository and the scripts have not
-> been recovered. See "What belongs here" below.
+Agentic tasks in a real terminal sandbox (89 tasks), run through [Harbor](https://github.com/laude-institute/harbor). We report the **mean reward**. Needs Docker.
 
-## What this benchmark is for
-
-Agentic tasks in a real terminal sandbox. Needs Docker.
-
-**Role in the paper:** Agent OOD — an agent benchmark that is not SWE-Bench. Note the Instruct model scores 0.00 here (it cannot drive an agent loop at all), so both trained rows are improvements over a floor, not a recovery toward a ceiling.
+**Role in the paper:** Agent OOD — an agent benchmark that is not SWE-Bench. Note the Instruct model scores 0.00 here (it cannot drive an agent loop at all), so both trained arms are improvements over a floor, not a recovery toward a ceiling.
 
 ## Numbers to reproduce
 
-Paper Table 2 (capability preservation), Qwen2.5-Coder-14B-Instruct + R2E-Gym.
-All three rows use the same checkpoints; only the benchmark differs.
+Paper Table 2 (capability preservation), Qwen2.5-Coder-14B-Instruct + R2E-Gym. All three arms use the same checkpoints; only the benchmark differs.
 
-| Setting | Score |
-|---|---|
-| Instruct (ceiling) | 0.00 |
-| + R2E-Gym | 2.41 |
-| + FIM Mid-Train + R2E-Gym | **3.66** |
+| Arm | Checkpoint | Score |
+|---|---|---|
+| Instruct | [Qwen/Qwen2.5-Coder-14B-Instruct](https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct) | 0.00 |
+| + R2E-Gym | [R2E-Gym/R2EGym-14B-Agent](https://huggingface.co/R2E-Gym/R2EGym-14B-Agent) | 2.41 |
+| **+ FIM Mid-Train + R2E-Gym (ours)** | [TIGER-Lab/FIM-14B](https://huggingface.co/TIGER-Lab/FIM-14B) | **3.66** |
 
-## What belongs here
+## Reproduce
 
-A runner that takes a **post-trained checkpoint** and emits a single score, for
-each of the three arms above. In practice that means:
+First serve the checkpoint with vLLM ([`../README.md`](../README.md#common-pattern)). Agents run **inside containers**, so the endpoint must be reachable from Docker — with the default bridge network that is `http://172.17.0.1:8010/v1`, not `127.0.0.1`.
 
-1. **Serve the checkpoint.** Reuse
-   [`../swebench/start_vllm_server.sh`](../swebench/start_vllm_server.sh) — every
-   benchmark here talks to an OpenAI-compatible endpoint, so the serving step is
-   identical and should not be re-implemented per benchmark.
-2. **Drive the upstream harness** against that endpoint: https://github.com/laude-institute/terminal-bench
-   Do not reimplement the benchmark; the published numbers only mean something
-   if they come from the official harness.
-3. **Parse the harness output into one number** and write it somewhere
-   comparable across the three arms.
+```bash
+pip install harbor
 
-The three arms to run:
+export OPENAI_BASE_URL=http://172.17.0.1:8010/v1
+export OPENAI_API_KEY=EMPTY
+harbor run --dataset terminal-bench@2.0 \
+  --agent qwen-code \
+  --model qwen2.5-coder-14b \
+  --n-concurrent 4
+```
 
-| Arm | Checkpoint |
-|---|---|
-| Instruct (ceiling) | `Qwen/Qwen2.5-Coder-14B-Instruct` |
-| post-training only | `../../posttraining/r2egym` output, started from the stock model |
-| ours | `../../posttraining/r2egym` output, started from the mid-trained model |
+(`--model` must equal the vLLM served name.) Mean reward over the 89 tasks is reported in the job summary.
+
+Live containers + agent scaffold carry run-to-run variance.
 
 ## Upstream
 
-https://github.com/laude-institute/terminal-bench
+https://github.com/laude-institute/terminal-bench · https://github.com/laude-institute/harbor
