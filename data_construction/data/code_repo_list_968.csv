@@ -295,7 +295,6 @@ sample_id,repository_url,category,description,notes,license
 293,https://github.com/wagtail/wagtail,Category 2: Domain Specific,Wagtail CMS,Django CMS,"BSD 3-Clause ""New"" or ""Revised"" License"
 294,https://github.com/joke2k/faker,Category 5: Small Frameworks,Fake data generator,Test data generation,MIT License
 295,https://github.com/samuelcolvin/watchfiles,Category 5: Small Frameworks,File watching,Rust-backed file watcher,MIT License
-,,,,,
 297,https://github.com/python-jsonschema/jsonschema,Category 5: Small Frameworks,JSON Schema validator,Schema validation,MIT License
 298,https://github.com/Julian/jsonschema,Category 5: Small Frameworks,JSON Schema implementation,Full JSON Schema support,MIT License
 299,https://github.com/ijl/orjson,Category 5: Small Frameworks,Fast JSON library,Rust-based JSON,Apache License 2.0
@@ -487,7 +486,6 @@ sample_id,repository_url,category,description,notes,license
 485,https://github.com/replicate/cog,Category 4: Scientific Computing,Cog,ML containers,Apache License 2.0
 486,https://github.com/huggingface/diffusers,Category 1: From Scratch,Diffusers,Diffusion models,Apache License 2.0
 487,https://github.com/CompVis/stable-diffusion,Category 1: From Scratch,Stable Diffusion,Text-to-image,Other
-,,,,,
 489,https://github.com/Stability-AI/generative-models,Category 1: From Scratch,Generative Models,SDXL and more,MIT License
 490,https://github.com/AUTOMATIC1111/stable-diffusion-webui,Category 1: From Scratch,SD Web UI,Web interface,GNU Affero General Public License v3.0
 491,https://github.com/invoke-ai/InvokeAI,Category 1: From Scratch,InvokeAI,Creative engine,Apache License 2.0
@@ -500,7 +498,6 @@ sample_id,repository_url,category,description,notes,license
 498,https://github.com/Mikubill/sd-webui-controlnet,Category 1: From Scratch,ControlNet WebUI,ControlNet extension,GNU General Public License v3.0
 499,https://github.com/lllyasviel/ControlNet-v1-1-nightly,Category 1: From Scratch,ControlNet v1.1,Improved ControlNet,No License
 500,https://github.com/salesforce/BLIP,Category 1: From Scratch,BLIP,Vision-language,"BSD 3-Clause ""New"" or ""Revised"" License"
-,,,,,
 502,https://github.com/salesforce/LAVIS,Category 1: From Scratch,LAVIS,Vision-language,"BSD 3-Clause ""New"" or ""Revised"" License"
 503,https://github.com/OFA-Sys/OFA,Category 1: From Scratch,OFA,Unified model,Apache License 2.0
 504,https://github.com/microsoft/unilm,Category 1: From Scratch,UniLM,Pre-training,MIT License
@@ -531,13 +528,11 @@ sample_id,repository_url,category,description,notes,license
 529,https://github.com/modelscope/modelscope,Category 1: From Scratch,ModelScope,Model hub,Apache License 2.0
 530,https://github.com/modelscope/FunASR,Category 1: From Scratch,FunASR,Speech recognition,MIT License
 531,https://github.com/modelscope/swift,Category 1: From Scratch,SWIFT,LLM fine-tuning,Apache License 2.0
-,,,,,
 533,https://github.com/THUDM/ChatGLM-6B,Category 1: From Scratch,ChatGLM-6B,Chinese LLM,Apache License 2.0
 534,https://github.com/THUDM/GLM-130B,Category 1: From Scratch,GLM-130B,Large LLM,Apache License 2.0
 535,https://github.com/THUDM/CodeGeeX,Category 1: From Scratch,CodeGeeX,Code generation,Apache License 2.0
 536,https://github.com/THUDM/VisualGLM-6B,Category 1: From Scratch,VisualGLM,Vision-language,Apache License 2.0
 537,https://github.com/baichuan-inc/Baichuan-7B,Category 1: From Scratch,Baichuan-7B,Chinese LLM,Apache License 2.0
-,,,,,
 539,https://github.com/InternLM/InternLM,Category 1: From Scratch,InternLM,Multilingual LLM,Apache License 2.0
 540,https://github.com/QwenLM/Qwen,Category 1: From Scratch,Qwen,Alibaba LLM,Apache License 2.0
 541,https://github.com/FlagAI-Open/FlagAI,Category 1: From Scratch,FlagAI,Large-scale AI,Apache License 2.0
@@ -566,7 +561,6 @@ sample_id,repository_url,category,description,notes,license
 564,https://github.com/google/jax-md,Category 1: From Scratch,JAX-MD,Molecular dynamics,Apache License 2.0
 565,https://github.com/n2cholas/jax-cfd,Category 1: From Scratch,JAX-CFD,Computational fluid dynamics,Apache License 2.0
 566,https://github.com/deepmind/acme,Category 4: Scientific Computing,Acme,RL research,Apache License 2.0
-,,,,,
 568,https://github.com/deepmind/sonnet,Category 1: From Scratch,Sonnet,TensorFlow library,Apache License 2.0
 569,https://github.com/keras-team/keras,Category 1: From Scratch,Keras,Deep learning API,Apache License 2.0
 570,https://github.com/tensorflow/tensorflow,Category 1: From Scratch,TensorFlow,ML platform,Apache License 2.0
@@ -596,7 +590,6 @@ sample_id,repository_url,category,description,notes,license
 594,https://github.com/facebookresearch/pytorchvideo,Category 1: From Scratch,PyTorchVideo,Video understanding,Apache License 2.0
 595,https://github.com/SwinTransformer/Swin-Transformer-Semantic-Segmentation,Category 1: From Scratch,Swin Seg,Semantic segmentation,Apache License 2.0
 596,https://github.com/NVlabs/SegFormer,Category 1: From Scratch,SegFormer,Segmentation transformer,Other
-,,,,,
 598,https://github.com/tesseract-ocr/tesseract,Category 2: Domain Specific,Tesseract,OCR engine,Apache License 2.0
 599,https://github.com/madmaze/pytesseract,Category 2: Domain Specific,pytesseract,Python Tesseract,Apache License 2.0
 600,https://github.com/PaddlePaddle/PaddleHub,Category 1: From Scratch,PaddleHub,Pre-trained models,Apache License 2.0
@@ -654,8 +647,6 @@ sample_id,repository_url,category,description,notes,license
 652,https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life,Category 1: From Scratch,Old Photo Restoration,Photo restoration,MIT License
 653,https://github.com/microsoft/Cream,Category 1: From Scratch,Cream,Vision models,MIT License
 654,https://github.com/microsoft/Oscar,Category 1: From Scratch,Oscar,Vision-language,MIT License
-,,,,,
-,,,,,
 657,https://github.com/microsoft/table-transformer,Category 1: From Scratch,Table Transformer,Table extraction,MIT License
 658,https://github.com/NielsRogge/Transformers-Tutorials,Category 7: Educational,Transformers Tutorials,HF tutorials,MIT License
 659,https://github.com/philschmid/deep-learning-pytorch-huggingface,Category 7: Educational,DL HuggingFace,PyTorch HF tutorials,MIT License
@@ -675,14 +666,12 @@ sample_id,repository_url,category,description,notes,license
 673,https://github.com/DataTalksClub/mlops-zoomcamp,Category 7: Educational,MLOps Zoomcamp,MLOps course,No License
 674,https://github.com/DataTalksClub/data-engineering-zoomcamp,Category 7: Educational,DE Zoomcamp,Data engineering,No License
 675,https://github.com/DataTalksClub/machine-learning-zoomcamp,Category 7: Educational,ML Zoomcamp,ML course,No License
-,,,,,
 677,https://github.com/GokuMohandas/Made-With-ML,Category 7: Educational,Made With ML,Applied ML,MIT License
 678,https://github.com/mrdbourke/tensorflow-deep-learning,Category 7: Educational,TF Deep Learning,TensorFlow course,MIT License
 679,https://github.com/mrdbourke/pytorch-deep-learning,Category 7: Educational,PyTorch DL,PyTorch course,MIT License
 680,https://github.com/huggingface/course,Category 7: Educational,HF Course,Transformers course,Apache License 2.0
 681,https://github.com/huggingface/deep-rl-class,Category 7: Educational,Deep RL Class,RL course,Apache License 2.0
 682,https://github.com/huggingface/diffusion-models-class,Category 7: Educational,Diffusion Class,Diffusion course,Apache License 2.0
-,,,,,
 684,https://github.com/facebookresearch/llama-recipes,Category 7: Educational,LLaMA Recipes,Fine-tuning guide,MIT License
 685,https://github.com/ray-project/llm-applications,Category 7: Educational,LLM Applications,Ray LLM examples,Creative Commons Attribution 4.0 International
 686,https://github.com/pinecone-io/examples,Category 7: Educational,Pinecone Examples,Vector DB examples,MIT License
@@ -706,9 +695,7 @@ sample_id,repository_url,category,description,notes,license
 704,https://github.com/chris-chris/ml-engineering,Category 7: Educational,ML Engineering,ML eng guide,Creative Commons Attribution Share Alike 4.0 International
 705,https://github.com/stas00/ml-engineering,Category 7: Educational,ML Engineering,LLM engineering,Creative Commons Attribution Share Alike 4.0 International
 706,https://github.com/mli/paper-reading,Category 7: Educational,Paper Reading,Paper summaries,Apache License 2.0
-,,,,,
 708,https://github.com/eugeneyan/applied-ml,Category 7: Educational,Applied ML,ML in production,MIT License
-,,,,,
 710,https://github.com/chiphuyen/machine-learning-systems-design,Category 7: Educational,ML System Design,ML systems,No License
 711,https://github.com/chiphuyen/dmls-book,Category 7: Educational,DMLS Book,ML systems book,No License
 712,https://github.com/khuyentran1401/Data-science,Category 7: Educational,Data Science Tips,DS tips,No License
@@ -788,7 +775,6 @@ sample_id,repository_url,category,description,notes,license
 786,https://github.com/zergtant/pytorch-handbook,Category 7: Educational,PyTorch Handbook,Chinese handbook,CC BY-NC-SA
 787,https://github.com/chenyuntc/pytorch-book,Category 7: Educational,PyTorch Book,Chinese book,MIT License
 788,https://github.com/INTERMT/Awesome-PyTorch-Chinese,Category 7: Educational,Awesome PyTorch CN,Chinese resources,MIT License
-,,,,,
 790,https://github.com/nndl/nndl.github.io,Category 7: Educational,NNDL Book,DL textbook,No License
 791,https://github.com/dragen1860/Deep-Learning-with-TensorFlow-book,Category 7: Educational,DL with TF,Chinese book,No License
 792,https://github.com/dragen1860/TensorFlow-2.x-Tutorials,Category 7: Educational,TF2 Tutorials,Chinese tutorials,No License
@@ -801,10 +787,8 @@ sample_id,repository_url,category,description,notes,license
 799,https://github.com/exacity/deeplearningbook-chinese,Category 7: Educational,Deep Learning Book CN,Chinese translation,No License
 800,https://github.com/fluentpython/example-code-2e,Category 7: Educational,Fluent Python,Book code,MIT License
 801,https://github.com/cosmicpython/book,Category 7: Educational,Architecture Patterns,Python patterns,CC-By-ND
-,,,,,
 803,https://github.com/PacktPublishing/Python-Deep-Learning-Second-Edition,Category 7: Educational,Python DL,Book code,MIT License
 804,https://github.com/PacktPublishing/Python-Machine-Learning-Second-Edition,Category 7: Educational,Python ML,Book code,MIT License
-,,,,,
 806,https://github.com/alirezadir/Production-Level-Deep-Learning,Category 7: Educational,Production DL,Production guide,No License
 807,https://github.com/anyscale/ray-summit-2023-training,Category 7: Educational,Ray Summit Training,Ray tutorials,Apache License 2.0
 808,https://github.com/GoogleCloudPlatform/mlops-with-vertex-ai,Category 7: Educational,Vertex AI MLOps,GCP tutorials,Apache License 2.0
@@ -813,14 +797,12 @@ sample_id,repository_url,category,description,notes,license
 811,https://github.com/aws-samples/aws-machine-learning-university-accelerated-cv,Category 7: Educational,AWS CV Course,AWS ML,Creative Commons Attribution Share Alike 4.0 International
 812,https://github.com/Azure/azureml-examples,Category 7: Educational,AzureML Examples,Azure tutorials,MIT License
 813,https://github.com/Azure/MachineLearningNotebooks,Category 7: Educational,AzureML Notebooks,Azure ML,MIT License
-,,,,,
 815,https://github.com/microsoft/ML-For-Beginners,Category 7: Educational,ML for Beginners,Microsoft course,MIT License
 816,https://github.com/microsoft/AI-For-Beginners,Category 7: Educational,AI for Beginners,Microsoft course,MIT License
 817,https://github.com/microsoft/Data-Science-For-Beginners,Category 7: Educational,DS for Beginners,Microsoft course,MIT License
 818,https://github.com/microsoft/Web-Dev-For-Beginners,Category 7: Educational,Web for Beginners,Microsoft course,MIT License
 819,https://github.com/freeCodeCamp/freeCodeCamp,Category 7: Educational,freeCodeCamp,Learning platform,"BSD 3-Clause ""New"" or ""Revised"" License"
 820,https://github.com/tuvtran/project-based-learning,Category 7: Educational,Project Learning,Learning projects,MIT License
-,,,,,
 822,https://github.com/danistefanovic/build-your-own-x,Category 7: Educational,Build Your Own,From scratch projects,Creative Commons Public Domain Mark
 823,https://github.com/ryanmcdermott/clean-code-python,Category 7: Educational,Clean Code Python,Code quality,MIT License
 824,https://github.com/zedr/clean-code-python,Category 7: Educational,Clean Code Python,Clean code principles,MIT License
@@ -837,7 +819,6 @@ sample_id,repository_url,category,description,notes,license
 835,https://github.com/TwoWater/Python,Category 7: Educational,Grass Python,Chinese course,No License
 836,https://github.com/wistbean/learn_python3_spider,Category 7: Educational,Python Spider,Web scraping,MIT License
 837,https://github.com/Kr1s77/awesome-python-login-model,Category 7: Educational,Login Models,Web scraping,MIT License
-,,,,,
 839,https://github.com/lawlite19/MachineLearning_Python,Category 7: Educational,ML Python,Chinese ML,MIT License
 840,https://github.com/lijin-THU/notes-python,Category 7: Educational,Python Notes,Chinese notes,No License
 841,https://github.com/shimohq/chinese-programmer-wrong-pronunciation,Category 7: Educational,Pronunciation,Tech pronunciation,No License
@@ -860,7 +841,6 @@ sample_id,repository_url,category,description,notes,license
 858,https://github.com/mission-peace/interview,Category 3: Algorithms,Interview,Interview prep,Apache License 2.0
 859,https://github.com/yangshun/tech-interview-handbook,Category 3: Algorithms,Tech Interview,Interview guide,MIT License
 860,https://github.com/jwasham/coding-interview-university,Category 3: Algorithms,Coding Interview,Interview prep,Creative Commons Attribution Share Alike 4.0 International
-,,,,,
 862,https://github.com/TSiege/Tech-Interview-Cheat-Sheet,Category 3: Algorithms,Tech Interview,Interview tips,MIT License
 863,https://github.com/MaximAbramchuck/awesome-interview-questions,Category 3: Algorithms,Interview Questions,Question collection,Creative Commons Public Domain Mark
 864,https://github.com/donnemartin/system-design-primer,Category 3: Algorithms,System Design,System design,Creative Commons Attribution 4.0 International
@@ -967,7 +947,6 @@ sample_id,repository_url,category,description,notes,license
 965,https://github.com/stanfordnlp/dspy,Category 2: Domain Specific,DSPy,LLM programming,MIT License
 966,https://github.com/BerriAI/litellm,Category 2: Domain Specific,LiteLLM,LLM proxy,MIT License
 967,https://github.com/ollama/ollama-python,Category 2: Domain Specific,Ollama Python,Local LLM,MIT License
-,,,,,
 969,https://github.com/sgl-project/sglang,Category 1: From Scratch,SGLang,LLM programming,Apache License 2.0
 970,https://github.com/modal-labs/modal-client,Category 2: Domain Specific,Modal,Serverless compute,Apache License 2.0
 971,https://github.com/instructor-ai/instructor,Category 2: Domain Specific,Instructor,Structured LLM output,MIT License
@@ -988,4 +967,3 @@ sample_id,repository_url,category,description,notes,license
 986,https://github.com/Pythagora-io/gpt-pilot,Category 2: Domain Specific,GPT Pilot,AI development,MIT License
 987,https://github.com/OpenDevin/OpenDevin,Category 2: Domain Specific,OpenDevin,AI software developer,MIT License
 988,https://github.com/stitionai/devika,Category 2: Domain Specific,Devika,AI software engineer,MIT License
-,,,,,
