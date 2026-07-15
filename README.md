@@ -17,7 +17,7 @@ This project exploits it. We mask *functions* — chosen by program-dependency-g
 
 ## 🔥 News
 
-- **[2026-07]** Full release: [corpus (400K samples / 2.6B tokens)](https://huggingface.co/datasets/TIGER-Lab/FIM-Midtraining-400K), [six checkpoints](https://huggingface.co/collections/TIGER-Lab/fim-midtraining), data-construction pipeline, training configs, and evaluation guides.
+- **[2026-07]** Full release: [corpus (400K samples / 2.6B tokens)](https://huggingface.co/datasets/TIGER-Lab/FIM-Midtraining-400K), [checkpoints](https://huggingface.co/collections/TIGER-Lab/fim-midtraining), data-construction pipeline, training configs, and evaluation guides.
 - **[2026-07]** Paper released on [arXiv](https://arxiv.org/abs/2607.12463) (a copy also ships in this repo as [`paper.pdf`](paper.pdf)).
 
 ## 📦 Released artifacts
