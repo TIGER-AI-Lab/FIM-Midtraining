@@ -1,8 +1,7 @@
 <h1 align="center">Function-Aware Fill-in-the-Middle as Mid-Training<br>for Coding Agent Foundation Models</h1>
 
 <p align="center">
-  <a href="paper.pdf"><img src="https://img.shields.io/badge/Paper-PDF-B31B1B?logo=adobeacrobatreader&logoColor=white" alt="Paper"></a>
-  <!-- TODO once arXiv is live: <a href="https://arxiv.org/abs/XXXX.XXXXX"><img src="https://img.shields.io/badge/arXiv-XXXX.XXXXX-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> -->
+  <a href="https://arxiv.org/abs/2607.12463"><img src="https://img.shields.io/badge/arXiv-2607.12463-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a>
   <a href="https://huggingface.co/collections/TIGER-Lab/fim-midtraining"><img src="https://img.shields.io/badge/🤗_Collection-FIM--Midtraining-FFD21E" alt="HF Collection"></a>
   <a href="https://huggingface.co/datasets/TIGER-Lab/FIM-Midtraining-400K"><img src="https://img.shields.io/badge/🤗_Dataset-FIM--Midtraining--400K-FFD21E" alt="Dataset"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-4CAF50" alt="License"></a>
@@ -19,7 +18,7 @@ This project exploits it. We mask *functions* — chosen by program-dependency-g
 ## 🔥 News
 
 - **[2026-07]** Full release: [corpus (400K samples / 2.6B tokens)](https://huggingface.co/datasets/TIGER-Lab/FIM-Midtraining-400K), [six checkpoints](https://huggingface.co/collections/TIGER-Lab/fim-midtraining), data-construction pipeline, training configs, and evaluation guides.
-- **[2026-07]** Paper submitted to arXiv — link coming shortly; a copy ships in this repo as [`paper.pdf`](paper.pdf).
+- **[2026-07]** Paper released on [arXiv](https://arxiv.org/abs/2607.12463) (a copy also ships in this repo as [`paper.pdf`](paper.pdf)).
 
 ## 📦 Released artifacts
 
@@ -154,7 +153,7 @@ The 968 source repositories are each under their own license (>80% MIT/Apache/BS
 @article{wang2026fim,
   title={Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models},
   author={Wang, Yubo and Liang, Jiarong and Zhang, Yuxuan and Liu, Xuye and Wei, Cong and Zhang, Yuyu and Nie, Ping and Chen, Wenhu},
-  journal={arXiv preprint},
+  journal={arXiv preprint arXiv:2607.12463},
   year={2026}
 }
 ```
