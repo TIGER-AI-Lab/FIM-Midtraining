@@ -149,6 +149,8 @@ The 968 source repositories are each under their own license (>80% MIT/Apache/BS
 
 ## 📖 Citation
 
+Machine-readable citation metadata is available in [CITATION.cff](CITATION.cff). The BibTeX below cites the [arXiv preprint](https://arxiv.org/abs/2607.12463).
+
 ```bibtex
 @article{wang2026fim,
   title={Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models},

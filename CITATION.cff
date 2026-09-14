@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying paper when using this research software."
+type: software
+title: "FIM-Midtraining research code"
+repository-code: "https://github.com/TIGER-AI-Lab/FIM-Midtraining"
+authors:
+  - family-names: "Wang"
+    given-names: "Yubo"
+  - family-names: "Liang"
+    given-names: "Jiarong"
+  - family-names: "Zhang"
+    given-names: "Yuxuan"
+  - family-names: "Liu"
+    given-names: "Xuye"
+  - family-names: "Wei"
+    given-names: "Cong"
+  - family-names: "Zhang"
+    given-names: "Yuyu"
+  - family-names: "Nie"
+    given-names: "Ping"
+  - family-names: "Chen"
+    given-names: "Wenhu"
+license: Apache-2.0
+preferred-citation:
+  type: article
+  title: "Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models"
+  authors:
+    - family-names: "Wang"
+      given-names: "Yubo"
+    - family-names: "Liang"
+      given-names: "Jiarong"
+    - family-names: "Zhang"
+      given-names: "Yuxuan"
+    - family-names: "Liu"
+      given-names: "Xuye"
+    - family-names: "Wei"
+      given-names: "Cong"
+    - family-names: "Zhang"
+      given-names: "Yuyu"
+    - family-names: "Nie"
+      given-names: "Ping"
+    - family-names: "Chen"
+      given-names: "Wenhu"
+  year: 2026
+  journal: "arXiv preprint"
+  doi: "10.48550/arXiv.2607.12463"
+  url: "https://arxiv.org/abs/2607.12463"
